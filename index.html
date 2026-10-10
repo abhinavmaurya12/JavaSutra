@@ -47051,4 +47051,8 @@ new MutationObserver(sync).observe(B,{attributes:true,attributeFilter:['class']}
 .bver{color:#b93a00!important;background:var(--accent-soft)!important;border:1px solid color-mix(in srgb,var(--accent) 35%,transparent);border-radius:99px;padding:1px 8px!important;font:700 10.5px var(--font-mono)!important;letter-spacing:.03em;margin-top:2px}
 :root[data-theme="dark"] .bver{color:#ffa56b!important}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .bver{color:#ffa56b!important}}
-</style></body></html>
+</style><script>
+(function(){var H=document.getElementById('home');if(!H)return;
+function add(){var c=H.querySelector('.hm-cta');if(!c||c.querySelector('[data-jsq]'))return;var b=document.createElement('button');b.type='button';b.className='hm-s';b.dataset.jsq='1';b.textContent='☕ JavaSquadz';c.appendChild(b)}
+new MutationObserver(add).observe(H,{childList:true,subtree:true});add()})();
+</script></body></html>
