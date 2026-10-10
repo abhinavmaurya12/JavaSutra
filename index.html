@@ -46121,7 +46121,7 @@ ex.shutdown();</code></pre>
   </div>
   <footer class="site-foot">
     <span>Created by ABHINAV MAURYA</span>
-    <span class="ver">WebPage Vr. 1.8.2</span>
+    <span class="ver">WebPage Vr. 2.1.2</span>
   </footer>
 </div>
 
@@ -46938,7 +46938,7 @@ greet();
 <script>
 (function(){var b=document.querySelector('.bar .brand');if(!b||b.parentElement.classList.contains('bbox'))return;
 var w=document.createElement('div');w.className='bbox';b.parentNode.insertBefore(w,b);w.appendChild(b);
-var v=document.createElement('small');v.className='bver';v.textContent='WebPage Vr. 1.8.2';v.title='Version 1.8.2';w.appendChild(v)})();
+var v=document.createElement('small');v.className='bver';v.textContent='WebPage Vr. 2.1.2';v.title='Version 2.1.2';w.appendChild(v)})();
 </script><style id="nopc">#pc{display:none!important}</style><style id="volicon">#hrd svg{width:20px;height:20px;display:block}@media(max-width:380px){body:not(.home) .hb button#hrd{display:grid!important}}</style>
 <script>(function(){var b=document.getElementById('hrd');if(!b)return;b.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z" fill="currentColor"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>'})();</script><style id="jsqcss">
 #jsq{display:none;grid-column:1/-1;padding:18px 0 50px}
@@ -47047,4 +47047,8 @@ var b=document.createElement('button');b.id='seg-home';b.type='button';b.setAttr
 function sync(){var hi=B.classList.contains('hi'),h=B.classList.contains('home');b.textContent=hi?'🏠 होम':'🏠 Home';b.classList.toggle('on',h);b.setAttribute('aria-pressed',h?'true':'false')}
 new MutationObserver(sync).observe(B,{attributes:true,attributeFilter:['class']});sync();
 })();
-</script></body></html>
+</script><style id="verfix">
+.bver{color:#b93a00!important;background:var(--accent-soft)!important;border:1px solid color-mix(in srgb,var(--accent) 35%,transparent);border-radius:99px;padding:1px 8px!important;font:700 10.5px var(--font-mono)!important;letter-spacing:.03em;margin-top:2px}
+:root[data-theme="dark"] .bver{color:#ffa56b!important}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .bver{color:#ffa56b!important}}
+</style></body></html>
