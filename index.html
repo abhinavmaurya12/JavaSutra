@@ -47283,6 +47283,8 @@ new MutationObserver(function(){addBtn();if(P.classList.contains('on')){lab()}})
 .bm:hover,.nt:hover{border-color:var(--accent)!important}
 .bm.on{border-color:#f59f00!important;background:#fff3bf!important}
 .nt.on{border-color:var(--ac2,var(--accent))!important}
+.wnl{list-style:none;margin:0 0 14px;padding:0;display:grid;gap:12px}.wnl li{display:flex;gap:12px;align-items:flex-start}.wnl .e{font-size:22px;line-height:1.2;flex:none}.wnl b{font-size:15px}.wnl p{margin:2px 0 0;font-size:13.5px;color:var(--muted);line-height:1.5}.wnc{gap:8px}.wnc li{align-items:center}.wnc .e{font-size:18px}
+.wn-dot.seen{display:none}[data-wn]{position:relative}.wn-dot{position:absolute;top:-7px;right:-6px;margin:0;padding:2px 7px;box-shadow:0 2px 6px rgba(0,0,0,.25);pointer-events:none;border-radius:99px;background:#fff;color:#c2255c;font:800 10px var(--font-body);letter-spacing:.06em;line-height:1.2}
 .lib{display:grid;grid-template-columns:1fr 1fr;gap:14px}.lib h3{margin:0 0 8px}.lib ul{list-style:none;margin:0;padding:0}.lib li{padding:7px 0;border-bottom:1px solid var(--line);font-size:14px}.lib li button{all:unset;cursor:pointer;color:var(--fg)}.lib li button:hover{color:var(--accent)}.lib li small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
 @media(max-width:800px){.lib{grid-template-columns:1fr}}
 </style>
@@ -47372,7 +47374,7 @@ $('#tldl').onclick=function(){var a=nts();delete a[id];sv('jnotes',a);if(btn)btn
 function libHtml(){var b=bms().slice(0,6),n=nts(),ids=Object.keys(n).slice(0,6);
 return'<div class="lib"><div class="hm-card"><h3>★ '+L('Bookmarks','बुकमार्क')+'</h3>'+(b.length?'<ul>'+b.map(function(x){return'<li><button '+(x.p?'data-pgo':'data-go')+'="'+x.id+'" data-n="'+x.n+'" data-p="'+(x.p||'')+'">'+esc(x.t)+'</button><small>'+where(x)+'</small></li>'}).join('')+'</ul>':'<p>'+L('Tap ★ next to any topic to save it here.','किसी भी टॉपिक के पास ★ दबाकर उसे यहाँ सेव करें।')+'</p>')+'</div><div class="hm-card"><h3>✎ '+L('My notes','मेरे नोट्स')+'</h3>'+(ids.length?'<ul>'+ids.map(function(k){var x=n[k];return'<li><button '+(x.p?'data-pgo':'data-go')+'="'+k+'" data-n="'+x.n+'" data-p="'+(x.p||'')+'">'+esc(x.t)+'</button><small>'+(x.p?where(x)+' · ':'')+''+esc(x.tx.slice(0,90))+(x.tx.length>90?'…':'')+'</small></li>'}).join('')+'</ul>':'<p>'+L('Tap ✎ next to any topic to write your own note.','किसी भी टॉपिक के पास ✎ दबाकर अपना नोट लिखें।')+'</p>')+'</div></div>'}
 function lib(){var l=$('#tlib');if(l)l.innerHTML=libHtml()}
-function tools(){if(!H)return;var q=H.querySelector('.hm-quick:not([data-tools])');if(!q||H.querySelector('[data-tools]'))return;var qb=ld('jquiz',{}),best=qb.mix;
+function tools(){if(!H)return;wnInject();var q=H.querySelector('.hm-quick:not([data-tools])');if(!q||H.querySelector('[data-tools]'))return;var qb=ld('jquiz',{}),best=qb.mix;
 q.insertAdjacentHTML('afterend','<div class="hm-h" data-tools>🧰 '+L('Study tools','स्टडी टूल्स')+'<small>'+L('Quizzes, animations, bookmarks and notes','क्विज़, एनिमेशन, बुकमार्क और नोट्स')+'</small></div><div class="hm-quick" data-tools><button class="hm-q" data-act="quiz"><div class="e">🧠</div><b>'+L('Quick quiz','क्विक क्विज़')+'</b><span>'+L('8 mixed questions','8 मिले-जुले प्रश्न')+(best?' · '+L('best','बेस्ट')+' '+best+'%':'')+'</span></button><button class="hm-q" data-act="thr"><div class="e">🧵</div><b>'+L('Thread lifecycle','थ्रेड लाइफ़साइकिल')+'</b><span>'+L('Watch the states move','स्टेट्स को चलते देखें')+'</span></button><button class="hm-q" data-act="gc"><div class="e">♻️</div><b>'+L('Garbage collection','गार्बेज कलेक्शन')+'</b><span>'+L('Mark, sweep, compact','Mark, sweep, compact')+'</span></button></div><div id="tlib" data-tools style="margin-top:14px">'+libHtml()+'</div>')}
 if(H){H.addEventListener('click',function(e){var a=e.target.closest('[data-act]'),g=e.target.closest('[data-go],[data-pgo]');if(a){var k=a.dataset.act;k==='quiz'?mixQuiz():k==='thr'?threadAnim():gcAnim()}else if(g)(g.dataset.pgo?goPart(g.dataset.p,g.dataset.pgo):goSec(+g.dataset.n,g.dataset.go))});new MutationObserver(tools).observe(H,{childList:true,subtree:true});tools()}
 function chapBtns(){var a=document.querySelector('article.book');if(!a||a.querySelector('.qzb'))return;var hd=a.querySelector('header,.part-head')||a.querySelector('h2');if(!hd)return;var n=+((/(\d+)/.exec((a.querySelector('.eyebrow')||{}).textContent||'')||[])[1]),name=(a.querySelector('h2')||{}).textContent||'';if(!n)return;
@@ -47405,6 +47407,30 @@ b.onclick=function(e){e.preventDefault();e.stopPropagation();var l=bms(),k=l.fin
 t.onclick=function(e){e.preventDefault();e.stopPropagation();noteEd(id,0,title,t,p)};h.appendChild(b);h.appendChild(t)})})}
 new MutationObserver(function(){partLabels();lib()}).observe(B,{attributes:true,attributeFilter:['class']});
 partDec();
+
+/* ---------- WHAT'S NEW ---------- */
+var WN_VER='2.1.6';
+var WN=[
+['🧠','Quizzes everywhere','हर जगह क्विज़','Quiz any Full Notes chapter, or the OOPs, Collections and Threads tabs. AI writes 5 questions from the text; offline questions are used if AI is unavailable. Home has an 8-question Quick quiz.','किसी भी Full Notes अध्याय, या OOPs, Collections और Threads टैब का क्विज़ दें। AI टेक्स्ट से 5 प्रश्न बनाता है; AI न हो तो ऑफ़लाइन प्रश्न आते हैं। Home पर 8 प्रश्नों का क्विक क्विज़ है।'],
+['★','Bookmarks and notes','बुकमार्क और नोट्स','Use ★ to bookmark and ✎ to write your own note on any topic, in Full Notes and in the OOPs, Collections and Threads tabs. They show up on Home and jump you back to the spot.','किसी भी टॉपिक पर ★ से बुकमार्क और ✎ से अपना नोट बनाएँ, Full Notes और OOPs, Collections, Threads टैब में। वे Home पर दिखते हैं और सीधे उसी जगह ले जाते हैं।'],
+['🧵','Animated explainers','एनिमेटेड एक्सप्लेनर','Thread lifecycle and Garbage collection animations with Play, Step and Reset. Find them in the Study tools row on Home and on the related pages.','थ्रेड लाइफ़साइकिल और गार्बेज कलेक्शन एनिमेशन, Play, Step और Reset के साथ। Home की Study tools पंक्ति और संबंधित पेजों पर मिलेंगे।'],
+['🔲','Clearer ★ and ✎ buttons','साफ़ ★ और ✎ बटन','Bookmark and note buttons now have a visible border, and an amber or coloured border once used.','बुकमार्क और नोट बटन पर अब साफ़ बॉर्डर है, और इस्तेमाल के बाद एम्बर या रंगीन बॉर्डर दिखता है।'],
+['🇮🇳','Hindi switch','हिंदी स्विच','All the new tools switch with the हि button. Offline quiz questions are English only.','सभी नए टूल हि बटन से बदलते हैं। ऑफ़लाइन क्विज़ प्रश्न केवल अंग्रेज़ी में हैं।']];
+function wnSeen(){try{return localStorage.getItem('jwn')===WN_VER}catch(e){return true}}
+function wnMark(){try{localStorage.setItem('jwn',WN_VER)}catch(e){}H&&H.querySelectorAll('.wn-dot').forEach(function(d){d.classList.add('seen')})}
+function wnList(){return WN.map(function(x){return'<li><span class="e">'+x[0]+'</span><div><b>'+L(x[1],x[2])+'</b><p>'+L(x[3],x[4])+'</p></div></li>'}).join('')}
+function wnOpen(){wnMark();openM('✨ '+L("What's new",'नया क्या है')+' · v'+WN_VER);BD.innerHTML='<ul class="wnl">'+wnList()+'</ul><button class="tlbtn" id="wncl">'+L('Got it','समझ गया')+'</button>';$('#wncl').onclick=closeM}
+function wnInject(){if(!H||typeof WN==='undefined'||!WN)return;var cta=H.querySelector('.hm-cta');
+if(cta&&!cta.querySelector('[data-wn]')){var b=document.createElement('button');b.className='hm-s';b.dataset.wn='1';b.dataset.wnx='';b.innerHTML='✨ '+L("What's new",'नया क्या है')+' <span class="wn-dot'+(wnSeen()?' seen':'')+'">NEW</span>';b.onclick=wnOpen;cta.appendChild(b)}
+var st=H.querySelector('.hm-stats');
+if(st&&!H.querySelector('#wnsec')){var d=document.createElement('div');d.id='wnsec';d.dataset.wnx='';d.className='hm-card';d.style.margin='0 0 14px';d.innerHTML='<h3>✨ '+L("What's new",'नया क्या है')+' · v'+WN_VER+'</h3><ul class="wnl wnc">'+WN.slice(0,3).map(function(x){return'<li><span class="e">'+x[0]+'</span><div><b>'+L(x[1],x[2])+'</b></div></li>'}).join('')+'</ul><button class="hm-btn" id="wnall">'+L('See everything new →','सब कुछ नया देखें →')+'</button>';st.insertAdjacentElement('afterend',d);d.querySelector('#wnall').onclick=wnOpen}}
+var wnHi=B.classList.contains('hi');new MutationObserver(function(){var h=B.classList.contains('hi');if(h===wnHi)return;wnHi=h;if(H){H.querySelectorAll('[data-wnx]').forEach(function(e){e.remove()});wnInject()}}).observe(B,{attributes:true,attributeFilter:['class']});
+wnInject();
+/* keep the hero buttons in one fixed order, whichever script adds them first */
+var ctaT=0;function ctaOrder(){var c=H&&H.querySelector('.hm-cta');if(!c)return;var rank=function(e){return e.classList.contains('hm-p')?0:e.id==='hmS'?1:e.dataset.jsq?2:e.dataset.play?3:e.dataset.wn?4:5};
+var k=[].slice.call(c.children),w=k.slice().sort(function(a,b){return rank(a)-rank(b)});if(w.some(function(e,i){return e!==k[i]}))w.forEach(function(e){c.appendChild(e)})}
+if(H)new MutationObserver(function(){if(ctaT)return;ctaT=setTimeout(function(){ctaT=0;ctaOrder()},30)}).observe(H,{childList:true,subtree:true});
+ctaOrder();
 })();
 </script>
 </body></html>
