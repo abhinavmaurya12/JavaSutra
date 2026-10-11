@@ -1,4 +1,6 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html><head>
+<meta name="color-scheme" content="light dark">
+<script>try{var __t=localStorage.getItem("jtheme");document.documentElement.setAttribute("data-theme",__t==="dark"?"dark":"light")}catch(e){document.documentElement.setAttribute("data-theme","light")}</script><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Java Sutra · by Abhinav</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47154,7 +47156,7 @@ addEventListener('scroll',function(){scrolling=performance.now()+400},{passive:t
 document.addEventListener('visibilitychange',function(){last=performance.now();loop()});
 document.addEventListener('click',function(e){var o=e.target.closest&&e.target.closest('.ok');if(o){setTimeout(function(){var d=o.closest('.card')||o.closest('h3');if(d&&d.classList.contains('dn'))cheer(L('Nice! Topic learned 🎉','शाबाश! टॉपिक सीखा 🎉'))},140)}
 if(e.target.closest&&e.target.closest('#cbBtn'))say(L('Ask away! 💬','पूछिए! 💬'),2200)},true);
-badge();flip();place();
+window.sutraSay=say;badge();flip();place();
 if(RM){setMode('juggle');x=20;place()}else{setMode('run');setTimeout(function(){say(L('Hi! I\'m Sutra Boy ⚽','नमस्ते! मैं सूत्र बॉय हूँ ⚽'),3000)},1500);loop()}
 })();
 </script><style id="dock">
@@ -47178,5 +47180,67 @@ var M=[['cbBtn','💬','Ask AI','AI'],['kidT','⚽','Sutra','सूत्र'],[
 M.forEach(function(m){var b=document.getElementById(m[0]);if(!b)return;b.innerHTML='<span class="fi">'+m[1]+'</span><small data-en="'+m[2]+'" data-hi="'+m[3]+'">'+m[2]+'</small>'});
 function lab(){var h=B.classList.contains('hi');fab.querySelectorAll('small[data-en]').forEach(function(s){s.textContent=h?s.dataset.hi:s.dataset.en})}
 new MutationObserver(lab).observe(B,{attributes:true,attributeFilter:['class']});lab();
+})();
+</script><script>(function(){var ft=document.getElementById('ft');if(!ft)return;ft.addEventListener('click',function(){setTimeout(function(){try{localStorage.setItem('jtheme',document.documentElement.dataset.theme==='dark'?'dark':'light')}catch(e){}},30)})})();</script><style id="playcss">
+body.playing #kid{display:none!important}
+#pl{position:fixed;inset:0;z-index:150;display:none;align-items:center;justify-content:center;background:rgba(5,10,25,.6);backdrop-filter:blur(5px);padding:12px}
+#pl.on{display:flex;animation:fadeIn .2s}
+.plc{width:min(100%,400px);background:var(--surface);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.45);animation:pop .3s cubic-bezier(.3,1.3,.5,1)}
+.plh{display:flex;align-items:center;gap:10px;padding:12px 14px;color:#fff;background:linear-gradient(135deg,#e8590c,#c2255c 50%,#7048e8)}
+.plh b{flex:1;font-size:15px}
+.plst{display:flex;align-items:baseline;gap:4px;font-size:11px;opacity:.95}.plst span{font:800 18px var(--font-mono);margin-left:6px}
+#plX{border:0;background:rgba(255,255,255,.22);color:#fff;width:32px;height:32px;border-radius:10px;cursor:pointer;font-size:14px}
+#pla{position:relative;height:min(58vh,440px);background:linear-gradient(#a5d8ff,#e7f5ff 72%);overflow:hidden;touch-action:none;user-select:none;-webkit-user-select:none;cursor:pointer}
+#pla::before{content:"☁️";position:absolute;left:12%;top:10%;font-size:34px;opacity:.8;animation:plcl 24s linear infinite}
+@keyframes plcl{from{transform:translateX(-60px)}to{transform:translateX(420px)}}
+#plg{position:absolute;left:0;right:0;bottom:0;height:44px;background:linear-gradient(#69db7c,#2f9e44)}
+#plball{position:absolute;left:0;top:0;width:48px;height:48px;will-change:transform;pointer-events:none}#plball svg,#plbi svg{width:100%;height:100%;display:block;overflow:visible}
+#plboy{position:absolute;left:0;bottom:30px;width:80px;height:96px;will-change:transform;pointer-events:none}#plbi{width:100%;height:100%}#plbi.jmp{animation:plj .28s ease-out}
+@keyframes plj{50%{transform:translateY(-30px)}}
+#plov{position:absolute;inset:0;display:flex;flex-direction:column;gap:12px;align-items:center;justify-content:center;background:rgba(10,20,40,.58);color:#fff;text-align:center;padding:20px;font-weight:700;line-height:1.45}
+#plov.off{display:none}
+#plov button{border:0;border-radius:14px;padding:12px 26px;font:800 16px var(--font-body);background:#fff;color:#c2255c;cursor:pointer;animation:cbpulse 2s infinite}
+.plp{position:absolute;font:800 20px var(--font-body);color:#fff;text-shadow:0 2px 6px rgba(0,0,0,.5);pointer-events:none;animation:plup .7s ease-out forwards}
+@keyframes plup{to{transform:translateY(-54px);opacity:0}}
+.plf{padding:10px 14px;color:var(--muted);font-size:12.5px;text-align:center}
+</style>
+<div id="pl" role="dialog" aria-label="Play with Sutra Boy"><div class="plc"><div class="plh"><b>⚽ <span id="plT"></span></b><div class="plst"><small id="plL1"></small><span id="plS">0</span><small id="plL2"></small><span id="plB">0</span></div><button id="plX" aria-label="Close">✕</button></div>
+<div id="pla"><div id="plg"></div><div id="plboy"><div id="plbi"></div></div><div id="plball"></div><div id="plov"><div id="plm"></div><button id="plgo"></button></div></div><div class="plf" id="plF"></div></div></div>
+<script>
+(function(){
+var B=document.body,$=function(s){return document.querySelector(s)},P=$('#pl'),A=$('#pla'),H=$('#home');
+function L(e,h){return B.classList.contains('hi')?h:e}
+var kb=$('#kid .kb'),kball=$('#kid .ball');
+if(kb)$('#plbi').appendChild(kb.cloneNode(true));
+if(kball)$('#plball').appendChild(kball.cloneNode(true));
+var BL=$('#plball'),BY=$('#plboy'),ov=$('#plov'),run=false,bx=0,by=0,vx=0,vy=0,rot=0,score=0,best=0,boyX=0,aw=300,ah=400,R=24,GR=44,last=0,raf=0;
+try{best=+localStorage.getItem('jplbest')||0}catch(e){}
+function lab(){$('#plT').textContent=L('Play with Sutra Boy','सूत्र बॉय के साथ खेलो');$('#plL1').textContent=L('Score','स्कोर');$('#plL2').textContent=L('Best','बेस्ट');$('#plS').textContent=score;$('#plB').textContent=best;$('#plF').textContent=L('Tap the ball to kick it up. Don\'t let it touch the grass!','गेंद पर टैप करके उसे ऊपर उछालो। उसे घास को छूने न दो!')}
+function say(t){try{window.sutraSay&&window.sutraSay(t,2200)}catch(e){}}
+function paint(){BL.style.transform='translate('+(bx-R)+'px,'+(by-R)+'px) rotate('+rot+'deg)';BY.style.transform='translateX('+(boyX-40)+'px)'}
+function reset(){aw=A.clientWidth;ah=A.clientHeight;bx=aw/2+(Math.random()-.5)*60;by=70;vx=(Math.random()-.5)*80;vy=0;rot=0;score=0;boyX=aw/2;lab();paint()}
+function showOv(msg,btn){$('#plm').innerHTML=msg;$('#plgo').textContent=btn;ov.classList.remove('off')}
+function start(){reset();ov.classList.add('off');run=true;last=performance.now();cancelAnimationFrame(raf);raf=requestAnimationFrame(loop)}
+function over(){run=false;var nb=score>best;if(nb){best=score;try{localStorage.setItem('jplbest',best)}catch(e){}}lab();
+showOv('<div style="font-size:40px">'+(nb&&score>0?'🏆':'⚽')+'</div><div style="font-size:20px">'+L('Game over!','गेम ओवर!')+'</div><div>'+L('Score','स्कोर')+' <b>'+score+'</b> · '+L('Best','बेस्ट')+' <b>'+best+'</b></div>'+(nb&&score>0?'<div>'+L('New best! 🎉','नया बेस्ट! 🎉')+'</div>':''),L('Play again','दोबारा खेलो'));
+say(nb&&score>2?L('New best score! You are a champion!','नया बेस्ट स्कोर! आप चैंपियन हो!'):L('Nice try! You scored '+score,'अच्छा खेले! आपका स्कोर '+score))}
+function loop(now){if(!run)return;var dt=Math.min(.033,(now-last)/1000);last=now;aw=A.clientWidth;ah=A.clientHeight;var g=Math.min(2200,1300+score*18);vy+=g*dt;bx+=vx*dt;by+=vy*dt;rot+=vx*dt*.7;
+if(bx<R){bx=R;vx=Math.abs(vx)*.8}if(bx>aw-R){bx=aw-R;vx=-Math.abs(vx)*.8}if(by<R){by=R;vy=Math.abs(vy)*.4}
+boyX+=(bx-boyX)*Math.min(1,dt*6);boyX=Math.max(40,Math.min(aw-40,boyX));
+if(by>ah-GR-R+6){paint();over();return}
+paint();raf=requestAnimationFrame(loop)}
+A.addEventListener('pointerdown',function(e){if(!run||e.target.closest('#plov'))return;var r=A.getBoundingClientRect(),px=e.clientX-r.left,py=e.clientY-r.top;
+if(Math.hypot(px-bx,py-by)<=R+34){vy=-(560+Math.min(score,40)*4);vx=Math.max(-380,Math.min(380,(bx-px)*7+(Math.random()-.5)*120));score++;$('#plS').textContent=score;
+var j=$('#plbi');j.classList.remove('jmp');void j.offsetWidth;j.classList.add('jmp');
+var f=document.createElement('div');f.className='plp';f.textContent='+1';f.style.left=(bx-8)+'px';f.style.top=(by-30)+'px';A.appendChild(f);setTimeout(function(){f.remove()},700);
+if(score%5===0)say(score%10===0?L(score+' kicks! Amazing!',score+' किक! कमाल!'):L(score+' kicks! Great!',score+' किक! बढ़िया!'))}});
+$('#plgo').onclick=start;
+function openG(){lab();B.classList.add('playing');P.classList.add('on');reset();showOv('<div style="font-size:42px">⚽</div><div>'+L('Tap the ball to keep it in the air!','गेंद पर टैप करके उसे हवा में रखो!')+'</div>',L('Kick off ⚽','शुरू करें ⚽'));say(L('Let\'s play!','चलो खेलें!'))}
+function closeG(){run=false;cancelAnimationFrame(raf);P.classList.remove('on');B.classList.remove('playing')}
+$('#plX').onclick=closeG;P.addEventListener('pointerdown',function(e){if(e.target===P)closeG()});
+addEventListener('keydown',function(e){if(e.key==='Escape'&&P.classList.contains('on'))closeG()});
+function addBtn(){var c=H&&H.querySelector('.hm-cta');if(!c)return;var b=c.querySelector('[data-play]');if(!b){b=document.createElement('button');b.type='button';b.className='hm-s';b.dataset.play='1';c.appendChild(b)}var tx='⚽ '+L('Play with Sutra Boy','सूत्र बॉय के साथ खेलो');if(b.textContent!==tx)b.textContent=tx}
+if(H){H.addEventListener('click',function(e){if(e.target.closest('[data-play]'))openG()});new MutationObserver(addBtn).observe(H,{childList:true,subtree:true});addBtn()}
+new MutationObserver(function(){addBtn();if(P.classList.contains('on')){lab()}}).observe(B,{attributes:true,attributeFilter:['class']});
 })();
 </script></body></html>
