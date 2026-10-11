@@ -46121,7 +46121,7 @@ ex.shutdown();</code></pre>
   </div>
   <footer class="site-foot">
     <span>Created by ABHINAV MAURYA</span>
-    <span class="ver">WebPage Vr. 2.1.2</span>
+    <span class="ver">WebPage Vr. 2.1.4</span>
   </footer>
 </div>
 
@@ -46938,7 +46938,7 @@ greet();
 <script>
 (function(){var b=document.querySelector('.bar .brand');if(!b||b.parentElement.classList.contains('bbox'))return;
 var w=document.createElement('div');w.className='bbox';b.parentNode.insertBefore(w,b);w.appendChild(b);
-var v=document.createElement('small');v.className='bver';v.textContent='WebPage Vr. 2.1.2';v.title='Version 2.1.2';w.appendChild(v)})();
+var v=document.createElement('small');v.className='bver';v.textContent='WebPage Vr. 2.1.4';v.title='Version 2.1.4';w.appendChild(v)})();
 </script><style id="nopc">#pc{display:none!important}</style><style id="volicon">#hrd svg{width:20px;height:20px;display:block}@media(max-width:380px){body:not(.home) .hb button#hrd{display:grid!important}}</style>
 <script>(function(){var b=document.getElementById('hrd');if(!b)return;b.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z" fill="currentColor"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>'})();</script><style id="jsqcss">
 #jsq{display:none;grid-column:1/-1;padding:18px 0 50px}
@@ -47057,7 +47057,11 @@ function add(){var c=H.querySelector('.hm-cta');if(!c||c.querySelector('[data-js
 new MutationObserver(add).observe(H,{childList:true,subtree:true});add()})();
 </script><style id="kidcss">
 #kid{position:fixed;left:0;bottom:4px;width:120px;height:128px;z-index:40;pointer-events:none;will-change:transform}
-#kidf{position:absolute;inset:0;transform-origin:50% 100%}
+#kidf{position:absolute;inset:0;transform-origin:50% 100%;animation:kflip var(--kd,20s) steps(1,end) infinite}#kidj{position:absolute;inset:0}
+#kid{animation:kpatrol var(--kd,20s) linear infinite}
+#kid.juggle,#kid.cheer,#kid.juggle #kidf,#kid.cheer #kidf{animation-play-state:paused}
+@keyframes kpatrol{0%{transform:translate3d(0,0,0)}50%{transform:translate3d(var(--kw,300px),0,0)}100%{transform:translate3d(0,0,0)}}
+@keyframes kflip{0%{transform:scaleX(1)}50%{transform:scaleX(-1)}}
 #kid svg{position:absolute;overflow:visible}
 #kid .kb{left:0;top:0;width:100px;height:120px}
 #kid .ball{left:62px;top:88px;width:30px;height:30px;transform-origin:50% 50%}
@@ -47075,7 +47079,7 @@ new MutationObserver(add).observe(H,{childList:true,subtree:true});add()})();
 #kid.juggle .bsh{animation:shj 1.1s ease-in-out infinite}
 #kid.juggle .armL{transform:rotate(-150deg)}#kid.juggle .armR{transform:rotate(150deg)}
 #kid.juggle .spin{animation:spin .9s linear infinite}
-#kid.cheer #kidf{animation:jumpy .8s cubic-bezier(.3,.9,.4,1)}
+#kid.cheer #kidj{animation:jumpy .8s cubic-bezier(.3,.9,.4,1)}
 #kid.cheer .armL{transform:rotate(-160deg)}#kid.cheer .armR{transform:rotate(160deg)}
 #kid.cheer .ball{animation:jug .8s ease-out}
 @keyframes legA{0%,100%{transform:rotate(-32deg)}50%{transform:rotate(32deg)}}
@@ -47094,9 +47098,9 @@ body.rd #kid{display:none}
 body.kidoff #kid{display:none}
 #kidT{font-size:17px!important;position:relative}#kidT[data-v]::after{position:absolute;right:-3px;bottom:-3px;font-size:12px;line-height:1;background:var(--surface);border-radius:50%;padding:1px}#kidT[data-v="1"]::after{content:"🔊"}#kidT[data-v="0"]::after{content:"🔇"}
 body.kidoff #kidT{opacity:.5}
-@media(max-width:1000px){#kid{bottom:calc(60px + env(safe-area-inset-bottom,0px));width:96px;height:102px}#kidf{transform-origin:0 100%}#kid .kb{width:80px;height:96px}#kid .ball{left:50px;top:70px;width:24px;height:24px}#kid .bsh{left:53px;width:19px}#kidb{left:28px;bottom:102px;font-size:11.5px}}
+@media(max-width:1000px){#kid{bottom:calc(60px + env(safe-area-inset-bottom,0px));width:96px;height:102px}#kid .kb{width:80px;height:96px}#kid .ball{left:50px;top:70px;width:24px;height:24px}#kid .bsh{left:53px;width:19px}#kidb{left:28px;bottom:102px;font-size:11.5px}}
 </style>
-<div id="kid" aria-hidden="true"><div id="kidb"></div><div id="kidf">
+<div id="kid" aria-hidden="true"><div id="kidb"></div><div id="kidf"><div id="kidj">
 <svg class="kb" viewBox="0 0 100 120"><g class="bob">
 <g class="pt legL"><rect x="40" y="82" width="9" height="26" rx="4" fill="#ffd7b5"/><rect x="40" y="96" width="9" height="12" fill="#fff"/><rect x="40" y="99" width="9" height="3" fill="#e03131"/><ellipse cx="46" cy="110" rx="9" ry="5" fill="#222"/></g>
 <g class="pt legR"><rect x="53" y="82" width="9" height="26" rx="4" fill="#ffd7b5"/><rect x="53" y="96" width="9" height="12" fill="#fff"/><rect x="53" y="99" width="9" height="3" fill="#e03131"/><ellipse cx="60" cy="110" rx="9" ry="5" fill="#222"/></g>
@@ -47109,7 +47113,7 @@ body.kidoff #kidT{opacity:.5}
 </g></svg>
 <div class="bsh"></div>
 <svg class="ball" viewBox="0 0 30 30"><g class="spin pt"><circle cx="15" cy="15" r="13" fill="#fff" stroke="#222" stroke-width="1.6"/><polygon points="15,9 20,12.6 18,18.4 12,18.4 10,12.6" fill="#222"/><path d="M15 9V3M20 12.6l6-2M18 18.4l4 5M12 18.4l-4 5M10 12.6l-6-2" stroke="#222" stroke-width="1.4" fill="none"/></g></svg>
-</div></div>
+</div></div></div>
 <script>
 (function(){
 var B=document.body,$=function(s){return document.querySelector(s)},K=$('#kid'),F=$('#kidf'),BB=$('#kidb');
@@ -47133,16 +47137,18 @@ function pickV(h){var l=voices.filter(function(v){return h?/^hi/i.test(v.lang):/
 function talk(txt){if(!voiceOn||!synth||!ua||document.hidden||B.classList.contains('kidoff')||B.classList.contains('rd'))return;if(synth.speaking||synth.pending)return;
 var clean=txt.replace(/[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE0F}\u{200D}]/gu,'').replace(/\s+/g,' ').trim();if(!clean)return;
 var h=/[\u0900-\u097F]/.test(clean),u=new SpeechSynthesisUtterance(clean),v=pickV(h);u.lang=h?'hi-IN':'en-IN';if(v){try{u.voice=v}catch(e){}u.lang=v.lang}u.pitch=1.65;u.rate=1.06;u.volume=.95;try{synth.speak(u)}catch(e){}}
-function say(txt,ms,mute){BB.textContent=txt;BB.classList.add('on');clearTimeout(bt);bt=setTimeout(function(){BB.classList.remove('on')},ms||2600);if(!mute)talk(txt)}
-function flip(){F.style.transform='scaleX('+dir+')';BB.style.left=(dir>0?46:(K.offsetWidth-46-BB.offsetWidth))+'px'}
-function place(){K.style.transform='translateX('+Math.round(x)+'px)'}
+function say(txt,ms,mute){BB.textContent=txt;try{flip()}catch(e){}BB.classList.add('on');clearTimeout(bt);bt=setTimeout(function(){BB.classList.remove('on')},ms||2600);if(!mute)talk(txt)}
+function dirNow(){var t=getComputedStyle(F).transform,a=1;if(t&&t!=='none'){var v=parseFloat(t.split('(')[1]);if(!isNaN(v))a=v}return a<0?-1:1}
+function flip(){var d=dirNow(),w=BB.offsetWidth,kl=K.getBoundingClientRect().left,bl=d>0?46:(K.offsetWidth-46-w),abs=kl+bl;abs=Math.max(6,Math.min(innerWidth-6-w,abs));BB.style.left=(abs-kl)+'px'}
+function place(){}
+function setP(){var max=Math.max(0,innerWidth-K.offsetWidth);K.style.setProperty('--kw',max+'px');K.style.setProperty('--kd',Math.max(6,2*max/(innerWidth<700?60:78))+'s')}
 var IDLE=[['Keep going, you\'re doing great! 💪','लगे रहो, आप बढ़िया कर रहे हो! 💪'],['Code a little every day ☕','रोज़ थोड़ा कोड लिखो ☕'],['Practice makes perfect ⚽','प्रैक्टिस से ही परफ़ेक्ट बनते हैं ⚽'],['Tick topics as you learn ✅','सीखते जाओ और टिक लगाओ ✅'],['Try the Reader mode 🔊','रीडर मोड आज़माओ 🔊'],['Ask the AI tutor 💬','AI ट्यूटर से पूछो 💬']];
-function loop(){cancelAnimationFrame(raf);if(B.classList.contains('kidoff')||document.hidden)return;raf=requestAnimationFrame(tick)}
-function tick(now){var dt=Math.min(.05,(now-last)/1000);last=now;W=innerWidth;var max=Math.max(0,W-K.offsetWidth);
-if(mode==='run'){x+=dir*(scrolling>now?170:78)*dt;if(x>=max){x=max;dir=-1;flip()}if(x<=0){x=0;dir=1;flip()}
-if(now>idle){setMode('juggle',3400);say(L('Watch this! ⚽','देखो ये! ⚽'));idle=now+11000+Math.random()*7000}}
-else if(now>until){setMode('run');if(Math.random()<.6){var m=IDLE[Math.floor(Math.random()*IDLE.length)];say(L(m[0],m[1]))}}
-place();raf=requestAnimationFrame(tick)}
+function loop(){}
+setInterval(function(){if(B.classList.contains('kidoff')||document.hidden||RM)return;var now=performance.now();
+if(mode==='run'){if(now>idle){setMode('juggle',3400);say(L('Watch this! ⚽','देखो ये! ⚽'));idle=now+11000+Math.random()*7000}}
+else if(now>until&&mode!=='x'){setMode('run');if(Math.random()<.6){var m=IDLE[Math.floor(Math.random()*IDLE.length)];say(L(m[0],m[1]))}}},400);
+setInterval(function(){if(BB.classList.contains('on'))flip()},80);
+setP();var rz=0;addEventListener('resize',function(){clearTimeout(rz);rz=setTimeout(setP,200)});addEventListener('orientationchange',function(){setTimeout(setP,300)});
 function cheer(txt){if(B.classList.contains('kidoff')||RM)return;setMode('cheer',900);say(txt,2200);idle=performance.now()+9000}
 addEventListener('scroll',function(){scrolling=performance.now()+400},{passive:true});
 document.addEventListener('visibilitychange',function(){last=performance.now();loop()});
