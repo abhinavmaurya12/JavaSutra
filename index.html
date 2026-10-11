@@ -46123,7 +46123,7 @@ ex.shutdown();</code></pre>
   </div>
   <footer class="site-foot">
     <span>Created by ABHINAV MAURYA</span>
-    <span class="ver">WebPage Vr. 2.1.4</span>
+    <span class="ver">WebPage Vr. 2.1.6</span>
   </footer>
 </div>
 
@@ -46261,7 +46261,7 @@ ex.shutdown();</code></pre>
     secs.forEach(function (s) {
       var a = document.createElement("a");
       a.href = "#" + s.id;
-      a.innerHTML = s.getAttribute("data-nav") || s.querySelector("h2").textContent;
+      a.innerHTML = s.getAttribute("data-nav") || (function (h) { var c = h.cloneNode(true); c.querySelectorAll("button").forEach(function (x) { x.remove(); }); return c.textContent.trim(); })(s.querySelector("h2"));
       nav.appendChild(a);
     });
     if ("IntersectionObserver" in window) {
@@ -46909,6 +46909,9 @@ fetch('https://api.anthropic.com/v1/messages',{method:'POST',signal:ctl.signal,h
 function pump(){return rd.read().then(function(o){if(o.done)return;buf+=dec.decode(o.value,{stream:true});var ls=buf.split('\n');buf=ls.pop();ls.forEach(function(l){if(l.indexOf('data:')!==0)return;try{var j=JSON.parse(l.slice(5));if(j.type=='content_block_delta'&&j.delta&&j.delta.text){full+=j.delta.text;a.innerHTML=md(full);M.scrollTop=M.scrollHeight}}catch(e){}});return pump()})}
 return pump()}).then(function(){if(!full){a.remove();add('e',L('No answer came back. Try rephrasing.','कोई जवाब नहीं आया। दोबारा पूछें।'))}else turns.push({role:'user',content:q},{role:'assistant',content:full})}).catch(function(e){if(e&&e.name=='AbortError'){if(full)turns.push({role:'user',content:q},{role:'assistant',content:full});else a.remove();return}
 a.remove();var m=e&&e.code=='http401'?L('Your API key was rejected. Check it in ⚙.','आपकी API key अस्वीकार हो गई। ⚙ में जाँचें।'):e&&e.code=='http429'?L('Rate limit reached. Try again soon.','सीमा पूरी हो गई। थोड़ी देर बाद कोशिश करें।'):e&&e.code?L('The API returned an error ','API से त्रुटि मिली ')+e.code.replace('http','')+(e.msg?': '+e.msg:''):L('Could not reach the AI (no internet or blocked). Showing notes search instead.','AI तक नहीं पहुँच सके (इंटरनेट नहीं या ब्लॉक)। नोट्स खोज दिखा रहे हैं।');add('e',esc(m));if(!e||!e.code)localSend(q,shown)}).then(function(){setBusy(false);ctl=null})}
+window.sutraAsk=function(sys,user){if(sample)return sample([{role:'user',content:sys},{role:'user',content:user}],{cache:false,modelTier:'quick'}).then(function(r){return r.text});
+if(key())return fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'content-type':'application/json','x-api-key':key(),'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},body:JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:1800,system:sys,messages:[{role:'user',content:user}]})}).then(function(r){return r.ok?r.json():Promise.reject({code:'http'+r.status})}).then(function(j){return(j.content||[]).map(function(c){return c.text||''}).join('')});
+return Promise.reject({code:'none'})};
 $('#cbK').onclick=function(){var k=$('#cbk');k.classList.toggle('on');if(k.classList.contains('on'))$('#cbkv').value=key()};
 $('#cbkS').onclick=function(){var v=$('#cbkv').value.trim();try{if(v)localStorage.setItem('jcbkey',v);else localStorage.removeItem('jcbkey')}catch(e){}$('#cbk').classList.remove('on');lab();add('a','<p>'+(v?L('API key saved. AI answers are on.','API key सेव हो गई। AI जवाब चालू हैं।'):L('No key entered.','कोई key नहीं डाली।'))+'</p>')};
 $('#cbkR').onclick=function(){try{localStorage.removeItem('jcbkey')}catch(e){}$('#cbkv').value='';$('#cbk').classList.remove('on');lab();add('a','<p>'+L('API key removed. Back to notes search.','API key हटा दी गई। नोट्स खोज पर वापस।')+'</p>')};
@@ -46940,7 +46943,7 @@ greet();
 <script>
 (function(){var b=document.querySelector('.bar .brand');if(!b||b.parentElement.classList.contains('bbox'))return;
 var w=document.createElement('div');w.className='bbox';b.parentNode.insertBefore(w,b);w.appendChild(b);
-var v=document.createElement('small');v.className='bver';v.textContent='WebPage Vr. 2.1.4';v.title='Version 2.1.4';w.appendChild(v)})();
+var v=document.createElement('small');v.className='bver';v.textContent='WebPage Vr. 2.1.6';v.title='Version 2.1.6';w.appendChild(v)})();
 </script><style id="nopc">#pc{display:none!important}</style><style id="volicon">#hrd svg{width:20px;height:20px;display:block}@media(max-width:380px){body:not(.home) .hb button#hrd{display:grid!important}}</style>
 <script>(function(){var b=document.getElementById('hrd');if(!b)return;b.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z" fill="currentColor"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>'})();</script><style id="jsqcss">
 #jsq{display:none;grid-column:1/-1;padding:18px 0 50px}
@@ -47243,4 +47246,165 @@ function addBtn(){var c=H&&H.querySelector('.hm-cta');if(!c)return;var b=c.query
 if(H){H.addEventListener('click',function(e){if(e.target.closest('[data-play]'))openG()});new MutationObserver(addBtn).observe(H,{childList:true,subtree:true});addBtn()}
 new MutationObserver(function(){addBtn();if(P.classList.contains('on')){lab()}}).observe(B,{attributes:true,attributeFilter:['class']});
 })();
-</script></body></html>
+</script><style id="toolscss">
+#tlm{position:fixed;inset:0;z-index:140;display:none;align-items:center;justify-content:center;background:rgba(5,10,25,.6);backdrop-filter:blur(5px);padding:12px}
+#tlm.on{display:flex;animation:fadeIn .2s}
+.tlc{width:min(100%,560px);max-height:calc(100vh - 24px);display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.45);animation:pop .3s cubic-bezier(.3,1.3,.5,1)}
+.tlh{display:flex;align-items:center;gap:10px;padding:12px 16px;color:#fff;background:linear-gradient(135deg,#e8590c,#c2255c 50%,#7048e8)}
+.tlh b{flex:1;font-size:15px}.tlh button{border:0;background:rgba(255,255,255,.22);color:#fff;width:32px;height:32px;border-radius:10px;cursor:pointer}
+#tlb{padding:16px;overflow-y:auto}
+.tlq{font-size:16px;font-weight:700;line-height:1.5;margin:6px 0 12px}
+.tlo{display:block;width:100%;text-align:left;margin:0 0 8px;padding:11px 14px;border:1.5px solid var(--line);background:var(--surface);color:var(--fg);border-radius:13px;font:600 14.5px var(--font-body);cursor:pointer;transition:.15s}
+.tlo:hover:not(:disabled){border-color:var(--accent);background:var(--accent-soft)}
+.tlo.ok{border-color:#2f9e44;background:#ebfbee;color:#1b5e20}.tlo.bad{border-color:#e03131;background:#fff0f0;color:#a61e1e}
+.tlw{margin:8px 0 12px;padding:10px 12px;border-left:4px solid var(--ac2);background:color-mix(in srgb,var(--ac2) 8%,var(--surface));border-radius:0 10px 10px 0;font-size:13.5px;line-height:1.55}
+.tlbtn{border:0;border-radius:13px;padding:11px 22px;background:linear-gradient(135deg,var(--accent),var(--ac2));color:#fff;font:800 14.5px var(--font-body);cursor:pointer;margin:2px 6px 2px 0}
+.tlbtn.g{background:var(--surface);color:var(--accent);border:1.5px solid var(--accent)}
+.tlp{height:6px;border-radius:9px;background:var(--line);overflow:hidden;margin-bottom:6px}.tlp i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--ac2));transition:width .3s}
+.tlres{text-align:center;padding:10px 0}.tlres .big{font-size:54px;font-weight:800;background:linear-gradient(90deg,var(--accent),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.tln{width:100%;min-height:150px;resize:vertical;padding:12px;border:1.5px solid var(--line);border-radius:13px;background:var(--bg);color:var(--fg);font:14px/1.5 var(--font-body);outline:0}.tln:focus{border-color:var(--accent)}
+.tlsp{display:flex;align-items:center;gap:10px;color:var(--muted);padding:26px 0;justify-content:center}.tlsp i{width:22px;height:22px;border:3px solid var(--line);border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite}
+.tlcap{min-height:78px;margin:10px 0;padding:10px 12px;border-radius:12px;background:var(--accent-soft);font-size:14px;line-height:1.55}.tlcap code{background:rgba(0,0,0,.07);padding:1px 6px;border-radius:5px}
+.tlsvg{width:100%;height:auto;display:block;background:var(--bg);border:1px solid var(--line);border-radius:14px}
+.tlsvg .stb{fill:var(--surface);stroke:var(--line);stroke-width:2;transition:fill .4s,stroke .4s}.tlsvg .stb.on{fill:var(--accent-soft);stroke:var(--accent);stroke-width:3}
+.tlsvg text{font:700 11.5px var(--font-mono);fill:var(--fg);text-anchor:middle}.tlsvg .lk{stroke:var(--muted);stroke-width:1.5;stroke-dasharray:4 4;opacity:.6}.tlsvg .lb{font-size:9.5px;fill:var(--muted);font-weight:600}
+#tok{transition:transform .9s cubic-bezier(.4,0,.2,1)}
+.gch{display:flex;flex-wrap:wrap;gap:8px;min-height:116px;padding:12px;background:var(--bg);border:1px solid var(--line);border-radius:14px;align-content:flex-start}
+.gco{width:46px;height:46px;border-radius:12px;background:#adb5bd;display:grid;place-items:center;font-size:18px;color:#fff;transition:background .4s,transform .5s,opacity .5s,width .5s,margin .5s;transform:scale(0);opacity:0}
+.gco.in{transform:scale(1);opacity:1}.gco.mk{background:#2f9e44}.gco.sw{transform:scale(0);opacity:0}.gco.gone{width:0;margin:0 -4px;padding:0}
+.gcr{font:700 11px var(--font-mono);color:var(--muted);margin:0 0 6px}
+.qzb,.tlx{display:inline-flex;align-items:center;gap:6px;margin:6px 8px 6px 0;padding:7px 14px;border:1.5px solid var(--accent);background:var(--accent-soft);color:var(--accent);border-radius:99px;font:700 13px var(--font-body);cursor:pointer}
+.qzb:hover,.tlx:hover{background:var(--accent);color:#fff}
+.bm,.nt{position:static!important;display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;margin-left:6px;width:26px;height:26px;border-radius:8px;border:1.5px solid var(--line);background:none;cursor:pointer;font-size:13px;line-height:1;padding:0;color:var(--muted);transition:.15s;flex:none}
+.bm:hover,.nt:hover{border-color:var(--accent);transform:scale(1.1)}.bm.on{border-color:#f59f00;background:#fff3bf;color:#f59f00}.nt.on{border-color:var(--ac2);background:color-mix(in srgb,var(--ac2) 14%,transparent);color:var(--ac2)}
+.partbar{display:flex;flex-wrap:wrap;gap:4px;margin:14px 0 0}
+.part:not(#part-notes) section>h2 .bm,.part:not(#part-notes) section>h2 .nt{margin-left:8px}
+.bm,.nt{border:2px solid var(--muted)!important;border-radius:8px;background:var(--surface)!important;box-shadow:0 1px 2px rgba(0,0,0,.12)}
+.bm:hover,.nt:hover{border-color:var(--accent)!important}
+.bm.on{border-color:#f59f00!important;background:#fff3bf!important}
+.nt.on{border-color:var(--ac2,var(--accent))!important}
+.lib{display:grid;grid-template-columns:1fr 1fr;gap:14px}.lib h3{margin:0 0 8px}.lib ul{list-style:none;margin:0;padding:0}.lib li{padding:7px 0;border-bottom:1px solid var(--line);font-size:14px}.lib li button{all:unset;cursor:pointer;color:var(--fg)}.lib li button:hover{color:var(--accent)}.lib li small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+@media(max-width:800px){.lib{grid-template-columns:1fr}}
+</style>
+<div id="tlm" role="dialog"><div class="tlc"><div class="tlh"><b id="tlt"></b><button id="tlx" aria-label="Close">✕</button></div><div id="tlb"></div></div></div>
+<script>
+(function(){
+var B=document.body,$=function(s){return document.querySelector(s)},H=$('#home'),M=$('#tlm'),BD=$('#tlb');
+function L(e,h){return B.classList.contains('hi')?h:e}
+var PARTS={oops:{id:'part-oops',tag:'oop',en:'OOPs',hi:'OOPs',nm:'OOPs in Java'},collections:{id:'part-collections',tag:'coll',en:'Collections',hi:'कलेक्शन्स',nm:'Collections Framework'},threads:{id:'part-threads',tag:'thread',en:'Threads',hi:'थ्रेड्स',nm:'Threads in Java'}};
+function esc(x){return String(x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function sv(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}function ld(k,d){try{return JSON.parse(localStorage.getItem(k)||'')||d}catch(e){return d}}
+function say(t){try{window.sutraSay&&window.sutraSay(t,2400)}catch(e){}}
+var timer=null;function openM(t){clearInterval(timer);timer=null;$('#tlt').textContent=t;M.classList.add('on');B.classList.add('playing')}
+function closeM(){clearInterval(timer);timer=null;M.classList.remove('on');B.classList.remove('playing')}
+$('#tlx').onclick=closeM;M.addEventListener('pointerdown',function(e){if(e.target===M)closeM()});addEventListener('keydown',function(e){if(e.key==='Escape'&&M.classList.contains('on'))closeM()});
+function goSec(n,id){closeM();B.classList.remove('home','jsq');$('#seg-notes').click();setTimeout(function(){var a=$('#nav a[data-n="'+n+'"]');a&&a.click();var k=0,iv=setInterval(function(){var e=document.getElementById(id);if(e||++k>30){clearInterval(iv);if(e){e.scrollIntoView({block:'start'});e.style.outline='2px solid var(--accent)';setTimeout(function(){e.style.outline=''},2200)}}},80)},160)}
+/* ---------- QUIZ ---------- */
+var BANK=[
+['oop','Which OOP concept hides data using private fields and public getters/setters?',['Polymorphism','Encapsulation','Inheritance','Abstraction'],1,'Encapsulation wraps data and controls access to it.'],
+['oop','Method overloading is resolved at…',['Compile time','Runtime','Class-loading time','Garbage collection'],0,'Overloading is compile-time polymorphism; overriding is runtime.'],
+['oop','Can a Java class extend more than one class?',['Yes','No, but it can implement many interfaces','Only abstract classes','Only final classes'],1,'Java has no multiple inheritance through classes; interfaces fill the gap.'],
+['oop','Which keyword prevents a method from being overridden?',['static','abstract','final','private only'],2,'A final method cannot be overridden in a subclass.'],
+['oop','What does super() do inside a constructor?',['Calls the parent constructor','Creates a new object','Calls the same class constructor','Ends the constructor'],0,'super() invokes the parent class constructor.'],
+['coll','Which collection does NOT allow duplicate elements?',['ArrayList','LinkedList','HashSet','Vector'],2,'A Set stores unique elements.'],
+['coll','How many null keys can a HashMap hold?',['None','One','Two','Unlimited'],1,'HashMap allows one null key (Hashtable allows none).'],
+['coll','Which Map keeps keys in insertion order?',['HashMap','TreeMap','LinkedHashMap','Hashtable'],2,'LinkedHashMap maintains insertion order.'],
+['coll','What is the usual time complexity of ArrayList.get(i)?',['O(n)','O(log n)','O(1)','O(n log n)'],2,'ArrayList is array-backed, so random access is O(1).'],
+['coll','Which interface is used for natural ordering of objects?',['Comparator','Comparable','Iterable','Collection'],1,'Comparable defines natural order with compareTo().'],
+['thread','Which method actually starts a new thread?',['run()','start()','begin()','execute()'],1,'start() creates the new call stack; run() alone runs in the current thread.'],
+['thread','What is the state of a thread right after creation, before start()?',['NEW','RUNNABLE','BLOCKED','WAITING'],0,'NEW means created but not started.'],
+['thread','wait(), notify() and notifyAll() belong to which class?',['Thread','Runnable','Object','System'],2,'They are methods of Object and are used inside synchronized code.'],
+['thread','Calling run() directly on a Thread object…',['Starts a new thread','Runs in the current thread','Throws an exception','Does nothing'],1,'No new thread is created; the code runs in the caller thread.'],
+['thread','Which keyword lets only one thread enter a block at a time?',['volatile','transient','synchronized','static'],2,'synchronized acquires the object monitor.'],
+['str','String in Java is…',['Mutable','Immutable','A primitive','Always null'],1,'Strings are immutable; use StringBuilder to modify.'],
+['exc','Which of these is a checked exception?',['NullPointerException','ArithmeticException','IOException','ArrayIndexOutOfBoundsException'],2,'IOException must be handled or declared.'],
+['exc','The finally block runs…',['Only on error','Almost always, even after return','Never after return','Only if no exception'],1,'It runs in nearly all cases except System.exit() or a JVM crash.'],
+['jvm','Where does the JVM store objects?',['Stack','Heap','Register','Method area only'],1,'Objects live on the heap; local variables and frames on the stack.'],
+['jvm','What does garbage collection reclaim?',['Unreachable objects','All objects','Local variables','Class files'],0,'Objects no longer reachable from GC roots are freed.'],
+['jvm','Java is platform independent because of…',['Bytecode and the JVM','The compiler only','The OS','Source code sharing'],0,'javac produces bytecode that any JVM can run.'],
+['jvm','The Java Platform Module System (JPMS) was introduced in…',['Java 7','Java 8','Java 9','Java 11'],2,'Modules arrived in Java 9 with module-info.java.']];
+function tagFor(n){if(n==6||n==7||n==11||n==12)return'oop';if(n==13||n==14)return'coll';if(n==17)return'thread';if(n==5)return'str';if(n==9)return'exc';if(n>=28)return'jvm';return''}
+function pickBank(tag,k){var l=BANK.filter(function(q){return!tag||q[0]===tag});if(l.length<k)l=BANK.slice();l=l.slice().sort(function(){return Math.random()-.5}).slice(0,k);return l.map(function(q){return{q:q[1],o:q[2],a:q[3],w:q[4]}})}
+function runQuiz(title,qs,key,note){var i=0,sc=0;openM(title);
+function show(){if(i>=qs.length)return end();var q=qs[i];BD.innerHTML='<div class="tlp"><i style="width:'+(i/qs.length*100)+'%"></i></div><small style="color:var(--muted)">'+L('Question','प्रश्न')+' '+(i+1)+' / '+qs.length+(note?' · '+note:'')+'</small><div class="tlq">'+esc(q.q)+'</div><div id="tlop"></div><div id="tlfb"></div>';
+q.o.forEach(function(t,k){var b=document.createElement('button');b.className='tlo';b.textContent=t;b.onclick=function(){pick(k)};$('#tlop').appendChild(b)});
+function pick(k){var bs=BD.querySelectorAll('.tlo');bs.forEach(function(x,j){x.disabled=true;if(j===q.a)x.classList.add('ok');else if(j===k)x.classList.add('bad')});if(k===q.a)sc++;
+$('#tlfb').innerHTML='<div class="tlw">'+(k===q.a?'✅ '+L('Correct!','सही!'):'❌ '+L('Not quite.','सही नहीं।'))+' '+esc(q.w||'')+'</div><button class="tlbtn" id="tlnx">'+(i+1>=qs.length?L('See result','नतीजा देखें'):L('Next →','अगला →'))+'</button>';$('#tlnx').onclick=function(){i++;show()}}}
+function end(){var pct=Math.round(sc/qs.length*100),h=ld('jquiz',{});if(key&&(h[key]||0)<pct){h[key]=pct;sv('jquiz',h)}
+BD.innerHTML='<div class="tlres"><div class="big">'+sc+' / '+qs.length+'</div><div style="font-size:18px;font-weight:700;margin:4px 0">'+(pct>=80?'🏆 '+L('Excellent!','शानदार!'):pct>=50?'👍 '+L('Good job!','अच्छा किया!'):'💪 '+L('Keep practicing!','अभ्यास जारी रखो!'))+'</div><p style="color:var(--muted)">'+L('Score','स्कोर')+' '+pct+'%</p><button class="tlbtn" id="tlag">'+L('Try again','दोबारा')+'</button><button class="tlbtn g" id="tlcl">'+L('Close','बंद करें')+'</button></div>';
+$('#tlag').onclick=function(){i=0;sc=0;show()};$('#tlcl').onclick=closeM;say(pct>=80?L('Wow! You aced it!','वाह! आपने कमाल कर दिया!'):L('Nice try! Keep going!','अच्छी कोशिश! लगे रहो!'))}
+show()}
+function chapterText(n){var t=document.getElementById('tpl-b'+n);if(!t)return'';var out=[];t.content.querySelectorAll('h3[id],p,li').forEach(function(e){if(e.closest('pre'))return;var x=e.textContent.trim();if(x)out.push(x)});var all=out.join('\n'),len=all.length;if(len<=6000)return all;var st=Math.floor(Math.random()*(len-6000));return all.slice(st,st+6000)}
+function chapQuiz(n,name){var tag=tagFor(n),title='🧠 '+L('Quiz','क्विज़')+' · '+name;openM(title);
+if(!window.sutraAsk){runQuiz(title,pickBank(tag,5),'c'+n,L('General Java questions (offline)','सामान्य जावा प्रश्न (ऑफ़लाइन)'));return}
+BD.innerHTML='<div class="tlsp"><i></i>'+L('Writing questions from this chapter…','इस अध्याय से प्रश्न बना रहे हैं…')+'</div>';
+var sys='You write accurate Java multiple-choice quizzes. Reply with ONLY a JSON array, no markdown fences, no text before or after. Each item: {"q":"question","o":["A","B","C","D"],"a":correctIndex0to3,"w":"one-sentence explanation"}. Exactly 4 options, one correct, plausible distractors, mix easy and medium difficulty.'+(B.classList.contains('hi')?' Write in simple Hindi/Hinglish but keep Java keywords and code in English.':'');
+window.sutraAsk(sys,'Create 5 multiple-choice questions based on these notes from the chapter "'+name+'":\n\n'+chapterText(n)).then(function(txt){var a=txt.indexOf('['),b=txt.lastIndexOf(']'),qs=JSON.parse(txt.slice(a,b+1)).filter(function(q){return q&&q.q&&Array.isArray(q.o)&&q.o.length===4&&q.a>=0&&q.a<4}).map(function(q){return{q:q.q,o:q.o,a:q.a,w:q.w}});if(qs.length<3)throw 0;runQuiz(title,qs.slice(0,5),'c'+n,'AI')}).catch(function(){runQuiz(title,pickBank(tag,5),'c'+n,L('AI unavailable · general Java questions','AI उपलब्ध नहीं · सामान्य जावा प्रश्न'))})}
+function mixQuiz(){runQuiz('🧠 '+L('Quick Java quiz','क्विक जावा क्विज़'),pickBank('',8),'mix',L('Mixed topics','मिले-जुले टॉपिक'))}
+/* ---------- EXPLAINERS ---------- */
+function steps(title,caps,paint,reset,extra){openM(title);BD.innerHTML=extra+'<div class="tlcap" id="tlc"></div><div><button class="tlbtn" id="tlp">▶ '+L('Play','चलाएँ')+'</button><button class="tlbtn g" id="tls">⏭ '+L('Step','अगला')+'</button><button class="tlbtn g" id="tlr">↺ '+L('Reset','रीसेट')+'</button></div>';
+var i=-1;function go(k){i=k;paint(i);$('#tlc').innerHTML=caps[i]}function nx(){if(i>=caps.length-1){clearInterval(timer);timer=null;$('#tlp').textContent='▶ '+L('Play','चलाएँ');return false}go(i+1);return true}
+function rs(){clearInterval(timer);i=-1;reset();$('#tlc').innerHTML=L('Press <b>Play</b> or <b>Step</b> to begin.','शुरू करने के लिए <b>चलाएँ</b> या <b>अगला</b> दबाएँ।');$('#tlp').textContent='▶ '+L('Play','चलाएँ')}
+$('#tlp').onclick=function(){if(timer){clearInterval(timer);timer=null;$('#tlp').textContent='▶ '+L('Play','चलाएँ');return}if(i>=caps.length-1)rs();$('#tlp').textContent='⏸ '+L('Pause','रोकें');nx();timer=setInterval(function(){if(!nx()){timer=null}},2400)};
+$('#tls').onclick=function(){clearInterval(timer);timer=null;$('#tlp').textContent='▶ '+L('Play','चलाएँ');if(i>=caps.length-1)rs();else nx()};$('#tlr').onclick=rs;rs()}
+var ST={NEW:[16,118],RUNNABLE:[205,118],TERMINATED:[394,118],BLOCKED:[205,18],WAITING:[40,222],TIMED_WAITING:[370,222]};
+function threadAnim(){var names=Object.keys(ST),svg='<svg class="tlsvg" viewBox="0 0 520 290">';
+[['NEW','RUNNABLE','start()'],['RUNNABLE','TERMINATED','run() ends'],['RUNNABLE','BLOCKED','lock busy'],['RUNNABLE','WAITING','wait()'],['RUNNABLE','TIMED_WAITING','sleep(ms)']].forEach(function(l){var a=ST[l[0]],b=ST[l[1]];svg+='<line class="lk" x1="'+(a[0]+55)+'" y1="'+(a[1]+22)+'" x2="'+(b[0]+55)+'" y2="'+(b[1]+22)+'"/><text class="lb" x="'+((a[0]+b[0])/2+55)+'" y="'+((a[1]+b[1])/2+18)+'">'+l[2]+'</text>'});
+names.forEach(function(n){var p=ST[n];svg+='<rect class="stb" data-s="'+n+'" x="'+p[0]+'" y="'+p[1]+'" width="110" height="44" rx="12"/><text x="'+(p[0]+55)+'" y="'+(p[1]+26)+'">'+n+'</text>'});
+svg+='<circle id="tok" r="9" cx="0" cy="0" fill="#e8590c" stroke="#fff" stroke-width="2.5" style="transform:translate(60px,118px)"/></svg>';
+var seq=['NEW','RUNNABLE','BLOCKED','RUNNABLE','WAITING','RUNNABLE','TIMED_WAITING','RUNNABLE','TERMINATED'];
+var caps=[L('<code>Thread t = new Thread(task);</code> The thread object exists but has not started.','<code>Thread t = new Thread(task);</code> थ्रेड ऑब्जेक्ट बन गया है लेकिन शुरू नहीं हुआ।'),L('<code>t.start()</code> The thread is now <b>RUNNABLE</b>, ready or running under the JVM scheduler.','<code>t.start()</code> अब थ्रेड <b>RUNNABLE</b> है, JVM शेड्यूलर के तहत तैयार या चल रहा है।'),L('It reaches a <code>synchronized</code> block but another thread holds the lock, so it is <b>BLOCKED</b>.','यह <code>synchronized</code> ब्लॉक तक पहुँचा लेकिन लॉक दूसरे थ्रेड के पास है, इसलिए <b>BLOCKED</b>।'),L('The lock is released and acquired, so it is <b>RUNNABLE</b> again.','लॉक मिल गया, इसलिए यह फिर <b>RUNNABLE</b> है।'),L('<code>obj.wait()</code> The thread waits indefinitely and releases the monitor: <b>WAITING</b>.','<code>obj.wait()</code> थ्रेड अनिश्चित समय तक इंतज़ार करता है और मॉनिटर छोड़ देता है: <b>WAITING</b>।'),L('Another thread calls <code>obj.notify()</code>. It wakes up and is <b>RUNNABLE</b>.','दूसरा थ्रेड <code>obj.notify()</code> कॉल करता है। यह जागकर <b>RUNNABLE</b> हो जाता है।'),L('<code>Thread.sleep(1000)</code> Waits for a fixed time: <b>TIMED_WAITING</b>.','<code>Thread.sleep(1000)</code> तय समय तक इंतज़ार: <b>TIMED_WAITING</b>।'),L('The time is over, so it is <b>RUNNABLE</b> again.','समय पूरा हुआ, इसलिए फिर <b>RUNNABLE</b>।'),L('<code>run()</code> finished. The thread is <b>TERMINATED</b> and cannot be restarted.','<code>run()</code> खत्म हुआ। थ्रेड <b>TERMINATED</b> है और दोबारा शुरू नहीं हो सकता।')];
+steps('🧵 '+L('Thread lifecycle','थ्रेड लाइफ़साइकिल'),caps,function(i){var s=seq[i],p=ST[s];$('#tok').style.transform='translate('+(p[0]+55)+'px,'+(p[1]+22)+'px)';BD.querySelectorAll('.stb').forEach(function(r){r.classList.toggle('on',r.dataset.s===s)})},function(){$('#tok').style.transform='translate(60px,118px)';BD.querySelectorAll('.stb').forEach(function(r){r.classList.remove('on')})},svg)}
+function gcAnim(){var live=[1,0,1,1,0,0,1,0,1,0,0,1],hold='<div class="gcr">'+L('HEAP (objects in memory)','HEAP (मेमोरी में ऑब्जेक्ट्स)')+'</div><div class="gch" id="gch"></div>',els=[];
+var caps=[L('<b>1. Allocate</b> — the program creates objects with <code>new</code>. They fill the heap.','<b>1. Allocate</b> — प्रोग्राम <code>new</code> से ऑब्जेक्ट बनाता है। वे heap भरते हैं।'),L('<b>2. Mark</b> — the GC starts from GC roots (stack variables, statics) and marks every <b>reachable</b> object green.','<b>2. Mark</b> — GC, GC roots (stack वेरिएबल, static) से शुरू करके हर <b>पहुँच-योग्य</b> ऑब्जेक्ट को हरा चिह्नित करता है।'),L('<b>3. Sweep</b> — objects that were never marked are unreachable, so their memory is reclaimed.','<b>3. Sweep</b> — जो ऑब्जेक्ट चिह्नित नहीं हुए वे unreachable हैं, उनकी मेमोरी वापस ली जाती है।'),L('<b>4. Compact</b> — survivors slide together so free memory is one big block again.','<b>4. Compact</b> — बचे हुए ऑब्जेक्ट साथ आ जाते हैं ताकि खाली मेमोरी फिर एक बड़ा ब्लॉक बने।')];
+steps('♻️ '+L('Garbage collection','गार्बेज कलेक्शन'),caps,function(i){if(i===0)els.forEach(function(e,k){setTimeout(function(){e.classList.add('in')},k*70)});if(i===1)els.forEach(function(e,k){if(live[k]){e.classList.add('mk');e.textContent='✓'}});if(i===2)els.forEach(function(e,k){if(!live[k])e.classList.add('sw')});if(i===3)els.forEach(function(e,k){if(!live[k])e.classList.add('gone')})},function(){var c=$('#gch');c.innerHTML='';els=live.map(function(){var d=document.createElement('div');d.className='gco';c.appendChild(d);return d})},hold)}
+/* ---------- BOOKMARKS & NOTES ---------- */
+function bms(){return ld('jbm',[])}function nts(){return ld('jnotes',{})}
+function chapOf(el){var a=el.closest('article.book'),m=a&&/(\d+)/.exec((a.querySelector('.eyebrow')||{}).textContent||'');return m?+m[1]:0}
+function decorate(){document.querySelectorAll('article.book h3[id]:not([data-bn])').forEach(function(h){h.dataset.bn=1;var n=chapOf(h),title=h.textContent.replace(/[✓★✎]/g,'').trim(),b=document.createElement('button'),t=document.createElement('button');
+b.className='bm'+(bms().some(function(x){return x.id===h.id})?' on':'');b.textContent='★';b.title=L('Bookmark','बुकमार्क');t.className='nt'+(nts()[h.id]?' on':'');t.textContent='✎';t.title=L('My note','मेरा नोट');
+b.onclick=function(e){e.preventDefault();e.stopPropagation();var l=bms(),k=l.findIndex(function(x){return x.id===h.id});if(k>=0)l.splice(k,1);else l.unshift({id:h.id,n:n,t:title});sv('jbm',l);b.classList.toggle('on',k<0);lib();if(k<0)say(L('Bookmarked!','बुकमार्क हो गया!'))};
+t.onclick=function(e){e.preventDefault();e.stopPropagation();noteEd(h.id,n,title,t)};h.appendChild(b);h.appendChild(t)})}
+function noteEd(id,n,title,btn,p){var all=nts();openM('✎ '+L('My note','मेरा नोट'));BD.innerHTML='<div style="color:var(--muted);font-size:13px;margin-bottom:8px">'+esc(title)+'</div><textarea class="tln" id="tlta" placeholder="'+L('Write your own note for this section…','इस सेक्शन के लिए अपना नोट लिखें…')+'">'+esc((all[id]||{}).tx||'')+'</textarea><div style="margin-top:10px"><button class="tlbtn" id="tlsv">'+L('Save','सेव')+'</button><button class="tlbtn g" id="tldl">'+L('Delete','हटाएँ')+'</button></div>';
+$('#tlsv').onclick=function(){var v=$('#tlta').value.trim(),a=nts();if(v)a[id]={n:n,t:title,tx:v,p:p};else delete a[id];sv('jnotes',a);if(btn)btn.classList.toggle('on',!!v);closeM();lib();if(v)say(L('Note saved!','नोट सेव हो गया!'))};
+$('#tldl').onclick=function(){var a=nts();delete a[id];sv('jnotes',a);if(btn)btn.classList.remove('on');closeM();lib()};setTimeout(function(){$('#tlta').focus()},200)}
+/* ---------- HOME + CHAPTER BUTTONS ---------- */
+function libHtml(){var b=bms().slice(0,6),n=nts(),ids=Object.keys(n).slice(0,6);
+return'<div class="lib"><div class="hm-card"><h3>★ '+L('Bookmarks','बुकमार्क')+'</h3>'+(b.length?'<ul>'+b.map(function(x){return'<li><button '+(x.p?'data-pgo':'data-go')+'="'+x.id+'" data-n="'+x.n+'" data-p="'+(x.p||'')+'">'+esc(x.t)+'</button><small>'+where(x)+'</small></li>'}).join('')+'</ul>':'<p>'+L('Tap ★ next to any topic to save it here.','किसी भी टॉपिक के पास ★ दबाकर उसे यहाँ सेव करें।')+'</p>')+'</div><div class="hm-card"><h3>✎ '+L('My notes','मेरे नोट्स')+'</h3>'+(ids.length?'<ul>'+ids.map(function(k){var x=n[k];return'<li><button '+(x.p?'data-pgo':'data-go')+'="'+k+'" data-n="'+x.n+'" data-p="'+(x.p||'')+'">'+esc(x.t)+'</button><small>'+(x.p?where(x)+' · ':'')+''+esc(x.tx.slice(0,90))+(x.tx.length>90?'…':'')+'</small></li>'}).join('')+'</ul>':'<p>'+L('Tap ✎ next to any topic to write your own note.','किसी भी टॉपिक के पास ✎ दबाकर अपना नोट लिखें।')+'</p>')+'</div></div>'}
+function lib(){var l=$('#tlib');if(l)l.innerHTML=libHtml()}
+function tools(){if(!H)return;var q=H.querySelector('.hm-quick:not([data-tools])');if(!q||H.querySelector('[data-tools]'))return;var qb=ld('jquiz',{}),best=qb.mix;
+q.insertAdjacentHTML('afterend','<div class="hm-h" data-tools>🧰 '+L('Study tools','स्टडी टूल्स')+'<small>'+L('Quizzes, animations, bookmarks and notes','क्विज़, एनिमेशन, बुकमार्क और नोट्स')+'</small></div><div class="hm-quick" data-tools><button class="hm-q" data-act="quiz"><div class="e">🧠</div><b>'+L('Quick quiz','क्विक क्विज़')+'</b><span>'+L('8 mixed questions','8 मिले-जुले प्रश्न')+(best?' · '+L('best','बेस्ट')+' '+best+'%':'')+'</span></button><button class="hm-q" data-act="thr"><div class="e">🧵</div><b>'+L('Thread lifecycle','थ्रेड लाइफ़साइकिल')+'</b><span>'+L('Watch the states move','स्टेट्स को चलते देखें')+'</span></button><button class="hm-q" data-act="gc"><div class="e">♻️</div><b>'+L('Garbage collection','गार्बेज कलेक्शन')+'</b><span>'+L('Mark, sweep, compact','Mark, sweep, compact')+'</span></button></div><div id="tlib" data-tools style="margin-top:14px">'+libHtml()+'</div>')}
+if(H){H.addEventListener('click',function(e){var a=e.target.closest('[data-act]'),g=e.target.closest('[data-go],[data-pgo]');if(a){var k=a.dataset.act;k==='quiz'?mixQuiz():k==='thr'?threadAnim():gcAnim()}else if(g)(g.dataset.pgo?goPart(g.dataset.p,g.dataset.pgo):goSec(+g.dataset.n,g.dataset.go))});new MutationObserver(tools).observe(H,{childList:true,subtree:true});tools()}
+function chapBtns(){var a=document.querySelector('article.book');if(!a||a.querySelector('.qzb'))return;var hd=a.querySelector('header,.part-head')||a.querySelector('h2');if(!hd)return;var n=+((/(\d+)/.exec((a.querySelector('.eyebrow')||{}).textContent||'')||[])[1]),name=(a.querySelector('h2')||{}).textContent||'';if(!n)return;
+var w=document.createElement('div');var q=document.createElement('button');q.className='qzb';q.textContent='🧠 '+L('Quiz this chapter','इस अध्याय का क्विज़');q.onclick=function(){chapQuiz(n,name.trim())};w.appendChild(q);
+if(n===17||n===30){var t=document.createElement('button');t.className='tlx';t.textContent='🧵 '+L('Thread lifecycle animation','थ्रेड लाइफ़साइकिल एनिमेशन');t.onclick=threadAnim;w.appendChild(t)}
+if(n===29||n===28){var g=document.createElement('button');g.className='tlx';g.textContent='♻️ '+L('Garbage collection animation','गार्बेज कलेक्शन एनिमेशन');g.onclick=gcAnim;w.appendChild(g)}
+hd.insertAdjacentElement('afterend',w)}
+var pend=0;new MutationObserver(function(){if(pend)return;pend=1;setTimeout(function(){pend=0;decorate();chapBtns();partDec()},90)}).observe(B,{childList:true,subtree:true});decorate();chapBtns();
+new MutationObserver(function(){var h=$('#home');if(h){h.querySelectorAll('[data-tools]').forEach(function(e){e.remove()});tools()}}).observe(B,{attributes:true,attributeFilter:['class']});
+
+/* ---------- OOPs / COLLECTIONS / THREADS (non-notes sections) ---------- */
+function where(x){if(x.p&&PARTS[x.p])return L(PARTS[x.p].en,PARTS[x.p].hi);return L('Part ','भाग ')+x.n}
+function goPart(p,id){closeM();B.classList.remove('home','jsq');var sg=$('#seg-'+p);sg&&sg.click();var k=0,iv=setInterval(function(){var e=document.getElementById(id);if(e&&!e.closest('[hidden]')||++k>30){clearInterval(iv);if(e){e.scrollIntoView({block:'start'});e.style.outline='2px solid var(--accent)';setTimeout(function(){e.style.outline=''},2200)}}},80)}
+function partText(p){var root=document.getElementById(PARTS[p].id);if(!root)return'';var out=[];root.querySelectorAll('section h2,section h3,section p,section li,section td,section th').forEach(function(e){if(e.closest('pre'))return;var x=e.textContent.replace(/[★✎✓]/g,'').replace(/Copy$/,'').trim();if(x)out.push(x)});var all=out.join('\n'),len=all.length;if(len<=6000)return all;var st=Math.floor(Math.random()*(len-6000));return all.slice(st,st+6000)}
+function partQuiz(p){var P=PARTS[p],name=L(P.en,P.hi),title='🧠 '+L('Quiz','क्विज़')+' · '+name;openM(title);var key='p-'+p;
+if(!window.sutraAsk){runQuiz(title,pickBank(P.tag,5),key,L('General Java questions (offline)','सामान्य जावा प्रश्न (ऑफ़लाइन)'));return}
+BD.innerHTML='<div class="tlsp"><i></i>'+L('Writing questions from this section…','इस सेक्शन से प्रश्न बना रहे हैं…')+'</div>';
+var sys='You write accurate Java multiple-choice quizzes. Reply with ONLY a JSON array, no markdown fences, no text before or after. Each item: {"q":"question","o":["A","B","C","D"],"a":correctIndex0to3,"w":"one-sentence explanation"}. Exactly 4 options, one correct, plausible distractors, mix easy and medium difficulty.'+(B.classList.contains('hi')?' Write in simple Hindi/Hinglish but keep Java keywords and code in English.':'');
+window.sutraAsk(sys,'Create 5 multiple-choice questions based on these notes from the section "'+P.nm+'":\n\n'+partText(p)).then(function(txt){var a=txt.indexOf('['),b=txt.lastIndexOf(']'),qs=JSON.parse(txt.slice(a,b+1)).filter(function(q){return q&&q.q&&Array.isArray(q.o)&&q.o.length===4&&q.a>=0&&q.a<4}).map(function(q){return{q:q.q,o:q.o,a:q.a,w:q.w}});if(qs.length<3)throw 0;runQuiz(title,qs.slice(0,5),key,'AI')}).catch(function(){runQuiz(title,pickBank(P.tag,5),key,L('AI unavailable · general Java questions','AI उपलब्ध नहीं · सामान्य जावा प्रश्न'))})}
+function partLabels(){document.querySelectorAll('[data-pq]').forEach(function(b){var p=b.dataset.pq,best=(ld('jquiz',{}))['p-'+p];b.textContent='🧠 '+L('Quiz this section','इस सेक्शन का क्विज़')+(best?' · '+best+'%':'')});
+document.querySelectorAll('[data-pthr]').forEach(function(b){b.textContent='🧵 '+L('Thread lifecycle animation','थ्रेड लाइफ़साइकिल एनिमेशन')});
+document.querySelectorAll('.part:not(#part-notes) .bm').forEach(function(b){b.title=L('Bookmark','बुकमार्क')});document.querySelectorAll('.part:not(#part-notes) .nt').forEach(function(b){b.title=L('My note','मेरा नोट')})}
+function partDec(){Object.keys(PARTS).forEach(function(p){var root=document.getElementById(PARTS[p].id);if(!root)return;
+if(!root.querySelector('[data-pq]')){var w=document.createElement('div');w.className='partbar';var q=document.createElement('button');q.className='qzb';q.dataset.pq=p;q.onclick=function(){partQuiz(p)};w.appendChild(q);
+if(p==='threads'){var t=document.createElement('button');t.className='tlx';t.dataset.pthr='1';t.onclick=threadAnim;w.appendChild(t)}
+root.insertBefore(w,root.firstElementChild);partLabels()}
+root.querySelectorAll('section[id] > h2:not([data-bn])').forEach(function(h){h.dataset.bn=1;var id=h.parentElement.id,title=h.textContent.trim(),b=document.createElement('button'),t=document.createElement('button');
+b.className='bm'+(bms().some(function(x){return x.id===id})?' on':'');b.textContent='★';b.title=L('Bookmark','बुकमार्क');t.className='nt'+(nts()[id]?' on':'');t.textContent='✎';t.title=L('My note','मेरा नोट');
+b.onclick=function(e){e.preventDefault();e.stopPropagation();var l=bms(),k=l.findIndex(function(x){return x.id===id});if(k>=0)l.splice(k,1);else l.unshift({id:id,n:0,p:p,t:title});sv('jbm',l);b.classList.toggle('on',k<0);lib();if(k<0)say(L('Bookmarked!','बुकमार्क हो गया!'))};
+t.onclick=function(e){e.preventDefault();e.stopPropagation();noteEd(id,0,title,t,p)};h.appendChild(b);h.appendChild(t)})})}
+new MutationObserver(function(){partLabels();lib()}).observe(B,{attributes:true,attributeFilter:['class']});
+partDec();
+})();
+</script>
+</body></html>
