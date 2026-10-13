@@ -47833,4 +47833,109 @@ function navProg(){document.querySelectorAll('#nav a').forEach(function(a){var m
 var t=0;function run(){reveal();countUp();navProg()}
 new MutationObserver(function(){if(t)return;t=setTimeout(function(){t=0;run()},150)}).observe(B,{childList:true,subtree:true});run();
 })();
+</script><style id="prem-css">.pm{margin-top:26px}.pm-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.pm-card{display:flex;flex-direction:column;gap:6px;transition:transform .2s,box-shadow .2s}.pm-card:hover{transform:translateY(-3px)}
+.pm-card h3{margin:0}.pm-card p{margin:0;opacity:.85}.pm-ic{font-size:28px;line-height:1}.pm-meta{font-size:12.5px;opacity:.7}
+.pm-act{margin-top:auto;padding-top:8px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}.pm-a{font-weight:600;color:var(--accent);text-decoration:none}.pm-a:hover{text-decoration:underline}
+.pm-chip{font:inherit;font-size:13px;cursor:pointer;color:inherit;background:transparent;border:1px solid var(--line);border-radius:99px;padding:5px 12px;margin:3px 5px 3px 0}
+.pm-chip:hover,.pm-chip:focus-visible{border-color:var(--accent);color:var(--accent)}.pm-chip em{font-style:normal;opacity:.65;font-size:11.5px}
+.pm-road{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.pm-stage{border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:14px;padding:14px 16px;position:relative}
+.pm-stage.s1{border-top-color:#2f9e6e}.pm-stage.s2{border-top-color:#c9822a}.pm-stage.s3{border-top-color:#7048e8}.pm-stage.s0{border-top-color:#2b7bd8}
+.pm-stage h4{margin:2px 0 2px;font-size:16px}.pm-n{position:absolute;right:12px;top:8px;font:700 26px var(--font-mono,monospace);opacity:.14}
+.pm-search{display:flex;gap:8px;max-width:560px;margin-top:16px}.pm-search input{flex:1;min-width:0;font:inherit;padding:11px 16px;border-radius:99px;border:0;background:#fff;color:#16212b;outline:0}
+.pm-search input:focus-visible{box-shadow:0 0 0 3px rgba(255,255,255,.55)}.pm-search button,.pm-sugg button{font:inherit;cursor:pointer;color:#fff;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.4);border-radius:99px;padding:9px 18px}
+.pm-sugg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px;color:#fff;font-size:13px}.pm-sugg button{padding:4px 12px;font-size:12.5px}
+.pm-foot{margin-top:40px;padding-top:22px;border-top:1px solid var(--line);display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px;font-size:14px}
+.pm-foot b{display:block;margin-bottom:6px}.pm-foot p{margin:0;opacity:.8}.pm-foot a{display:block;margin:3px 0;color:var(--accent);text-decoration:none}.pm-foot a:hover{text-decoration:underline}
+@media(max-width:700px){.pm-foot{grid-template-columns:1fr}.pm-search{flex-direction:column}}
+.fx{margin-top:44px;border-radius:20px;padding:30px 30px 18px;color:var(--fg);background:linear-gradient(180deg,var(--accent-soft),var(--surface) 38%);border:1px solid var(--line);position:relative;overflow:hidden}
+.fx::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--accent),var(--ac2))}
+.fx-top{display:grid;grid-template-columns:1.4fr 1fr;gap:26px;align-items:start;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.fx-logo{font:700 24px/1.2 var(--font-display,inherit);margin-bottom:8px;background:linear-gradient(90deg,var(--accent),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.fx-brand p{margin:0 0 12px;max-width:46ch;color:var(--muted);line-height:1.55}
+.fx-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px}
+.fx-stats div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.fx-stats b{display:block;font-size:22px;line-height:1.1;color:var(--accent)}.fx-stats span{font-size:12px;color:var(--muted)}
+.fx-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:22px;padding:24px 0}
+.fx-c h5{margin:0 0 10px;font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.fx-l{display:block;width:100%;font:inherit;font-size:14px;text-align:left;text-decoration:none;color:var(--fg);background:none;border:0;padding:4px 0;cursor:pointer;transition:color .15s,transform .15s}
+.fx-l:hover{color:var(--accent);transform:translateX(3px)}.fx-l:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+.fx-brand .fx-l{display:inline-block;width:auto;background:linear-gradient(135deg,var(--accent),var(--ac2));border-radius:99px;padding:8px 18px;color:#fff;font-weight:600}.fx-brand .fx-l:hover{color:#fff;transform:translateY(-1px)}
+.fx-bar{display:flex;flex-wrap:wrap;gap:10px 18px;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.fx-tools{display:flex;gap:10px;flex-wrap:wrap}.fx-tools .fx-l{width:auto;color:var(--fg);border:1px solid var(--line);border-radius:99px;padding:5px 14px;background:var(--surface)}
+.fx-tools .fx-l:hover{transform:none;border-color:var(--accent);color:var(--accent)}
+@media(max-width:760px){.fx{padding:22px 18px 14px}.fx-top{grid-template-columns:1fr}}
+@media print{.fx{display:none}}
+</style><script id="prem-js">(function(){try{
+var B=document.body,H=document.getElementById('home');if(!H)return;var Q=22,tm,tt;
+function hi(){return B.classList.contains('hi')}
+function T(e,h){return hi()&&h?h:e}
+function J(k,d){try{return JSON.parse(localStorage.getItem(k)||d)}catch(e){return JSON.parse(d)}}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;')}
+function names(){var n={};document.querySelectorAll('#nav a[data-n]').forEach(function(a){n[a.dataset.n]=a.textContent.replace(/^\s*\d+\s*·\s*/,'').replace(/\s+/g,' ').trim()});return n}
+function tpl(){var t={};document.querySelectorAll('template[id^="tpl-b"]').forEach(function(x){t[x.id.slice(5)]=x.content.querySelectorAll('h3[id]').length});return t}
+function openSearch(q){var b=[].slice.call(document.querySelectorAll('.hb button')).filter(function(x){return x.textContent.trim()==='🔍'})[0];if(!b)return;b.click();setTimeout(function(){var si=document.getElementById('si');if(si){si.value=q||'';si.dispatchEvent(new Event('input',{bubbles:true}))}},60)}
+function track(){var a=document.querySelector('article.book .eyebrow'),p=document.getElementById('part-notes');if(!a||!p||!p.offsetParent)return;var m=/(\d+)/.exec(a.textContent);if(!m)return;var n=+m[1],r=J('jrecent','[]');if(r[0]===n)return;r=r.filter(function(x){return x!==n});r.unshift(n);try{localStorage.setItem('jrecent',JSON.stringify(r.slice(0,6)))}catch(e){}}
+function build(){
+var n=names(),t=tpl(),per={},d=J('jdone','[]'),last=+localStorage.getItem('jlast')||0;
+d.forEach(function(k){var m=/^b(\d+)-/.exec(k);if(m)per[m[1]]=(per[m[1]]||0)+1});
+var chs=Object.keys(n).length,tops=0;for(var k in t)tops+=t[k];
+function rng(a,b){var o=[];for(var i=a;i<=b;i++)if(n[i])o.push(i);return o}
+function sm(a,o){return a.reduce(function(s,i){return s+(o[i]||0)},0)}
+function chip(i){return'<button class="pm-chip" data-ch="'+i+'">'+i+' · '+esc(n[i])+(per[i]?' <em>'+per[i]+'/'+(t[i]||0)+'</em>':'')+'</button>'}
+var core=rng(1,12),adv=rng(13,31),dsa=[4,5,13].filter(function(i){return n[i]});
+function card(ic,h,p,ids,btn){var td=sm(ids,per),tt2=sm(ids,t);return'<div class="hm-card pm-card"><div class="pm-ic">'+ic+'</div><h3>'+h+'</h3><p>'+p+'</p><div class="pm-meta">'+ids.length+' '+T('chapters','अध्याय')+' · '+tt2.toLocaleString()+' '+T('topics','टॉपिक')+'</div>'+(td?'<div class="hm-bar"><i style="width:'+Math.round(td/tt2*100)+'%"></i></div><div class="pm-meta">'+td+' / '+tt2+' '+T('learned','सीखे')+'</div>':'')+'<div class="pm-act">'+btn+'</div></div>'}
+function go(id,txt){return'<button class="hm-btn" data-ch="'+id+'">'+txt+'</button>'}
+var h='<div id="prem">';
+var rec=J('jrecent','[]').filter(function(x){return n[x]});
+if(rec.length)h+='<section class="pm"><div class="hm-h">'+T('Recently accessed','हाल ही में देखे गए')+'<small>'+T('Chapters you opened last','आपके खोले हुए अध्याय')+'</small></div><div>'+rec.map(chip).join('')+'</div></section>';
+h+='<section class="pm" id="pm-paths"><div class="hm-h">'+T('Choose your path','अपना रास्ता चुनें')+'<small>'+T('Four ways into the notes','नोट्स में आने के चार रास्ते')+'</small></div><div class="pm-grid">'
++card('☕',T('Core Java','कोर जावा'),T('Syntax, control flow, arrays, strings, OOP, exceptions and interfaces.','सिंटैक्स, कंट्रोल फ़्लो, ऐरे, स्ट्रिंग्स, OOP, एक्सेप्शन और इंटरफ़ेस।'),core,go(core[0],T('Start Core Java →','कोर जावा शुरू करें →')))
++card('🚀',T('Advanced Java','एडवांस्ड जावा'),T('Collections, generics, I/O, multithreading, Java 8, JDBC, memory, GC and the JVM.','कलेक्शन्स, जेनेरिक्स, I/O, मल्टीथ्रेडिंग, Java 8, JDBC, मेमोरी, GC और JVM।'),adv,go(adv[0],T('Open Advanced Java →','एडवांस्ड जावा खोलें →')))
++card('🧩',T('DSA foundations','DSA की बुनियाद'),T('Arrays, Strings and the Collections Framework from the notes. Code practice lives in the JavaSquadz repository.','नोट्स से Arrays, Strings और Collections Framework। कोड प्रैक्टिस JavaSquadz रिपॉज़िटरी में है।'),dsa,go(dsa[0],T('Start with Arrays →','Arrays से शुरू करें →'))+'<a class="pm-a" href="https://github.com/abhinavmaurya12/JavaSquadz" target="_blank" rel="noopener">JavaSquadz ↗</a>')
++'<div class="hm-card pm-card"><div class="pm-ic">🎯</div><h3>'+T('Interview preparation','इंटरव्यू की तैयारी')+'</h3><p>'+T('A mixed quiz of '+Q+' questions on OOP, Collections, Strings, Exceptions, Threads and the JVM.',Q+' प्रश्नों की मिक्स्ड क्विज़: OOP, Collections, Strings, Exceptions, Threads और JVM।')+'</p><div class="pm-meta">'+Q+' '+T('quiz questions','क्विज़ प्रश्न')+'</div><div class="pm-act"><button class="hm-btn" data-act="quiz">'+T('Start the quiz →','क्विज़ शुरू करें →')+'</button></div></div>'
++'</div></section>';
+var st=[[T('Beginner','शुरुआती'),rng(1,5)],[T('Intermediate','मध्यम'),rng(6,12)],[T('Advanced','एडवांस्ड'),rng(13,20)],[T('Expert','एक्सपर्ट'),rng(21,31)]];
+h+='<section class="pm"><div class="hm-h">'+T('Learning roadmap','लर्निंग रोडमैप')+'<small>'+T('Beginner to expert, in chapter order','शुरुआती से एक्सपर्ट तक, अध्याय क्रम में')+'</small></div><div class="pm-road">'+st.map(function(s,i){return'<div class="pm-stage s'+i+'"><div class="pm-n">'+(i+1)+'</div><h4>'+s[0]+'</h4><div class="pm-meta">'+s[1].length+' '+T('chapters','अध्याय')+' · '+sm(s[1],t).toLocaleString()+' '+T('topics','टॉपिक')+'</div><div>'+s[1].map(chip).join('')+'</div></div>'}).join('')+'</div></section>';
+var iv=[5,6,7,9,13,17,30].filter(function(i){return n[i]});
+h+='<section class="pm"><div class="hm-h">'+T('Practice and interview resources','प्रैक्टिस और इंटरव्यू संसाधन')+'<small>'+T('Built from what is in the notes','नोट्स में मौजूद सामग्री से')+'</small></div><div class="pm-grid">'
++'<div class="hm-card pm-card"><h3>'+T('Mixed interview quiz','मिक्स्ड इंटरव्यू क्विज़')+'</h3><p>'+Q+' '+T('questions, six topic areas, instant explanations.','प्रश्न, छह टॉपिक क्षेत्र, तुरंत व्याख्या।')+'</p><div class="pm-act"><button class="hm-btn" data-act="quiz">'+T('Try it →','आज़माएँ →')+'</button></div></div>'
++'<div class="hm-card pm-card"><h3>'+T('Interview-favourite chapters','इंटरव्यू के पसंदीदा अध्याय')+'</h3><div>'+iv.map(chip).join('')+'</div></div>'
++'<div class="hm-card pm-card"><h3>'+T('Run it, predict it','चलाएँ, अनुमान लगाएँ')+'</h3><p>'+T('Code examples in the notes have Run and Predict-the-output buttons. Try them in Collections.','नोट्स के कोड उदाहरणों में Run और Predict-the-output बटन हैं। Collections में आज़माएँ।')+'</p><div class="pm-act">'+go(13,T('Open Collections →','Collections खोलें →'))+'</div></div></div></section></div>';
+var rows=H.querySelectorAll('.hm-row');(rows[rows.length-1]||H.querySelector('.hm-stats')).insertAdjacentHTML('afterend',h);
+var hp=H.querySelector('.hm-hero p');if(hp)hp.textContent=T('Your compact rulebook for Java: '+chs+' chapters, '+tops.toLocaleString()+' topics, quick-reference cards, animated explainers and a reader that talks. In English and Hindi.','जावा का आपका संक्षिप्त नियम-पुस्तक: '+chs+' अध्याय, '+tops.toLocaleString()+' टॉपिक, क्विक-रेफ़रेंस कार्ड्स, एनिमेटेड एक्सप्लेनर और बोलकर पढ़ने वाला रीडर। हिंदी और अंग्रेज़ी दोनों में।');
+var p=H.querySelector('.hm-p');if(p)p.textContent=last&&n[last]?T('Continue Learning','पढ़ाई जारी रखें'):T('Start Learning','सीखना शुरू करें');
+var ex=H.querySelector('#hmS');if(ex)ex.textContent='🧭 '+T('Explore Java Topics','जावा टॉपिक देखें');
+var cta=H.querySelector('.hm-cta');if(cta)cta.insertAdjacentHTML('afterend','<div class="pm-search"><input id="pmQ" type="search" autocomplete="off" aria-label="Search" placeholder="'+T('Search Java concepts, collections, interview questions…','जावा कॉन्सेप्ट, कलेक्शन्स, इंटरव्यू प्रश्न खोजें…')+'"><button type="button" data-q="">'+T('Search','खोजें')+'</button></div><div class="pm-sugg"><span>'+T('Try:','आज़माएँ:')+'</span><button data-q="interview">'+T('Interview questions','इंटरव्यू प्रश्न')+'</button><button data-q="array">'+T('Arrays and DSA basics','Arrays और DSA')+'</button><button data-q="HashMap">HashMap</button><button data-q="thread">'+T('Multithreading','मल्टीथ्रेडिंग')+'</button></div>');
+var sts=H.querySelector('.hm-stats');if(sts)sts.innerHTML=[[chs,T('Chapters','अध्याय')],[tops.toLocaleString(),T('Topics','टॉपिक')],[Q,T('Quiz questions','क्विज़ प्रश्न')],[document.querySelectorAll('[id^="part-"]:not(#part-notes)').length,T('Quick-reference tabs','क्विक-रेफ़रेंस टैब')]].map(function(s){return'<div class="hm-st"><b>'+s[0]+'</b><span>'+s[1]+'</span></div>'}).join('');
+if(!H.querySelector('#pmfoot'))H.insertAdjacentHTML('beforeend',footHTML(n,t,chs,tops,per,last))}
+function footHTML(n,t,chs,tops,per,last){
+var learned=0;for(var k in per)learned+=per[k];
+var v=((document.querySelector('.bver')||{}).textContent||'').trim();
+function b(a,x){return'<button type="button" class="fx-l" '+a+'>'+x+'</button>'}
+function ex(u,x){return'<a class="fx-l" href="'+u+'" target="_blank" rel="noopener">'+x+' ↗</a>'}
+function col(h,items){return'<nav class="fx-c" aria-label="'+h+'"><h5>'+h+'</h5>'+items.join('')+'</nav>'}
+var lv=[[1,T('Beginner','शुरुआती')],[6,T('Intermediate','मध्यम')],[13,T('Advanced','एडवांस्ड')],[21,T('Expert','एक्सपर्ट')]].filter(function(x){return n[x[0]]});
+var st=[[chs,T('chapters','अध्याय')],[tops.toLocaleString(),T('topics','टॉपिक')],[Q,T('quiz questions','क्विज़ प्रश्न')]];if(learned)st.push([learned,T('topics learned by you','आपके सीखे टॉपिक')]);
+return'<footer id="pmfoot" class="fx"><div class="fx-top"><div class="fx-brand"><div class="fx-logo">☕ Java Sutra</div><p>'+T('A compact Java rulebook by Abhinav. Notes, quick-reference cards, animated explainers and a quiz, in English and Hindi.','अभिनव द्वारा जावा का संक्षिप्त नियम-पुस्तक: नोट्स, क्विक-रेफ़रेंस कार्ड्स, एनिमेटेड एक्सप्लेनर और क्विज़, हिंदी और अंग्रेज़ी में।')+'</p>'+(last&&n[last]?b('data-ch="'+last+'"','▶ '+T('Continue: ','जारी रखें: ')+last+' · '+esc(n[last])):'')+'</div><div class="fx-stats">'+st.map(function(s){return'<div><b>'+s[0]+'</b><span>'+s[1]+'</span></div>'}).join('')+'</div></div>'
++'<div class="fx-cols">'
++col(T('Learn','सीखें'),lv.map(function(x){return b('data-ch="'+x[0]+'"',x[1])}))
++col(T('Explore','एक्सप्लोर'),[b('data-fx="seg:home"',T('Home','होम')),b('data-fx="seg:oops"','OOPs'),b('data-fx="seg:collections"','Collections'),b('data-fx="seg:threads"','Threads'),b('data-fx="seg:notes"',T('Full Notes','पूरे नोट्स')),b('data-fx="seg:jsq"','☕ JavaSquadz')])
++col(T('Practice','प्रैक्टिस'),[b('data-act="quiz"',T('Mixed interview quiz','मिक्स्ड इंटरव्यू क्विज़')),b('data-q=""',T('Search topics','टॉपिक खोजें'))].concat(n[13]?[b('data-ch="13"',T('Run and predict (Collections)','Run और Predict (Collections)'))]:[],n[9]?[b('data-ch="9"',esc(n[9]))]:[],n[17]?[b('data-ch="17"',esc(n[17]))]:[]))
++col(T('Your study data','आपका स्टडी डेटा'),[b('data-fx="click:Export backup"',T('Export backup','बैकअप एक्सपोर्ट')),b('data-fx="click:Import backup"',T('Import backup','बैकअप इम्पोर्ट')),b('data-fx="click:Print"',T('Print / PDF cheat sheet','प्रिंट / PDF चीट शीट')),b('data-fx="sel:[data-wn]"',T("What's new",'नया क्या है')),b('data-fx="sel:[data-inst]"',T('Get the app','ऐप पाएँ'))])
++col(T('Project','प्रोजेक्ट'),[ex('https://github.com/abhinavmaurya12/JavaSquadz','JavaSquadz repo'),ex('https://github.com/abhinavmaurya12','GitHub · abhinavmaurya12'),ex('https://abhinavmaurya12.github.io/javapath-react/','JavaPath (React)')])
++'</div><div class="fx-bar"><span>'+T('Made by Abhinav','अभिनव द्वारा निर्मित')+(v?' · '+esc(v):'')+'</span><span class="fx-tools">'+b('data-fx="id:ft"','◐ '+T('Theme','थीम'))+b('data-fx="id:hlg"','हि / EN')+b('data-fx="top:"','↑ '+T('Back to top','ऊपर जाएँ'))+'</span></div></footer>'}
+H.addEventListener('click',function(e){var x=e.target.closest('[data-fx]');if(!x)return;e.preventDefault();var a=x.dataset.fx,i=a.indexOf(':'),k=a.slice(0,i),w=a.slice(i+1),el;
+if(k==='top'){scrollTo({top:0,behavior:'smooth'});return}
+if(k==='seg')el=document.getElementById('seg-'+w);else if(k==='id')el=document.getElementById(w);else if(k==='sel')el=H.querySelector(w);else if(k==='click')el=[].slice.call(H.querySelectorAll('button')).filter(function(q){return!q.closest('#pmfoot')&&q.textContent.indexOf(w)>=0})[0];
+el&&el.click()});
+
+function fix(){if(!H.querySelector('.hm-hero'))return;if(!H.querySelector('#prem'))build();var f=H.querySelector('#pmfoot');if(f&&H.lastElementChild!==f)H.appendChild(f)}
+H.addEventListener('click',function(e){var q=e.target.closest('[data-q]');if(q){e.preventDefault();var i=document.getElementById('pmQ');openSearch(q.dataset.q||(i&&i.value)||'');return}var x=e.target.closest('#hmS');if(x){e.stopImmediatePropagation();e.preventDefault();var s=document.getElementById('pm-paths');s&&s.scrollIntoView({behavior:'smooth',block:'start'})}},true);
+H.addEventListener('keydown',function(e){if(e.key==='Enter'&&e.target.id==='pmQ'){e.preventDefault();openSearch(e.target.value)}});
+new MutationObserver(function(){clearTimeout(tm);tm=setTimeout(fix,60)}).observe(H,{childList:true});
+new MutationObserver(function(){clearTimeout(tt);tt=setTimeout(track,400)}).observe(B,{childList:true,subtree:true});
+setTimeout(fix,250);
+}catch(err){console.error('premium home',err)}})();
 </script></body></html>
