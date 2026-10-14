@@ -47870,6 +47870,53 @@ new MutationObserver(function(){if(t)return;t=setTimeout(function(){t=0;run()},1
 .fx-tools .fx-l:hover{transform:none;border-color:var(--accent);color:var(--accent)}
 @media(max-width:760px){.fx{padding:22px 18px 14px}.fx-top{grid-template-columns:1fr}}
 @media print{.fx{display:none}}
+.pm-search{position:relative}.pm-search .pm-sr{position:absolute;left:0;right:0;top:calc(100% + 8px);z-index:40;max-height:360px;overflow:auto;text-align:left;background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:16px;box-shadow:0 18px 44px rgba(0,0,0,.28);padding:6px}.pm-sr[hidden]{display:none}
+.pm-search .pm-sr .pm-r{display:block;width:100%;font:inherit;font-size:14px;text-align:left;color:var(--fg);background:none;border:0;border-radius:10px;padding:9px 12px;cursor:pointer}
+.pm-search .pm-sr .pm-r small{display:block;color:var(--muted);font-size:12px;margin-top:1px}.pm-sr .pm-r.on,.pm-sr .pm-r:hover{background:var(--accent-soft)}
+.pm-sr mark{background:var(--accent-soft);color:var(--accent);border-radius:3px;padding:0 2px;font-weight:600}.pm-search .pm-sr .pm-all{color:var(--accent);font-weight:600}
+.pm-jump{position:sticky;top:72px;z-index:20;display:flex;gap:4px;justify-content:center;padding:5px;margin:22px auto 0;width:max-content;max-width:100%;overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:99px;box-shadow:0 8px 26px rgba(0,0,0,.1)}
+.pm-jump button{font:inherit;font-size:13px;color:var(--muted);background:none;border:0;border-radius:99px;padding:6px 15px;cursor:pointer;transition:background .2s,color .2s}.pm-jump button:hover{color:var(--accent)}
+.pm-jump button.on{background:linear-gradient(135deg,var(--accent),var(--ac2));color:#fff}#pm-paths,#pm-road,#pm-prac,#pmfoot{scroll-margin-top:130px}
+.pm-chs:not(.open) .pm-chip:nth-child(n+5){display:none}.pm-more{font:inherit;font-size:12.5px;font-weight:600;color:var(--accent);background:none;border:0;cursor:pointer;padding:4px 2px}.pm-stage .hm-bar{margin:8px 0}
+.pm-stage::after{content:"→";position:absolute;right:-13px;top:50%;transform:translateY(-50%);color:var(--muted)}.pm-stage:last-child::after{display:none}@media(max-width:1000px){.pm-stage::after{display:none}}
+@keyframes pmIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}.pm-rv{opacity:0;transform:translateY(18px)}.pm-rv.in{opacity:1;transform:none;animation:pmIn .55s backwards}.pm-card.pm-rv.in:hover{transform:translateY(-3px)}
+.pm button,.pm a,.pm-jump button,.fx button,.fx a{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.pm-click{cursor:pointer}.pm-click:hover{border-color:var(--accent)}
+.pm-stage .pm-chs{display:flex;flex-direction:column;gap:6px;margin-top:6px}
+.pm-stage .pm-chip{display:flex;align-items:center;gap:8px;width:100%;margin:0;text-align:left;line-height:1.3;min-height:42px;border-radius:12px;padding:8px 12px;background:var(--surface)}
+.pm-stage .pm-chip::after{content:"›";margin-left:auto;opacity:.45;font-size:18px}.pm-stage .pm-chip em{margin-left:auto;padding-left:6px}.pm-stage .pm-chip em+*,.pm-stage .pm-chip:has(em)::after{margin-left:4px}
+.pm-chip:hover,.pm-chip:focus-visible{background:var(--accent-soft)}.pm-chip:active,.pm-card .hm-btn:active{transform:scale(.97)}
+.pm-card .pm-act{align-items:flex-end;min-height:76px;align-content:flex-end}.pm-a{font-size:13px}
+.pm-stage::after{pointer-events:none}.pm-jump button{min-height:36px}
+@media(max-width:700px){#pmfoot{margin-bottom:96px}.pm-chip,.pm-card .hm-btn{min-height:44px}}
+#cpal{position:fixed;inset:0;z-index:9999;display:flex;justify-content:center;align-items:flex-start;padding:12vh 14px 0}#cpal[hidden]{display:none}
+.cp-bd{position:absolute;inset:0;background:rgba(10,12,28,.5);backdrop-filter:blur(5px)}
+.cp-p{position:relative;width:100%;max-width:620px;background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:18px;box-shadow:0 30px 80px rgba(0,0,0,.4);overflow:hidden}
+.cp-in{width:100%;font:inherit;font-size:17px;padding:16px 20px;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--fg);outline:0}
+.cp-l{max-height:min(55vh,420px);overflow:auto;padding:6px}.cp-g{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);padding:10px 12px 4px}
+.cp-i{display:flex;gap:12px;align-items:center;width:100%;font:inherit;font-size:14.5px;text-align:left;color:var(--fg);background:none;border:0;border-radius:10px;padding:9px 12px;cursor:pointer}.cp-i.on{background:var(--accent-soft);color:var(--accent)}
+.cp-i small{display:block;color:var(--muted);font-size:12px}.cp-ic{width:26px;text-align:center;opacity:.85}.cp-e{padding:22px;text-align:center;color:var(--muted)}
+.cp-f{padding:9px 16px;font-size:12px;color:var(--muted);border-top:1px solid var(--line)}
+.pm-heat{display:grid;grid-template-columns:repeat(auto-fill,minmax(40px,1fr));gap:6px}.pm-cell{font:inherit;font-size:12px;aspect-ratio:1;border-radius:10px;border:1px solid var(--line);cursor:pointer;color:var(--fg);background:var(--surface);background:color-mix(in srgb,var(--accent) calc(var(--f)*80%),var(--surface));transition:transform .15s}.pm-cell:hover{transform:scale(1.08);border-color:var(--accent)}
+@media print{#cpal{display:none}}
+#hmn{position:fixed;inset:0;z-index:9500}#hmn[hidden]{display:none}.hmn-lock{overflow:hidden}
+.hmn-bd{position:absolute;inset:0;background:rgba(10,12,28,.5);backdrop-filter:blur(4px);opacity:0;transition:opacity .22s}#hmn.on .hmn-bd{opacity:1}
+.hmn-p{position:absolute;left:0;top:0;bottom:0;width:min(86vw,340px);display:flex;flex-direction:column;background:var(--surface);color:var(--fg);border-right:1px solid var(--line);box-shadow:12px 0 40px rgba(0,0,0,.3);transform:translateX(-100%);transition:transform .25s cubic-bezier(.2,.8,.2,1);padding-top:env(safe-area-inset-top,0)}#hmn.on .hmn-p{transform:none}
+.hmn-h{display:flex;justify-content:space-between;align-items:center;padding:16px 18px;border-bottom:1px solid var(--line);font-size:18px;background:linear-gradient(90deg,var(--accent-soft),transparent)}
+.hmn-x{font:inherit;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--fg);cursor:pointer}
+.hmn-b{overflow:auto;padding:6px 10px calc(24px + env(safe-area-inset-bottom,0));flex:1}.hmn-g{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);padding:14px 10px 4px}
+.hmn-i{display:flex;align-items:center;gap:12px;width:100%;min-height:46px;font:inherit;font-size:15px;text-align:left;text-decoration:none;color:var(--fg);background:none;border:0;border-radius:12px;padding:8px 10px;cursor:pointer;touch-action:manipulation}
+.hmn-i span{width:26px;text-align:center}.hmn-i:active,.hmn-i:hover{background:var(--accent-soft);color:var(--accent)}.hmn-i:focus-visible{outline:2px solid var(--accent)}
+@media(min-width:900px){#hmn{display:none!important}}@media print{#hmn{display:none}}
+.hm-hero{isolation:isolate}
+.pm-aur{position:absolute;z-index:-1;width:420px;height:420px;border-radius:50%;filter:blur(70px);opacity:.45;pointer-events:none;background:radial-gradient(circle,#ffd166,transparent 65%);top:-140px;right:8%;animation:pmFloat 14s ease-in-out infinite alternate}
+.pm-aur.b{background:radial-gradient(circle,#7c5cff,transparent 65%);top:auto;bottom:-180px;left:5%;right:auto;animation-duration:18s;animation-direction:alternate-reverse}
+@keyframes pmFloat{to{transform:translate(-50px,40px) scale(1.15)}}
+.pm-streak{display:inline-flex;margin-top:14px;padding:6px 14px;border-radius:99px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);color:#fff;font-size:13px;font-weight:600;backdrop-filter:blur(6px)}
+.pm-card,.pm-stage,.hm-st,.hm-card{--mx:-999px;--my:-999px;background-image:radial-gradient(340px circle at var(--mx) var(--my),color-mix(in srgb,var(--accent) 13%,transparent),transparent 62%)}
+.hm-st b{background:linear-gradient(90deg,var(--accent),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent}.hm-st{backdrop-filter:blur(8px)}
+::selection{background:var(--accent);color:#fff}html{scrollbar-width:thin;scrollbar-color:var(--accent) transparent}
+@media(prefers-reduced-motion:reduce){.pm-aur{animation:none}}
 </style><script id="prem-js">(function(){try{
 var B=document.body,H=document.getElementById('home');if(!H)return;var Q=22,tm,tt;
 function hi(){return B.classList.contains('hi')}
@@ -47890,7 +47937,9 @@ function chip(i){return'<button class="pm-chip" data-ch="'+i+'">'+i+' · '+esc(n
 var core=rng(1,12),adv=rng(13,31),dsa=[4,5,13].filter(function(i){return n[i]});
 function card(ic,h,p,ids,btn){var td=sm(ids,per),tt2=sm(ids,t);return'<div class="hm-card pm-card"><div class="pm-ic">'+ic+'</div><h3>'+h+'</h3><p>'+p+'</p><div class="pm-meta">'+ids.length+' '+T('chapters','अध्याय')+' · '+tt2.toLocaleString()+' '+T('topics','टॉपिक')+'</div>'+(td?'<div class="hm-bar"><i style="width:'+Math.round(td/tt2*100)+'%"></i></div><div class="pm-meta">'+td+' / '+tt2+' '+T('learned','सीखे')+'</div>':'')+'<div class="pm-act">'+btn+'</div></div>'}
 function go(id,txt){return'<button class="hm-btn" data-ch="'+id+'">'+txt+'</button>'}
-var h='<div id="prem">';
+var h='<div id="prem"><nav class="pm-jump" aria-label="Sections"><button data-jump="pm-paths">'+T('Paths','रास्ते')+'</button><button data-jump="pm-road">'+T('Roadmap','रोडमैप')+'</button><button data-jump="pm-prac">'+T('Practice','प्रैक्टिस')+'</button><button data-jump="pmfoot">'+T('Links','लिंक')+'</button></nav>';
+var tl=0;for(var q0 in per)tl+=per[q0];
+if(tl)h+='<section class="pm" id="pm-prog"><div class="hm-h">'+T('Your progress map','आपका प्रोग्रेस मैप')+'<small>'+tl+' '+T('topics learned','टॉपिक सीखे')+'</small></div><div class="pm-heat">'+Object.keys(n).map(function(i){var f=(per[i]||0)/(t[i]||1);return'<button type="button" class="pm-cell" data-ch="'+i+'" style="--f:'+f.toFixed(2)+'" title="'+i+' · '+esc(n[i])+' — '+(per[i]||0)+'/'+(t[i]||0)+'">'+i+'</button>'}).join('')+'</div><p class="pm-meta">'+T('Each square is a chapter. A deeper colour means more topics learned.','हर वर्ग एक अध्याय है। गहरा रंग यानी ज़्यादा टॉपिक सीखे।')+'</p></section>';
 var rec=J('jrecent','[]').filter(function(x){return n[x]});
 if(rec.length)h+='<section class="pm"><div class="hm-h">'+T('Recently accessed','हाल ही में देखे गए')+'<small>'+T('Chapters you opened last','आपके खोले हुए अध्याय')+'</small></div><div>'+rec.map(chip).join('')+'</div></section>';
 h+='<section class="pm" id="pm-paths"><div class="hm-h">'+T('Choose your path','अपना रास्ता चुनें')+'<small>'+T('Four ways into the notes','नोट्स में आने के चार रास्ते')+'</small></div><div class="pm-grid">'
@@ -47900,9 +47949,9 @@ h+='<section class="pm" id="pm-paths"><div class="hm-h">'+T('Choose your path','
 +'<div class="hm-card pm-card"><div class="pm-ic">🎯</div><h3>'+T('Interview preparation','इंटरव्यू की तैयारी')+'</h3><p>'+T('A mixed quiz of '+Q+' questions on OOP, Collections, Strings, Exceptions, Threads and the JVM.',Q+' प्रश्नों की मिक्स्ड क्विज़: OOP, Collections, Strings, Exceptions, Threads और JVM।')+'</p><div class="pm-meta">'+Q+' '+T('quiz questions','क्विज़ प्रश्न')+'</div><div class="pm-act"><button class="hm-btn" data-act="quiz">'+T('Start the quiz →','क्विज़ शुरू करें →')+'</button></div></div>'
 +'</div></section>';
 var st=[[T('Beginner','शुरुआती'),rng(1,5)],[T('Intermediate','मध्यम'),rng(6,12)],[T('Advanced','एडवांस्ड'),rng(13,20)],[T('Expert','एक्सपर्ट'),rng(21,31)]];
-h+='<section class="pm"><div class="hm-h">'+T('Learning roadmap','लर्निंग रोडमैप')+'<small>'+T('Beginner to expert, in chapter order','शुरुआती से एक्सपर्ट तक, अध्याय क्रम में')+'</small></div><div class="pm-road">'+st.map(function(s,i){return'<div class="pm-stage s'+i+'"><div class="pm-n">'+(i+1)+'</div><h4>'+s[0]+'</h4><div class="pm-meta">'+s[1].length+' '+T('chapters','अध्याय')+' · '+sm(s[1],t).toLocaleString()+' '+T('topics','टॉपिक')+'</div><div>'+s[1].map(chip).join('')+'</div></div>'}).join('')+'</div></section>';
+h+='<section class="pm" id="pm-road"><div class="hm-h">'+T('Learning roadmap','लर्निंग रोडमैप')+'<small>'+T('Beginner to expert, in chapter order','शुरुआती से एक्सपर्ट तक, अध्याय क्रम में')+'</small></div><div class="pm-road">'+st.map(function(s,i){return'<div class="pm-stage s'+i+'"><div class="pm-n">'+(i+1)+'</div><h4>'+s[0]+'</h4><div class="pm-meta">'+s[1].length+' '+T('chapters','अध्याय')+' · '+sm(s[1],t).toLocaleString()+' '+T('topics','टॉपिक')+'</div>'+(sm(s[1],per)?'<div class="hm-bar"><i style="width:'+Math.round(sm(s[1],per)/sm(s[1],t)*100)+'%"></i></div>':'')+'<div class="pm-chs">'+s[1].map(chip).join('')+'</div>'+(s[1].length>4?'<button type="button" class="pm-more" data-more="'+(s[1].length-4)+'" aria-expanded="false">+'+(s[1].length-4)+' '+T('more','और')+'</button>':'')+'</div>'}).join('')+'</div></section>';
 var iv=[5,6,7,9,13,17,30].filter(function(i){return n[i]});
-h+='<section class="pm"><div class="hm-h">'+T('Practice and interview resources','प्रैक्टिस और इंटरव्यू संसाधन')+'<small>'+T('Built from what is in the notes','नोट्स में मौजूद सामग्री से')+'</small></div><div class="pm-grid">'
+h+='<section class="pm" id="pm-prac"><div class="hm-h">'+T('Practice and interview resources','प्रैक्टिस और इंटरव्यू संसाधन')+'<small>'+T('Built from what is in the notes','नोट्स में मौजूद सामग्री से')+'</small></div><div class="pm-grid">'
 +'<div class="hm-card pm-card"><h3>'+T('Mixed interview quiz','मिक्स्ड इंटरव्यू क्विज़')+'</h3><p>'+Q+' '+T('questions, six topic areas, instant explanations.','प्रश्न, छह टॉपिक क्षेत्र, तुरंत व्याख्या।')+'</p><div class="pm-act"><button class="hm-btn" data-act="quiz">'+T('Try it →','आज़माएँ →')+'</button></div></div>'
 +'<div class="hm-card pm-card"><h3>'+T('Interview-favourite chapters','इंटरव्यू के पसंदीदा अध्याय')+'</h3><div>'+iv.map(chip).join('')+'</div></div>'
 +'<div class="hm-card pm-card"><h3>'+T('Run it, predict it','चलाएँ, अनुमान लगाएँ')+'</h3><p>'+T('Code examples in the notes have Run and Predict-the-output buttons. Try them in Collections.','नोट्स के कोड उदाहरणों में Run और Predict-the-output बटन हैं। Collections में आज़माएँ।')+'</p><div class="pm-act">'+go(13,T('Open Collections →','Collections खोलें →'))+'</div></div></div></section></div>';
@@ -47910,7 +47959,7 @@ var rows=H.querySelectorAll('.hm-row');(rows[rows.length-1]||H.querySelector('.h
 var hp=H.querySelector('.hm-hero p');if(hp)hp.textContent=T('Your compact rulebook for Java: '+chs+' chapters, '+tops.toLocaleString()+' topics, quick-reference cards, animated explainers and a reader that talks. In English and Hindi.','जावा का आपका संक्षिप्त नियम-पुस्तक: '+chs+' अध्याय, '+tops.toLocaleString()+' टॉपिक, क्विक-रेफ़रेंस कार्ड्स, एनिमेटेड एक्सप्लेनर और बोलकर पढ़ने वाला रीडर। हिंदी और अंग्रेज़ी दोनों में।');
 var p=H.querySelector('.hm-p');if(p)p.textContent=last&&n[last]?T('Continue Learning','पढ़ाई जारी रखें'):T('Start Learning','सीखना शुरू करें');
 var ex=H.querySelector('#hmS');if(ex)ex.textContent='🧭 '+T('Explore Java Topics','जावा टॉपिक देखें');
-var cta=H.querySelector('.hm-cta');if(cta)cta.insertAdjacentHTML('afterend','<div class="pm-search"><input id="pmQ" type="search" autocomplete="off" aria-label="Search" placeholder="'+T('Search Java concepts, collections, interview questions…','जावा कॉन्सेप्ट, कलेक्शन्स, इंटरव्यू प्रश्न खोजें…')+'"><button type="button" data-q="">'+T('Search','खोजें')+'</button></div><div class="pm-sugg"><span>'+T('Try:','आज़माएँ:')+'</span><button data-q="interview">'+T('Interview questions','इंटरव्यू प्रश्न')+'</button><button data-q="array">'+T('Arrays and DSA basics','Arrays और DSA')+'</button><button data-q="HashMap">HashMap</button><button data-q="thread">'+T('Multithreading','मल्टीथ्रेडिंग')+'</button></div>');
+var cta=H.querySelector('.hm-cta');if(cta)cta.insertAdjacentHTML('afterend','<div class="pm-search"><input id="pmQ" type="search" autocomplete="off" aria-label="Search" role="combobox" aria-expanded="false" placeholder="'+T('Search Java concepts, collections, interview questions…','जावा कॉन्सेप्ट, कलेक्शन्स, इंटरव्यू प्रश्न खोजें…')+'"><div class="pm-sr" id="pmSr" role="listbox" hidden></div><button type="button" data-q="">'+T('Search','खोजें')+'</button></div><div class="pm-sugg"><span>'+T('Try:','आज़माएँ:')+'</span><button data-q="interview">'+T('Interview questions','इंटरव्यू प्रश्न')+'</button><button data-q="array">'+T('Arrays and DSA basics','Arrays और DSA')+'</button><button data-q="HashMap">HashMap</button><button data-q="thread">'+T('Multithreading','मल्टीथ्रेडिंग')+'</button></div>');
 var sts=H.querySelector('.hm-stats');if(sts)sts.innerHTML=[[chs,T('Chapters','अध्याय')],[tops.toLocaleString(),T('Topics','टॉपिक')],[Q,T('Quiz questions','क्विज़ प्रश्न')],[document.querySelectorAll('[id^="part-"]:not(#part-notes)').length,T('Quick-reference tabs','क्विक-रेफ़रेंस टैब')]].map(function(s){return'<div class="hm-st"><b>'+s[0]+'</b><span>'+s[1]+'</span></div>'}).join('');
 if(!H.querySelector('#pmfoot'))H.insertAdjacentHTML('beforeend',footHTML(n,t,chs,tops,per,last))}
 function footHTML(n,t,chs,tops,per,last){
@@ -47928,17 +47977,106 @@ return'<footer id="pmfoot" class="fx"><div class="fx-top"><div class="fx-brand">
 +col(T('Practice','प्रैक्टिस'),[b('data-act="quiz"',T('Mixed interview quiz','मिक्स्ड इंटरव्यू क्विज़')),b('data-q=""',T('Search topics','टॉपिक खोजें'))].concat(n[13]?[b('data-ch="13"',T('Run and predict (Collections)','Run और Predict (Collections)'))]:[],n[9]?[b('data-ch="9"',esc(n[9]))]:[],n[17]?[b('data-ch="17"',esc(n[17]))]:[]))
 +col(T('Your study data','आपका स्टडी डेटा'),[b('data-fx="click:Export backup"',T('Export backup','बैकअप एक्सपोर्ट')),b('data-fx="click:Import backup"',T('Import backup','बैकअप इम्पोर्ट')),b('data-fx="click:Print"',T('Print / PDF cheat sheet','प्रिंट / PDF चीट शीट')),b('data-fx="sel:[data-wn]"',T("What's new",'नया क्या है')),b('data-fx="sel:[data-inst]"',T('Get the app','ऐप पाएँ'))])
 +col(T('Project','प्रोजेक्ट'),[ex('https://github.com/abhinavmaurya12/JavaSquadz','JavaSquadz repo'),ex('https://github.com/abhinavmaurya12','GitHub · abhinavmaurya12'),ex('https://abhinavmaurya12.github.io/javapath-react/','JavaPath (React)')])
-+'</div><div class="fx-bar"><span>'+T('Made by Abhinav','अभिनव द्वारा निर्मित')+(v?' · '+esc(v):'')+'</span><span class="fx-tools">'+b('data-fx="id:ft"','◐ '+T('Theme','थीम'))+b('data-fx="id:hlg"','हि / EN')+b('data-fx="top:"','↑ '+T('Back to top','ऊपर जाएँ'))+'</span></div></footer>'}
++'</div><div class="fx-bar"><span>'+T('Made by Abhinav','अभिनव द्वारा निर्मित')+(v?' · '+esc(v):'')+'</span><span class="fx-tools">'+b('data-fx="id:ft"','◐ '+T('Theme','थीम'))+b('data-fx="id:hlg"','हि / EN')+b('data-cpal=""','⌘ K '+T('Command palette','कमांड पैलेट'))+b('data-fx="top:"','↑ '+T('Back to top','ऊपर जाएँ'))+'</span></div></footer>'}
 H.addEventListener('click',function(e){var x=e.target.closest('[data-fx]');if(!x)return;e.preventDefault();var a=x.dataset.fx,i=a.indexOf(':'),k=a.slice(0,i),w=a.slice(i+1),el;
 if(k==='top'){scrollTo({top:0,behavior:'smooth'});return}
 if(k==='seg')el=document.getElementById('seg-'+w);else if(k==='id')el=document.getElementById(w);else if(k==='sel')el=H.querySelector(w);else if(k==='click')el=[].slice.call(H.querySelectorAll('button')).filter(function(q){return!q.closest('#pmfoot')&&q.textContent.indexOf(w)>=0})[0];
 el&&el.click()});
 
-function fix(){if(!H.querySelector('.hm-hero'))return;if(!H.querySelector('#prem'))build();var f=H.querySelector('#pmfoot');if(f&&H.lastElementChild!==f)H.appendChild(f)}
+var IX=null,SP=null,act=-1;
+function ix(){if(IX)return IX;IX=[];document.querySelectorAll('template[id^="tpl-b"]').forEach(function(x){var c=x.id.slice(5);x.content.querySelectorAll('h3[id]').forEach(function(h){var t=h.textContent.replace(/\s+/g,' ').trim();IX.push({id:h.id,c:c,t:t,l:t.toLowerCase()})})});return IX}
+function hl(t,q){var i=t.toLowerCase().indexOf(q);return i<0?esc(t):esc(t.slice(0,i))+'<mark>'+esc(t.slice(i,i+q.length))+'</mark>'+esc(t.slice(i+q.length))}
+function srHide(){var b=document.getElementById('pmSr');if(b){b.hidden=true;b.innerHTML=''}act=-1}
+function srShow(raw){var b=document.getElementById('pmSr');if(!b)return;var q=raw.trim().toLowerCase();if(q.length<2){srHide();return}
+var n=names(),r=[];ix().forEach(function(x){var i=x.l.indexOf(q);if(i>=0)r.push([i===0?0:/[\s(\/-]/.test(x.l.charAt(i-1))?1:2,x])});
+r.sort(function(a,b){return a[0]-b[0]||a[1].t.length-b[1].t.length});r=r.slice(0,7);act=-1;
+b.innerHTML=r.map(function(m){var x=m[1];return'<button type="button" class="pm-r" role="option" data-ch="'+x.c+'" data-id="'+x.id+'">'+hl(x.t,q)+'<small>'+T('Part ','भाग ')+x.c+' · '+esc(n[x.c]||'')+'</small></button>'}).join('')+'<button type="button" class="pm-r pm-all" data-q="'+esc(raw.trim())+'">'+T('Search everything for ','सब कुछ खोजें: ')+'“'+esc(raw.trim())+'” ↵</button>';b.hidden=false}
+function spy(){if(SP)SP.disconnect();if(!('IntersectionObserver' in window))return;var bs=H.querySelectorAll('.pm-jump [data-jump]');SP=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)[].forEach.call(bs,function(b){b.classList.toggle('on',b.dataset.jump===e.target.id)})})},{rootMargin:'-30% 0px -60% 0px'});[].forEach.call(bs,function(b){var t=document.getElementById(b.dataset.jump);t&&SP.observe(t)})}
+function rv(){if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion:reduce)').matches)return;var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.06});[].forEach.call(H.querySelectorAll('#prem .pm-card,#prem .pm-stage,#prem .hm-h,#pmfoot'),function(el,i){el.classList.add('pm-rv');el.style.animationDelay=(i%4)*70+'ms';io.observe(el)})}
+H.addEventListener('input',function(e){if(e.target.id==='pmQ')srShow(e.target.value)});
+H.addEventListener('keydown',function(e){if(e.target.id!=='pmQ')return;var b=document.getElementById('pmSr'),o=b?b.querySelectorAll('.pm-r'):[];
+if(e.key==='ArrowDown'||e.key==='ArrowUp'){if(!o.length)return;e.preventDefault();act=(act+(e.key==='ArrowDown'?1:-1)+o.length)%o.length;[].forEach.call(o,function(x,i){x.classList.toggle('on',i===act)});o[act].scrollIntoView({block:'nearest'})}
+else if(e.key==='Enter'){e.preventDefault();if(act>=0&&o[act])o[act].click();else openSearch(e.target.value)}
+else if(e.key==='Escape')srHide()});
+H.addEventListener('click',function(e){var pc=e.target.closest('.pm-click');if(pc&&!e.target.closest('a,button')){var pb=pc.querySelector('.hm-btn');pb&&pb.click();return}var j=e.target.closest('[data-jump]');if(j){var t=document.getElementById(j.dataset.jump);t&&t.scrollIntoView({behavior:'smooth',block:'start'});return}
+var m=e.target.closest('[data-more]');if(m){var c=m.previousElementSibling,o=c.classList.toggle('open');m.setAttribute('aria-expanded',o);m.textContent=o?T('Show less','कम दिखाएँ'):'+'+m.dataset.more+' '+T('more','और')}});
+document.addEventListener('click',function(e){if(!e.target.closest('.pm-search')||e.target.closest('.pm-r'))srHide()});
+
+function fix(){if(!H.querySelector('.hm-hero'))return;if(!H.querySelector('#prem')){build();rv();spy();[].forEach.call(H.querySelectorAll('#pm-paths .pm-card,#pm-prac .pm-card'),function(c){if(c.querySelector('.hm-btn'))c.classList.add('pm-click')})}var f=H.querySelector('#pmfoot');if(f&&H.lastElementChild!==f)H.appendChild(f)}
 H.addEventListener('click',function(e){var q=e.target.closest('[data-q]');if(q){e.preventDefault();var i=document.getElementById('pmQ');openSearch(q.dataset.q||(i&&i.value)||'');return}var x=e.target.closest('#hmS');if(x){e.stopImmediatePropagation();e.preventDefault();var s=document.getElementById('pm-paths');s&&s.scrollIntoView({behavior:'smooth',block:'start'})}},true);
-H.addEventListener('keydown',function(e){if(e.key==='Enter'&&e.target.id==='pmQ'){e.preventDefault();openSearch(e.target.value)}});
+
 new MutationObserver(function(){clearTimeout(tm);tm=setTimeout(fix,60)}).observe(H,{childList:true});
 new MutationObserver(function(){clearTimeout(tt);tt=setTimeout(track,400)}).observe(B,{childList:true,subtree:true});
 setTimeout(fix,250);
 }catch(err){console.error('premium home',err)}})();
+</script><script id="cpal-js">(function(){try{
+var H=document.getElementById('home'),B=document.body;if(!H)return;var root,inp,box,items=[],act=0,IXc=null;
+function hi(){return B.classList.contains('hi')}function T(e,h){return hi()&&h?h:e}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;')}
+function nm(){var n={};document.querySelectorAll('template[id^="tpl-b"]').forEach(function(x){var h=x.content.querySelector('h2');if(h)n[x.id.slice(5)]=h.textContent.replace(/\s+/g,' ').trim()});return n}
+function tps(){if(IXc)return IXc;IXc=[];document.querySelectorAll('template[id^="tpl-b"]').forEach(function(x){var c=x.id.slice(5);x.content.querySelectorAll('h3[id]').forEach(function(h){var t=h.textContent.replace(/\s+/g,' ').trim();IXc.push({id:h.id,c:c,t:t,l:t.toLowerCase()})})});return IXc}
+function go(c,id){var b=document.createElement('button');b.dataset.ch=c;if(id)b.dataset.id=id;H.appendChild(b);b.click();b.remove()}
+function ck(f){return function(){var e=f();e&&e.click()}}
+function bt(t){return function(){return[].slice.call(H.querySelectorAll('button')).filter(function(b){return!b.closest('#pmfoot')&&b.textContent.indexOf(t)>=0})[0]}}
+function sg(i){return function(){return document.getElementById(i)}}
+function acts(){return[['🏠',T('Home','होम'),ck(sg('seg-home'))],['🧱','OOPs',ck(sg('seg-oops'))],['📦','Collections',ck(sg('seg-collections'))],['🧵','Threads',ck(sg('seg-threads'))],['📘',T('Full Notes','पूरे नोट्स'),ck(sg('seg-notes'))],['☕','JavaSquadz',ck(sg('seg-jsq'))],['🎯',T('Mixed interview quiz','मिक्स्ड इंटरव्यू क्विज़'),ck(function(){return H.querySelector('[data-act=quiz]')})],['◐',T('Toggle theme','थीम बदलें'),ck(sg('ft'))],['हि',T('Switch language','भाषा बदलें'),ck(sg('hlg'))],['⬇',T('Export backup','बैकअप एक्सपोर्ट'),ck(bt('Export backup'))],['⬆',T('Import backup','बैकअप इम्पोर्ट'),ck(bt('Import backup'))],['🖨',T('Print / PDF cheat sheet','प्रिंट / PDF चीट शीट'),ck(bt('Print'))],['✨',T("What's new",'नया क्या है'),ck(function(){return H.querySelector('[data-wn]')})]]}
+function build(q){q=q.trim().toLowerCase();var n=nm(),o=[];
+acts().forEach(function(a){if(!q||a[1].toLowerCase().indexOf(q)>=0)o.push({g:T('Actions','एक्शन'),ic:a[0],t:a[1],s:'',run:a[2]})});
+if(!q){var r=[];try{r=JSON.parse(localStorage.getItem('jrecent')||'[]')}catch(e){}r.filter(function(i){return n[i]}).slice(0,4).forEach(function(i){o.unshift({g:T('Recent chapters','हाल के अध्याय'),ic:'🕘',t:i+' · '+n[i],s:'',run:function(){go(i)}})});o.sort(function(a,b){return(a.g===T('Actions','एक्शन'))-(b.g===T('Actions','एक्शन'))})}
+else{Object.keys(n).forEach(function(i){if((i+' '+n[i]).toLowerCase().indexOf(q)>=0||('part '+i)===q)o.push({g:T('Chapters','अध्याय'),ic:'📖',t:i+' · '+n[i],s:'',run:function(){go(i)}})});
+if(q.length>=2){var m=[];tps().forEach(function(x){var i=x.l.indexOf(q);if(i>=0)m.push([i===0?0:/[\s(\/-]/.test(x.l.charAt(i-1))?1:2,x])});m.sort(function(a,b){return a[0]-b[0]||a[1].t.length-b[1].t.length}).slice(0,7).forEach(function(z){var x=z[1];o.push({g:T('Topics','टॉपिक'),ic:'#',t:x.t,s:T('Part ','भाग ')+x.c+' · '+(n[x.c]||''),run:function(){go(x.c,x.id)}})})}}
+return o}
+function paint(){var q=inp.value;items=build(q);act=0;var g='',h='';items.forEach(function(it,i){if(it.g!==g){g=it.g;h+='<div class="cp-g">'+esc(g)+'</div>'}h+='<button type="button" class="cp-i'+(i===0?' on':'')+'" data-i="'+i+'"><span class="cp-ic">'+esc(it.ic)+'</span><span>'+esc(it.t)+(it.s?'<small>'+esc(it.s)+'</small>':'')+'</span></button>'});box.innerHTML=h||'<div class="cp-e">'+T('No matches','कोई मैच नहीं')+'</div>'}
+function mark(){[].forEach.call(box.querySelectorAll('.cp-i'),function(b,i){b.classList.toggle('on',i===act)});var a=box.querySelector('.cp-i.on');a&&a.scrollIntoView({block:'nearest'})}
+function close(){root&&(root.hidden=true)}
+function run(i){var it=items[i];if(!it)return;close();setTimeout(it.run,30)}
+function open(){if(!root){root=document.createElement('div');root.id='cpal';root.hidden=true;root.innerHTML='<div class="cp-bd"></div><div class="cp-p" role="dialog" aria-modal="true" aria-label="Command palette"><input class="cp-in" type="text" autocomplete="off" spellcheck="false"><div class="cp-l"></div><div class="cp-f"></div></div>';B.appendChild(root);inp=root.querySelector('.cp-in');box=root.querySelector('.cp-l');
+root.querySelector('.cp-bd').onclick=close;box.addEventListener('click',function(e){var b=e.target.closest('.cp-i');b&&run(+b.dataset.i)});box.addEventListener('mousemove',function(e){var b=e.target.closest('.cp-i');if(b&&+b.dataset.i!==act){act=+b.dataset.i;mark()}});
+inp.addEventListener('input',paint);inp.addEventListener('keydown',function(e){if(e.key==='ArrowDown'){e.preventDefault();act=Math.min(items.length-1,act+1);mark()}else if(e.key==='ArrowUp'){e.preventDefault();act=Math.max(0,act-1);mark()}else if(e.key==='Enter'){e.preventDefault();run(act)}else if(e.key==='Escape'){e.preventDefault();close()}})}
+inp.placeholder=T('Jump to a chapter, topic or action…','किसी अध्याय, टॉपिक या एक्शन पर जाएँ…');root.querySelector('.cp-f').textContent=T('↑↓ navigate · Enter open · Esc close','↑↓ चुनें · Enter खोलें · Esc बंद');root.hidden=false;inp.value='';paint();inp.focus()}
+document.addEventListener('keydown',function(e){if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();e.stopPropagation();root&&!root.hidden?close():open()}},true);
+document.addEventListener('click',function(e){if(e.target.closest('[data-cpal]')){e.preventDefault();open()}});
+}catch(err){console.error('palette',err)}})();
+</script><script id="hmn-js">(function(){try{
+var H=document.getElementById('home'),B=document.body,mn=document.getElementById('mn');if(!H||!mn)return;var root,bd;
+function T(e,h){return B.classList.contains('hi')&&h?h:e}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;')}
+function $i(i){return function(){return document.getElementById(i)}}
+function ck(f){return function(){var e=f();e&&e.click()}}
+function bt(t){return function(){return[].slice.call(H.querySelectorAll('button')).filter(function(b){return!b.closest('#pmfoot')&&!b.closest('#hmn')&&b.textContent.indexOf(t)>=0})[0]}}
+function jump(id){return function(){var e=document.getElementById(id);e&&e.scrollIntoView({behavior:'smooth',block:'start'})}}
+function hdr(ic){return function(){return[].slice.call(document.querySelectorAll('.hb button')).filter(function(b){return b.textContent.trim()===ic})[0]}}
+function groups(){var p=H.querySelector('.hm-p'),pl=p?p.textContent.trim():T('Start Learning','सीखना शुरू करें');
+var jm=[['🧭',T('Choose your path','अपना रास्ता चुनें'),'pm-paths'],['🗺️',T('Learning roadmap','लर्निंग रोडमैप'),'pm-road'],['📊',T('Your progress map','आपका प्रोग्रेस मैप'),'pm-prog'],['🎯',T('Practice and interview','प्रैक्टिस और इंटरव्यू'),'pm-prac'],['🔗',T('Links and footer','लिंक और फ़ूटर'),'pmfoot']].filter(function(x){return document.getElementById(x[2])}).map(function(x){return[x[0],x[1],jump(x[2])]});
+return[[T('On this page','इस पेज पर'),jm],
+[T('Browse','ब्राउज़ करें'),[['🧱','OOPs',ck($i('seg-oops'))],['📦','Collections',ck($i('seg-collections'))],['🧵','Threads',ck($i('seg-threads'))],['📘',T('Full Notes','पूरे नोट्स'),ck($i('seg-notes'))],['☕','JavaSquadz',ck($i('seg-jsq'))]]],
+[T('Learn','सीखें'),[['▶',pl,ck(function(){return H.querySelector('.hm-p')})],['🎯',T('Mixed interview quiz','मिक्स्ड इंटरव्यू क्विज़'),ck(function(){return H.querySelector('[data-act=quiz]')})],['🔍',T('Search topics','टॉपिक खोजें'),ck(hdr('🔍'))],['⌘',T('Command palette','कमांड पैलेट'),function(){var e=document.createElement('i');e.dataset.cpal='';B.appendChild(e);e.click();e.remove()}]]],
+[T('Your study data','आपका स्टडी डेटा'),[['⬇',T('Export backup','बैकअप एक्सपोर्ट'),ck(bt('Export backup'))],['⬆',T('Import backup','बैकअप इम्पोर्ट'),ck(bt('Import backup'))],['🖨',T('Print / PDF cheat sheet','प्रिंट / PDF चीट शीट'),ck(bt('Print'))]]],
+[T('App','ऐप'),[['◐',T('Toggle theme','थीम बदलें'),ck($i('ft'))],['हि',T('Switch language','भाषा बदलें'),ck($i('hlg'))],['✨',T("What's new",'नया क्या है'),ck(function(){return H.querySelector('[data-wn]')})],['📲',T('Get the app','ऐप पाएँ'),ck(function(){return H.querySelector('[data-inst]')})]]],
+[T('Project','प्रोजेक्ट'),[['↗','JavaSquadz repo','https://github.com/abhinavmaurya12/JavaSquadz'],['↗','GitHub · abhinavmaurya12','https://github.com/abhinavmaurya12'],['↗','JavaPath (React)','https://abhinavmaurya12.github.io/javapath-react/']]]]}
+function close(){if(!root||root.hidden)return;root.classList.remove('on');document.documentElement.classList.remove('hmn-lock');mn.setAttribute('aria-expanded','false');setTimeout(function(){root.hidden=true},220)}
+function open(){if(!root){root=document.createElement('div');root.id='hmn';root.hidden=true;root.innerHTML='<div class="hmn-bd"></div><aside class="hmn-p" role="dialog" aria-modal="true"><div class="hmn-h"><b>☕ Java Sutra</b><button type="button" class="hmn-x" aria-label="Close">✕</button></div><div class="hmn-b"></div></aside>';B.appendChild(root);
+root.querySelector('.hmn-bd').onclick=close;root.querySelector('.hmn-x').onclick=close;
+root.querySelector('.hmn-b').addEventListener('click',function(e){var b=e.target.closest('.hmn-i');if(!b)return;if(b.tagName==='A'){close();return}var f=b._f;close();f&&setTimeout(f,120)})}
+var h='',i;groups().forEach(function(g){if(!g[1].length)return;h+='<div class="hmn-g">'+esc(g[0])+'</div>';g[1].forEach(function(x){h+=typeof x[2]==='string'?'<a class="hmn-i" href="'+x[2]+'" target="_blank" rel="noopener"><span>'+x[0]+'</span>'+esc(x[1])+'</a>':'<button type="button" class="hmn-i" data-k="'+(i=(i||0)+1)+'"><span>'+x[0]+'</span>'+esc(x[1])+'</button>'})});
+var bx=root.querySelector('.hmn-b');bx.innerHTML=h;var k=0;groups().forEach(function(g){g[1].forEach(function(x){if(typeof x[2]!=='string'){k++;var el=bx.querySelector('[data-k="'+k+'"]');if(el)el._f=x[2]}})});
+root.hidden=false;document.documentElement.classList.add('hmn-lock');mn.setAttribute('aria-expanded','true');requestAnimationFrame(function(){root.classList.add('on')})}
+document.addEventListener('click',function(e){if(!e.target.closest('#mn')||!B.classList.contains('home'))return;e.stopImmediatePropagation();e.preventDefault();root&&!root.hidden?close():open()},true);
+document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+new MutationObserver(function(){if(!B.classList.contains('home'))close()}).observe(B,{attributes:true,attributeFilter:['class']});
+}catch(err){console.error('home menu',err)}})();
+</script><script id="polish-js">(function(){try{
+var H=document.getElementById('home'),B=document.body,tm;if(!H)return;
+function T(e,h){return B.classList.contains('hi')&&h?h:e}
+function day(d){var z=new Date(d);return z.getFullYear()+'-'+('0'+(z.getMonth()+1)).slice(-2)+'-'+('0'+z.getDate()).slice(-2)}
+function streak(){var v=[];try{v=JSON.parse(localStorage.getItem('jvis')||'[]')}catch(e){}var d=new Date();d.setHours(12,0,0,0);d=+d;var t=day(d);if(v.indexOf(t)<0){v.push(t);v=v.slice(-90);try{localStorage.setItem('jvis',JSON.stringify(v))}catch(e){}}var n=0;while(v.indexOf(day(d))>=0){n++;d-=864e5}return n}
+var S=streak(),calm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function cu(b){var raw=b.textContent,v=+raw.replace(/,/g,'');if(!(v>0))return;var t0=performance.now();(function f(t){var k=Math.min(1,(t-t0)/900);b.textContent=k<1?Math.round(v*(1-Math.pow(1-k,3))).toLocaleString():raw;if(k<1)requestAnimationFrame(f)})(t0)}
+function polish(){var h=H.querySelector('.hm-hero');if(!h)return;
+if(!h.querySelector('.pm-aur'))h.insertAdjacentHTML('afterbegin','<i class="pm-aur"></i><i class="pm-aur b"></i>');
+if(S>=2&&!h.querySelector('.pm-streak')){var c=h.querySelector('.pm-sugg')||h.querySelector('.hm-cta');c&&c.insertAdjacentHTML('afterend','<div class="pm-streak">🔥 '+S+T('-day streak: you opened Java Sutra '+S+' days in a row','-दिन की स्ट्रीक: आपने लगातार '+S+' दिन Java Sutra खोला')+'</div>')}
+if(!calm&&'IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){io.unobserve(e.target);cu(e.target)}})});[].forEach.call(H.querySelectorAll('.hm-st b:not([data-cu])'),function(b){b.dataset.cu=1;io.observe(b)})}}
+H.addEventListener('pointermove',function(e){var c=e.target.closest('.pm-card,.pm-stage,.hm-st,.hm-card');if(!c)return;var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')},{passive:true});
+new MutationObserver(function(){clearTimeout(tm);tm=setTimeout(polish,120)}).observe(H,{childList:true});setTimeout(polish,450);
+}catch(err){console.error('polish',err)}})();
 </script></body></html>
