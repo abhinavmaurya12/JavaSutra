@@ -47950,6 +47950,25 @@ article.book pre:hover{transform:translateY(-2px);box-shadow:0 28px 64px -22px c
 body.home .hb button#hrd,body.jsq .hb button#hrd{display:grid!important}
 body.home.rd #rt,body.jsq.rd #rt{display:flex!important}
 body.rd .rdnow{outline:2px solid var(--accent);outline-offset:6px;border-radius:12px;background:color-mix(in srgb,var(--accent) 6%,transparent)}
+#uacct{font:inherit;cursor:pointer}#uacct.in span{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--ac2));color:#fff;font-weight:700;font-size:13px}
+#ukm{position:fixed;inset:0;z-index:9800;display:flex;justify-content:center;align-items:center;padding:14px}
+.uk-bd{position:absolute;inset:0;background:rgba(10,12,28,.55);backdrop-filter:blur(5px)}
+.uk-p{position:relative;width:100%;max-width:420px;max-height:92vh;overflow:auto;background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:20px;padding:26px 24px;box-shadow:0 30px 80px rgba(0,0,0,.4)}.uk-p.wide{max-width:980px}
+.uk-p h3{margin:0 0 12px;font-size:22px}.uk-x{position:absolute;right:14px;top:14px;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--fg);cursor:pointer}
+.uk-tabs{display:flex;gap:6px;background:var(--bg);padding:4px;border-radius:99px;margin-bottom:14px}.uk-tabs button{flex:1;font:inherit;border:0;background:none;color:var(--muted);padding:8px;border-radius:99px;cursor:pointer}.uk-tabs button.on{background:linear-gradient(135deg,var(--accent),var(--ac2));color:#fff}
+.uk-f label,.uk-l{display:block;font-size:13px;color:var(--muted);margin-bottom:10px}.uk-p input{display:block;width:100%;margin-top:4px;font:inherit;font-size:15px;padding:11px 13px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--fg);outline:0}.uk-p input:focus{border-color:var(--accent)}
+.uk-err{min-height:18px;color:#d6336c;font-size:13px;margin-bottom:6px}.uk-note{font-size:12.5px;color:var(--muted);margin:12px 0 0}.uk-note.warn{background:var(--accent-soft);color:var(--fg);padding:9px 12px;border-radius:10px}
+.uk-go{font:inherit;font-weight:600;cursor:pointer;border:0;border-radius:99px;padding:10px 18px;color:#fff;background:linear-gradient(135deg,var(--accent),var(--ac2))}.uk-go.alt{background:var(--surface);color:var(--accent);border:1px solid var(--accent)}#ukgo{width:100%}
+.uk-row{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.uk-av{width:60px;height:60px;border-radius:50%;display:grid;place-items:center;font-size:26px;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--accent),var(--ac2));margin-bottom:10px}
+.uk-sub{color:var(--muted);margin:0 0 12px;font-size:14px}.uk-badge{background:var(--accent-soft);color:var(--accent);padding:2px 9px;border-radius:99px;font-size:12px;font-weight:600}
+.uk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px;margin:10px 0}.uk-grid div{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:10px;font-size:12px;color:var(--muted)}.uk-grid b{display:block;font-size:20px;color:var(--accent)}
+.uk-del{font:inherit;font-size:13px;background:none;border:0;color:#d6336c;cursor:pointer;padding:6px 0}
+.uk-tw{overflow:auto;border:1px solid var(--line);border-radius:12px}.uk-t{width:100%;border-collapse:collapse;font-size:13px;min-width:760px}.uk-t th,.uk-t td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top}.uk-t th{color:var(--muted);background:var(--bg)}
+.uk-ac button{font:inherit;font-size:12px;margin-right:4px;padding:4px 9px;border-radius:99px;border:1px solid var(--line);background:var(--surface);color:var(--fg);cursor:pointer}.uk-dt td{background:var(--bg);font-size:12.5px;line-height:1.6}
+.uk-lock{display:flex;gap:16px;align-items:center;margin:26px 0;padding:20px 22px;border-radius:18px;border:1px dashed var(--accent);background:linear-gradient(135deg,var(--accent-soft),transparent)}.uk-lock p{margin:4px 0 0;color:var(--muted)}.uk-li{font-size:34px}
+a.uk-lkd{opacity:.65}@media(max-width:420px){.uk-lock{flex-direction:column;align-items:flex-start}}@media print{#ukm,.uk-lock{display:none}}
+@media(max-width:480px){.hb{gap:3px}.hb button,#mn{min-width:31px!important;width:31px!important;height:31px!important;padding:0!important;font-size:13px}#uacct.in span{width:22px;height:22px;font-size:12px}.brand{font-size:14px}.bver{display:none!important}}
+@media(max-width:380px){.brand{font-size:12px!important;letter-spacing:-.01em}}
 </style><script id="prem-js">(function(){try{
 var B=document.body,H=document.getElementById('home');if(!H)return;var Q=22,tm,tt;
 function hi(){return B.classList.contains('hi')}
@@ -48135,4 +48154,148 @@ var L=units(mode());if(!L.length)return;on=true;tok++;b.textContent='⏸ Stop';b
 new MutationObserver(function(){if(on&&(!B.classList.contains('rd')||!mode()))stop()}).observe(B,{attributes:true,attributeFilter:['class']});
 addEventListener('pagehide',stop);
 }catch(err){console.error('reader ext',err)}})();
+</script><style id="uk-gate-css">.uk-gate{flex-direction:row;margin:30px 0}.uk-gate b{font-size:19px}.pm-chip.lk::before,#nav a.lk::before,a.lk[data-u]::before{content:"\1F512  ";font-size:.85em}@media(max-width:420px){.uk-gate{flex-direction:column;align-items:flex-start}}</style>
+<script id="cloud-cfg">/* Cross-device accounts: paste your Supabase Project URL and anon public key between the quotes (see java-sutra-supabase-setup.sql). Leave empty to keep accounts on this browser only. */
+window.JS_CLOUD={url:"",key:""};</script>
+<script id="auth-js">(function(){try{
+var B=document.body,KEYS=['jbm','jnotes','jdone','jlast','jrecent','jvis','jpos','jplbest'],FREE=10,root;
+var CFG=window.JS_CLOUD||{},SB=String(CFG.url||'').replace(/\/+$/,''),CLOUD=!!(SB&&CFG.key);
+function L(e,h){return B.classList.contains('hi')&&h?h:e}
+function noop(){}
+function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+function J(k,d){try{return JSON.parse(localStorage.getItem(k)||d)}catch(e){return JSON.parse(d)}}
+function W(k,v){try{localStorage.setItem(k,typeof v==='string'?v:JSON.stringify(v))}catch(e){}}
+function hex(b){return[].map.call(new Uint8Array(b),function(x){return('0'+x.toString(16)).slice(-2)}).join('')}
+function rnd(n){var a=new Uint8Array(n);try{crypto.getRandomValues(a)}catch(e){for(var i=0;i<n;i++)a[i]=Math.random()*256}return hex(a)}
+function hash(pw,salt){var enc=new TextEncoder();if(window.crypto&&crypto.subtle)return crypto.subtle.importKey('raw',enc.encode(pw),'PBKDF2',false,['deriveBits']).then(function(k){return crypto.subtle.deriveBits({name:'PBKDF2',salt:enc.encode(salt),iterations:120000,hash:'SHA-256'},k,256)}).then(hex);var h=5381,t=salt+pw;for(var i=0;i<t.length;i++)h=((h<<5)+h+t.charCodeAt(i))|0;return Promise.resolve('w'+(h>>>0).toString(16))}
+function snapObj(){var o={};KEYS.forEach(function(k){var v=localStorage.getItem(k);if(v!==null)o[k]=v});return o}
+function applyObj(o){KEYS.forEach(function(k){localStorage.removeItem(k)});for(var k in o){if(KEYS.indexOf(k)>=0&&typeof o[k]==='string')localStorage.setItem(k,o[k])}}
+function norm(o){o=o||{};return JSON.stringify(Object.keys(o).sort().map(function(k){return[k,o[k]]}))}
+function statsOf(o){function P(k,d){try{return JSON.parse(o[k]||d)}catch(e){return JSON.parse(d)}}return{done:P('jdone','[]').length,bm:P('jbm','[]'),nt:P('jnotes','{}'),last:o.jlast||'',rec:P('jrecent','[]'),o:o}}
+function fd(t){return t?new Date(t).toLocaleString():'-'}
+
+/* ================= LOCAL ADAPTER (this browser only) ================= */
+var LA={
+users:function(){return J('jusers','[]')},
+sid:function(){return localStorage.getItem('jsess')||''},
+me:function(){var i=LA.sid();return LA.users().filter(function(u){return u.id===i})[0]||null},
+snap:function(id){W('judata:'+id,snapObj())},
+data:function(id){if(id===LA.sid())LA.snap(id);return J('judata:'+id,'{}')},
+signup:function(nm,em,pw){var us=LA.users();if(us.some(function(u){return u.email===em}))return Promise.reject(new Error('An account with this email already exists.'));var salt=rnd(12);return hash(pw,salt).then(function(h){var u={id:'u'+Date.now().toString(36)+rnd(2),name:nm,email:em,salt:salt,hash:h,role:us.length?'user':'admin',created:Date.now(),last:Date.now()};us.push(u);W('jusers',us);LA.snap(u.id);localStorage.setItem('jsess',u.id);return{ok:1}})},
+login:function(em,pw){var us=LA.users(),u=us.filter(function(x){return x.email===em})[0],bad=new Error('Incorrect email or password.');if(!u)return Promise.reject(bad);return hash(pw,u.salt).then(function(h){if(h!==u.hash)throw bad;u.last=Date.now();W('jusers',us);applyObj(J('judata:'+u.id,'{}'));localStorage.setItem('jsess',u.id);return{ok:1}})},
+logout:function(){var u=LA.me();if(u)LA.snap(u.id);applyObj({});localStorage.removeItem('jsess');return Promise.resolve()},
+rename:function(n){var u=LA.me(),us=LA.users();us.forEach(function(x){if(x.id===u.id)x.name=n});W('jusers',us);return Promise.resolve()},
+remove:function(){var u=LA.me();W('jusers',LA.users().filter(function(x){return x.id!==u.id}));localStorage.removeItem('judata:'+u.id);applyObj({});localStorage.removeItem('jsess');return Promise.resolve()},
+list:function(){return Promise.resolve(LA.users().map(function(u){return{id:u.id,name:u.name,email:u.email,role:u.role,created:u.created,last:u.last,o:LA.data(u.id)}}))},
+setRole:function(id,role){var us=LA.users(),t=us.filter(function(x){return x.id===id})[0];if(!t)return Promise.reject(new Error('User not found.'));if(role!=='admin'&&t.role==='admin'&&us.filter(function(x){return x.role==='admin'}).length<2)return Promise.reject(new Error('There must be at least one admin.'));t.role=role;W('jusers',us);return Promise.resolve()},
+removeUser:function(id){W('jusers',LA.users().filter(function(x){return x.id!==id}));localStorage.removeItem('judata:'+id);return Promise.resolve()},
+tick:function(){var u=LA.me();u&&LA.snap(u.id)},
+beacon:function(){LA.tick()}
+};
+
+/* ================= CLOUD ADAPTER (Supabase: works on every device) ================= */
+var CS={get:function(){return J('jcloud','null')},set:function(s){W('jcloud',s)},clear:function(){localStorage.removeItem('jcloud');localStorage.removeItem('jcme');localStorage.removeItem('jsrv')}};
+var lastPushed='',refreshing=null;
+function friendly(r,j){var m=(j&&(j.error_description||j.msg||j.message||j.error))||'';var l=String(m).toLowerCase();
+if(l.indexOf('invalid login')>=0)return'Incorrect email or password.';
+if(l.indexOf('not confirmed')>=0)return'Please confirm your email first. Check your inbox for the link.';
+if(l.indexOf('already registered')>=0||l.indexOf('already been registered')>=0)return'An account with this email already exists.';
+if(r.status===429||l.indexOf('rate limit')>=0)return'Too many attempts. Please wait a minute and try again.';
+return m||('Request failed ('+r.status+')')}
+function raw(path,opt,tok){opt=opt||{};var h={'apikey':CFG.key,'Content-Type':'application/json','Authorization':'Bearer '+(tok||CFG.key)};for(var k in (opt.headers||{}))h[k]=opt.headers[k];
+return fetch(SB+path,{method:opt.method||'GET',headers:h,body:opt.body!==undefined?JSON.stringify(opt.body):undefined,keepalive:!!opt.keepalive}).then(function(r){return r.text().then(function(t){var j=null;try{j=t?JSON.parse(t):null}catch(e){}if(!r.ok){var e=new Error(friendly(r,j));e.status=r.status;throw e}return j})},function(){throw new Error('Cannot reach the server. Check your internet connection.')})}
+function sess(j){var old=CS.get()||{},s={at:j.access_token,rt:j.refresh_token,exp:Date.now()+(j.expires_in||3600)*1000,uid:(j.user&&j.user.id)||old.uid};CS.set(s);return s}
+function token(){var s=CS.get();if(!s)return Promise.reject(new Error('Not logged in.'));if(Date.now()<s.exp-60000)return Promise.resolve(s.at);if(refreshing)return refreshing;
+refreshing=raw('/auth/v1/token?grant_type=refresh_token',{method:'POST',body:{refresh_token:s.rt}}).then(function(j){refreshing=null;return sess(j).at},function(e){refreshing=null;if(e.status===400||e.status===401||e.status===403)CS.clear();throw e});return refreshing}
+function rest(path,opt){return token().then(function(t){return raw(path,opt,t)})}
+function cacheMe(r){W('jcme',{id:r.id,name:r.name,email:r.email,role:r.role,created:Date.parse(r.created_at)||0,last:Date.parse(r.last_login)||0})}
+function mapRow(r){return{id:r.id,name:r.name,email:r.email,role:r.role,created:Date.parse(r.created_at)||0,last:Date.parse(r.last_login)||0,o:r.data||{}}}
+var CA={
+me:function(){return CS.get()?J('jcme','null'):null},
+profile:function(){var s=CS.get();if(!s)return Promise.resolve(null);return rest('/rest/v1/profiles?select=*&id=eq.'+encodeURIComponent(s.uid)).then(function(a){var r=a&&a[0];if(!r)throw new Error('Profile not found. Run the SQL setup file in Supabase first.');cacheMe(r);return r})},
+pushNow:function(force){var s=CS.get(),u=CA.me();if(!s||!u)return Promise.resolve();var o=snapObj(),n=norm(o);if(!force&&n===lastPushed)return Promise.resolve();
+return rest('/rest/v1/profiles?id=eq.'+encodeURIComponent(u.id)+'&select=updated_at',{method:'PATCH',headers:{Prefer:'return=representation'},body:{data:o}}).then(function(a){lastPushed=n;if(a&&a[0])localStorage.setItem('jsrv',a[0].updated_at||'')})},
+beacon:function(){var s=CS.get(),u=CA.me();if(!s||!u||Date.now()>s.exp)return;var o=snapObj();if(norm(o)===lastPushed)return;try{fetch(SB+'/rest/v1/profiles?id=eq.'+encodeURIComponent(u.id),{method:'PATCH',keepalive:true,headers:{'apikey':CFG.key,'Authorization':'Bearer '+s.at,'Content-Type':'application/json'},body:JSON.stringify({data:o})}).catch(noop)}catch(e){}},
+tick:function(){CA.pushNow().catch(noop)},
+signup:function(nm,em,pw){return raw('/auth/v1/signup',{method:'POST',body:{email:em,password:pw,data:{name:nm}}}).then(function(j){if(j&&j.access_token){sess(j);return CA.profile().then(function(){return CA.pushNow(true)}).then(function(){return{ok:1}})}return{pending:1}})},
+login:function(em,pw){return raw('/auth/v1/token?grant_type=password',{method:'POST',body:{email:em,password:pw}}).then(function(j){sess(j);return CA.profile()}).then(function(r){var rd=r.data||{},p;if(Object.keys(rd).length){applyObj(rd);localStorage.setItem('jsrv',r.updated_at||'');lastPushed=norm(rd);p=Promise.resolve()}else p=CA.pushNow(true);return p.then(function(){return rest('/rest/v1/profiles?id=eq.'+encodeURIComponent(r.id),{method:'PATCH',headers:{Prefer:'return=minimal'},body:{last_login:new Date().toISOString()}}).catch(noop)}).then(function(){return{ok:1}})})},
+logout:function(){var s=CS.get();var p=Promise.race([CA.pushNow().catch(noop),new Promise(function(r){setTimeout(r,1800)})]);return p.then(function(){if(s)raw('/auth/v1/logout',{method:'POST',keepalive:true},s.at).catch(noop);CS.clear();applyObj({})})},
+rename:function(n){var u=CA.me();return rest('/rest/v1/profiles?id=eq.'+encodeURIComponent(u.id),{method:'PATCH',headers:{Prefer:'return=minimal'},body:{name:n}}).then(function(){u.name=n;W('jcme',u)})},
+remove:function(){return rest('/rest/v1/rpc/delete_me',{method:'POST',body:{}}).then(function(){CS.clear();applyObj({})})},
+list:function(){return rest('/rest/v1/profiles?select=*&order=created_at.asc').then(function(a){return(a||[]).map(mapRow)})},
+setRole:function(id,role){return rest('/rest/v1/rpc/admin_set_role',{method:'POST',body:{uid:id,new_role:role}})},
+removeUser:function(id){return rest('/rest/v1/rpc/admin_delete_user',{method:'POST',body:{uid:id}})},
+forgot:function(em){return raw('/auth/v1/recover',{method:'POST',body:{email:em}})}
+};
+var A=CLOUD?CA:LA;
+
+/* ---- modal helpers ---- */
+function close(){root&&root.remove();root=null}
+function modal(h,wide){close();root=document.createElement('div');root.id='ukm';root.innerHTML='<div class="uk-bd"></div><div class="uk-p'+(wide?' wide':'')+'" role="dialog" aria-modal="true"><button class="uk-x" aria-label="Close">✕</button>'+h+'</div>';B.appendChild(root);root.querySelector('.uk-bd').onclick=close;root.querySelector('.uk-x').onclick=close;return root}
+addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+function err(m,ok){var e=document.getElementById('uker');if(e){e.textContent=m;e.style.color=ok?'var(--ok,#2b8a3e)':''}}
+function say(h,btn){modal('<h3>'+h[0]+'</h3><p class="uk-sub">'+h[1]+'</p>'+(btn?'<div class="uk-row"><button class="uk-go" data-u="login">Log in</button></div>':''))}
+
+/* ---- login / signup ---- */
+function authUI(mode){var su=mode==='signup',first=!CLOUD&&LA.users().length===0;
+var note=CLOUD?L('Your account and progress sync across all your devices.','आपका अकाउंट और प्रोग्रेस सभी डिवाइस पर सिंक होता है।'):(su&&first?'The first account created on this device becomes the admin. ':'')+'Accounts and progress are stored in this browser only.';
+var r=modal('<h3>'+(su?L('Create your account','अपना अकाउंट बनाएँ'):L('Welcome back','वापस स्वागत है'))+'</h3><div class="uk-tabs"><button data-t="login" class="'+(su?'':'on')+'">'+L('Log in','लॉग इन')+'</button><button data-t="signup" class="'+(su?'on':'')+'">'+L('Sign up','साइन अप')+'</button></div><div class="uk-f">'+(su?'<label>'+L('Name','नाम')+'<input id="ukn" autocomplete="name" maxlength="40"></label>':'')+'<label>Email<input id="uke" type="email" autocomplete="email"></label><label>'+L('Password','पासवर्ड')+'<input id="ukp" type="password" autocomplete="'+(su?'new-password':'current-password')+'"></label><div class="uk-err" id="uker" role="alert"></div><button class="uk-go" id="ukgo">'+(su?L('Create account','अकाउंट बनाएँ'):L('Log in','लॉग इन'))+'</button>'+(CLOUD&&!su?'<button type="button" class="uk-del" id="ukfg" style="color:var(--muted);display:block;margin-top:8px">'+L('Forgot password?','पासवर्ड भूल गए?')+'</button>':'')+'</div><p class="uk-note">'+note+'</p>');
+[].forEach.call(r.querySelectorAll('.uk-tabs button'),function(b){b.onclick=function(){authUI(b.dataset.t)}});
+r.querySelector('#ukgo').onclick=function(){submit(su)};r.querySelector('.uk-f').addEventListener('keydown',function(e){if(e.key==='Enter')submit(su)});
+var fg=r.querySelector('#ukfg');if(fg)fg.onclick=function(){var em=(document.getElementById('uke').value||'').trim().toLowerCase();if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em))return err('Enter your email above first.');A.forgot(em).then(function(){err('Reset link sent. Check your inbox.',1)}).catch(function(e){err(e.message)})};
+setTimeout(function(){var i=r.querySelector('input');i&&i.focus()},60)}
+function submit(su){var em=(document.getElementById('uke').value||'').trim().toLowerCase(),pw=document.getElementById('ukp').value,nm=su?(document.getElementById('ukn').value||'').trim():'';
+if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em))return err('Enter a valid email address.');if(pw.length<6)return err('Password must be at least 6 characters.');if(su&&nm.length<2)return err('Enter your name.');
+var go=document.getElementById('ukgo'),lb=go.textContent;go.disabled=true;go.textContent='Please wait…';err('');
+(su?A.signup(nm,em,pw):A.login(em,pw)).then(function(r){if(r&&r.pending){say(['Check your email','We sent a confirmation link to <b>'+esc(em)+'</b>. Open it, then come back here and log in.'],1)}else location.reload()}).catch(function(e){if(!document.getElementById('ukgo'))return;go.disabled=false;go.textContent=lb;err(e&&e.message||'Something went wrong. Try again.')})}
+function resetUI(at){var r=modal('<h3>Set a new password</h3><div class="uk-f"><label>New password<input id="ukp" type="password" autocomplete="new-password"></label><div class="uk-err" id="uker" role="alert"></div><button class="uk-go" id="ukgo">Update password</button></div>');
+r.querySelector('#ukgo').onclick=function(){var pw=document.getElementById('ukp').value;if(pw.length<6)return err('Password must be at least 6 characters.');raw('/auth/v1/user',{method:'PUT',body:{password:pw}},at).then(function(){say(['Password updated','You can now log in with your new password.'],1)}).catch(function(e){err(e.message)})}}
+
+/* ---- profile ---- */
+function profile(){var u=A.me();if(!u)return authUI('login');var s=statsOf(snapObj());
+var r=modal('<div class="uk-av">'+esc(u.name.charAt(0).toUpperCase())+'</div><h3>'+esc(u.name)+'</h3><p class="uk-sub">'+esc(u.email)+' · <span class="uk-badge">'+esc(u.role)+'</span></p><p class="uk-sub">'+(CLOUD?'☁ Synced across all your devices':'💾 Saved on this browser only')+'</p><div class="uk-grid"><div><b>'+s.done+'</b>topics learned</div><div><b>'+s.bm.length+'</b>bookmarks</div><div><b>'+Object.keys(s.nt).length+'</b>notes</div><div><b>'+(s.last||'-')+'</b>last chapter</div></div><p class="uk-sub">Member since '+esc(fd(u.created))+'</p><label class="uk-l">Display name<input id="ukn2" value="'+esc(u.name)+'" maxlength="40"></label><div class="uk-row"><button class="uk-go" data-a="save">Save name</button>'+(u.role==='admin'?'<button class="uk-go alt" data-a="admin">Admin panel</button>':'')+'<button class="uk-go alt" data-a="out">Log out</button></div><button class="uk-del" data-a="del">Delete my account</button>');
+r.onclick=function(e){var a=e.target.closest('[data-a]');if(!a)return;a=a.dataset.a;
+if(a==='out')A.logout().then(function(){location.reload()});
+else if(a==='admin')adminUI();
+else if(a==='save'){var n=(document.getElementById('ukn2').value||'').trim();if(n.length<2)return;A.rename(n).then(function(){hdr();profile()}).catch(function(e){alert(e.message)})}
+else if(a==='del'&&confirm('Delete your account and all saved progress? This cannot be undone.')){A.remove().then(function(){location.reload()}).catch(function(e){alert(e.message)})}}}
+
+/* ---- admin ---- */
+function adminUI(){var u=A.me();if(!u||u.role!=='admin')return;var ld=modal('<h3>Admin panel</h3><p class="uk-note">Loading users…</p>',true);
+A.list().then(function(rows){if(root!==ld)return;drawAdmin(rows)}).catch(function(e){if(root!==ld)return;modal('<h3>Admin panel</h3><p class="uk-note warn">'+esc(e.message)+'</p>')})}
+function drawAdmin(rows){var u=A.me(),tot=0,nts=0;rows.forEach(function(x){if(x.id===u.id)x.o=snapObj();x.s=statsOf(x.o||{});tot+=x.s.done;nts+=Object.keys(x.s.nt).length});
+var h='<h3>Admin panel</h3><p class="uk-note warn">'+(CLOUD?'Live data from the cloud database, all devices. Passwords are never visible.':'Shows accounts stored in <b>this browser only</b>. Passwords are never shown or exported.')+'</p><div class="uk-grid"><div><b>'+rows.length+'</b>users</div><div><b>'+rows.filter(function(x){return x.role==='admin'}).length+'</b>admins</div><div><b>'+tot+'</b>topics learned (all)</div><div><b>'+nts+'</b>notes (all)</div></div><div class="uk-row"><button class="uk-go" data-a="exp">Export all user data</button></div><div class="uk-tw"><table class="uk-t"><thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Joined</th><th>Last login</th><th>Learned</th><th>Bkmk</th><th>Notes</th><th></th></tr></thead><tbody>'+
+rows.map(function(x){var self=x.id===u.id;return'<tr data-id="'+esc(x.id)+'"><td>'+esc(x.name)+(self?' (you)':'')+'</td><td>'+esc(x.email)+'</td><td>'+esc(x.role)+'</td><td>'+esc(fd(x.created))+'</td><td>'+esc(fd(x.last))+'</td><td>'+x.s.done+'</td><td>'+x.s.bm.length+'</td><td>'+Object.keys(x.s.nt).length+'</td><td class="uk-ac"><button data-a="view">View</button>'+(self?'':'<button data-a="role">'+(x.role==='admin'?'Make user':'Make admin')+'</button><button data-a="rm">Delete</button>')+'</td></tr><tr class="uk-dt" hidden><td colspan="9"></td></tr>'}).join('')+'</tbody></table></div>';
+var r=modal(h,true);r.onclick=function(e){var a=e.target.closest('[data-a]');if(!a)return;var tr=a.closest('tr'),id=tr&&tr.dataset.id,k=a.dataset.a,row=rows.filter(function(x){return x.id===id})[0];
+if(k==='exp'){var o={exported:new Date().toISOString(),note:'Passwords and API keys excluded.',users:rows.map(function(x){return{id:x.id,name:x.name,email:x.email,role:x.role,created:x.created,last:x.last,data:x.o}})},bl=new Blob([JSON.stringify(o,null,1)],{type:'application/json'}),l=document.createElement('a');l.href=URL.createObjectURL(bl);l.download='java-sutra-users-'+new Date().toISOString().slice(0,10)+'.json';B.appendChild(l);l.click();setTimeout(function(){URL.revokeObjectURL(l.href);l.remove()},1500)}
+else if(k==='view'&&row){var d=tr.nextElementSibling,s=row.s;if(!d.hidden){d.hidden=true;return}d.hidden=false;d.firstChild.innerHTML='<b>Last chapter:</b> '+esc(s.last||'-')+' · <b>Recent:</b> '+esc(s.rec.join(', ')||'-')+'<br><b>Bookmarks:</b> '+(s.bm.map(function(b){return esc(b.t)}).join('; ')||'-')+'<br><b>Notes:</b> '+(Object.keys(s.nt).map(function(n){return esc((s.nt[n].t||n)+': '+String(s.nt[n].tx||'').slice(0,160))}).join(' | ')||'-')}
+else if(k==='role'&&row){A.setRole(id,row.role==='admin'?'user':'admin').then(adminUI).catch(function(e){alert(e.message)})}
+else if(k==='rm'&&confirm('Delete this user and their saved data?')){A.removeUser(id).then(adminUI).catch(function(e){alert(e.message)})}}}
+
+/* ---- header button ---- */
+function hdr(){var hb=document.querySelector('.hb');if(!hb)return;var u=A.me(),b=document.getElementById('uacct');if(!b){b=document.createElement('button');b.id='uacct';b.type='button';hb.insertBefore(b,hb.firstChild)}b.className=u?'in':'';b.title=u?u.name:'Log in';b.setAttribute('aria-label',b.title);b.innerHTML=u?'<span>'+esc(u.name.charAt(0).toUpperCase())+'</span>':'👤';b.onclick=function(){A.me()?profile():authUI('login')}}
+
+/* ---- quick-reference tabs (OOPs, Collections, Threads): first 40% of topics open, the rest need a login ---- */
+function nL(n){return Math.round(n*.6)}
+function tpanel(n,t){return'<div class="uk-lock"><div class="uk-li">🔒</div><div><b>'+L(n+' more topics are locked','आगे के '+n+' टॉपिक लॉक हैं')+'</b><p>'+L('You are viewing the first '+(t-n)+' of '+t+' topics. Log in or create a free account to unlock the rest.','आप '+t+' में से पहले '+(t-n)+' टॉपिक देख रहे हैं। बाकी खोलने के लिए लॉग इन करें या मुफ़्त अकाउंट बनाएँ।')+'</p><div class="uk-row"><button class="uk-go" data-u="login">'+L('Log in','लॉग इन')+'</button><button class="uk-go alt" data-u="signup">'+L('Create account','अकाउंट बनाएँ')+'</button></div></div></div>'}
+function lockParts(){if(A.me())return;['part-oops','part-collections','part-threads'].forEach(function(id){var p=document.getElementById(id);if(!p||p.dataset.lk)return;p.dataset.lk='1';var ss=[].slice.call(p.querySelectorAll(':scope > section'));if(ss.length<2)return;var X=ss.slice(ss.length-nL(ss.length));X[0].insertAdjacentHTML('beforebegin',tpanel(X.length,ss.length));X.forEach(function(s){[].forEach.call(document.querySelectorAll('a[href="#'+s.id+'"]'),function(l){l.classList.add('lk');l.dataset.u='login'});s.remove()})})}
+/* ---- chapter lock: chapters 1-FREE are open, the rest need a login ---- */
+function chNum(a){var e=a.querySelector('.eyebrow'),m=e&&/(\d+)/.exec(e.textContent);if(m)return+m[1];var h=a.querySelector('h3[id]');m=h&&/^b(\d+)-/.exec(h.id);return m?+m[1]:0}
+function gate(n){var tot=document.querySelectorAll('template[id^="tpl-b"]').length||31;return'<div class="uk-lock uk-gate"><div class="uk-li">🔒</div><div><b>'+L('Chapter '+n+' is locked','अध्याय '+n+' लॉक है')+'</b><p>'+L('Chapters 1 to '+FREE+' are free for everyone. Log in or create a free account to unlock all '+tot+' chapters'+(CLOUD?' and keep your progress on every device.':'.'),'अध्याय 1 से '+FREE+' सबके लिए मुफ़्त हैं। सभी '+tot+' अध्याय खोलने के लिए लॉग इन करें या मुफ़्त अकाउंट बनाएँ'+(CLOUD?' और अपनी प्रोग्रेस हर डिवाइस पर पाएँ।':'।'))+'</p><div class="uk-row"><button class="uk-go" data-u="login">'+L('Log in','लॉग इन')+'</button><button class="uk-go alt" data-u="signup">'+L('Create account','अकाउंट बनाएँ')+'</button></div></div></div>'}
+function lockArticle(a){if(a.dataset.lk||A.me())return;var n=chNum(a);if(!n||n<=FREE){a.dataset.lk='0';return}a.dataset.lk='1';
+[].slice.call(a.children).forEach(function(c){if(!c.classList.contains('part-head')&&!c.classList.contains('part-pager'))c.remove()});
+var g=document.createElement('div');g.innerHTML=gate(n);var hd=a.querySelector('.part-head');if(hd)hd.after(g.firstChild);else a.insertBefore(g.firstChild,a.firstChild)}
+function marks(){[].forEach.call(document.querySelectorAll('#nav a[data-n]:not(.lk)'),function(a){if(+a.dataset.n>FREE)a.classList.add('lk')});[].forEach.call(document.querySelectorAll('.pm-chip[data-ch]:not(.lk)'),function(c){if(+c.dataset.ch>FREE)c.classList.add('lk')})}
+function sweep(){if(A.me())return;[].forEach.call(document.querySelectorAll('article.book:not([data-lk])'),lockArticle);marks()}
+document.addEventListener('click',function(e){var b=e.target.closest('[data-u]');if(b){e.preventDefault();e.stopPropagation();authUI(b.dataset.u)}},true);
+
+/* ---- cloud boot: session check, pull from other devices, password-reset link ---- */
+function boot(){if(!CS.get())return;CA.profile().then(function(r){hdr();var rd=r.data||{},ls=norm(snapObj()),rs=norm(rd);if(rs===ls){lastPushed=ls;localStorage.setItem('jsrv',r.updated_at||'');return}
+if(Object.keys(rd).length&&r.updated_at!==localStorage.getItem('jsrv')&&!sessionStorage.getItem('jpulled')){sessionStorage.setItem('jpulled','1');applyObj(rd);localStorage.setItem('jsrv',r.updated_at||'');location.reload()}}).catch(function(){if(!CS.get()){applyObj({});location.reload()}})}
+function recovery(){var h=location.hash||'';if(h.indexOf('type=recovery')<0||h.indexOf('access_token=')<0)return;var p=new URLSearchParams(h.replace(/^#/,'')),at=p.get('access_token');try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}if(at)resetUI(at)}
+
+hdr();lockParts();sweep();new MutationObserver(sweep).observe(B,{childList:true,subtree:true});
+if(CLOUD){boot();recovery()}
+setInterval(function(){A.tick()},15000);addEventListener('pagehide',function(){A.beacon()});
+}catch(err){console.error('auth',err)}})();
 </script></body></html>
