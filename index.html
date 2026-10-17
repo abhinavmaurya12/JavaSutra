@@ -46735,7 +46735,7 @@ var html='<div class="hm-hero"><div class="k">'+L('Java Sutra · by Abhinav · I
 +'<div class="hm-row"><div class="hm-card">'+cont+'</div><div class="hm-card"><h3>'+L('Your progress','आपकी प्रगति')+'</h3><div class="hm-prog"><div class="hm-ring" style="--p:'+pc+'" data-t="'+pc+'%"></div><div><div class="t">'+D+' / '+T+'</div><p style="margin:0">'+L('topics marked learned','टॉपिक सीखे हुए चिह्नित')+'</p></div></div></div></div>'
 +'<div class="hm-row" style="margin-top:14px"><div class="hm-card"><h3>'+L('Topic of the day','आज का टॉपिक')+'</h3><div class="t">'+tp.t.replace(/</g,'&lt;')+'</div><p>'+L('Part ','भाग ')+tp.n+' · '+L(CH[tp.n-1][1],CH[tp.n-1][2])+'</p><button class="hm-btn" data-ch="'+tp.n+'" data-id="'+tp.id+'">'+L('Read it →','पढ़ें →')+'</button></div><div class="hm-card"><h3>'+L('Interview tip','इंटरव्यू टिप')+'</h3><div class="t">'+L('Master the core order','सही क्रम में सीखें')+'</div><p style="margin:0">'+L('Class → Object → Constructor → Inheritance → Overriding → Abstraction → Collections → Threads.','Class → Object → Constructor → Inheritance → Overriding → Abstraction → Collections → Threads।')+'</p></div></div>'
 +'<div class="hm-h">'+L('Quick reference','क्विक रेफ़रेंस')+'<small>'+L('Fast revision cards for interviews','इंटरव्यू से पहले तेज़ रिवीज़न कार्ड्स')+'</small></div><div class="hm-quick"><button class="hm-q" data-tab="oops"><div class="e">🧱</div><b>OOPs</b><span>'+L('4 pillars, constructors, casting','4 स्तंभ, कंस्ट्रक्टर, कास्टिंग')+'</span></button><button class="hm-q" data-tab="collections"><div class="e">📦</div><b>'+L('Collections','कलेक्शन्स')+'</b><span>'+L('List, Set, Queue, Map','List, Set, Queue, Map')+'</span></button><button class="hm-q" data-tab="threads"><div class="e">🧵</div><b>'+L('Threads','थ्रेड्स')+'</b><span>'+L('Methods, states, wait/notify','मेथड्स, स्टेट्स, wait/notify')+'</span></button><button class="hm-q" data-ch="1"><div class="e">📘</div><b>'+L('Full Notes','पूरे नोट्स')+'</b><span>'+L('All 31 chapters in depth','सभी 31 अध्याय विस्तार से')+'</span></button></div>'
-+'<div class="hm-h">'+L('Learning path','सीखने का रास्ता')+'<small>'+L('Follow the groups in order, or jump anywhere','समूहों को क्रम से पढ़ें या कहीं भी कूदें')+'</small></div>';
+;
 GR.forEach(function(g){html+='<div class="hm-g">'+L(g[0],g[1])+'</div><div class="hm-chs">'+g[2].map(function(n){var c=CH[n-1],x=per[n]||0,f=x>=tot[n];return'<button class="hm-ch'+(f?' full':'')+'" data-ch="'+n+'"><span class="n">'+(n<10?'0':'')+n+'</span><b>'+L(c[1],c[2])+'</b><div class="hm-bar" style="margin:6px 0 2px"><i style="width:'+Math.round(x/tot[n]*100)+'%"></i></div><small>'+x+' / '+tot[n]+'</small></button>'}).join('')+'</div>'});
 H.innerHTML=html}
 H.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;if(b.id=='hmS'){document.getElementById('fs').click();return}
@@ -48520,5 +48520,59 @@ if(fab&&!$('jedBtn')){var b=document.createElement('button');b.id='jedBtn';b.typ
 var saved='';try{saved=localStorage.getItem(KEY)||''}catch(e){}
 setCode(saved||template('HelloWorld').replace('\t\t\n','\t\tSystem.out.println("Hello, Java!");\n'),'');dirty=false;title();
 }catch(err){console.error('jed',err)}})();
+</script>
+<style id="tl-css">
+#home .hm-g,#home .hm-chs{display:none!important}
+#home .tl{margin:22px 0 6px}
+#home .tl-top{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:10px 0}
+#home .tl-q{flex:1 1 240px;min-width:0;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:12px;padding:11px 14px;font:500 15px var(--font-body,system-ui)}
+#home .tl-q:focus-visible,#home .tl-f:focus-visible,#home .tl-c:focus-visible,#home .tl-t:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#home .tl-fs{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin;max-width:100%}
+#home .tl-f{flex:0 0 auto;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:99px;padding:6px 13px;font:600 13px var(--font-body,system-ui);cursor:pointer;white-space:nowrap}
+#home .tl-f[aria-pressed=true]{background:linear-gradient(90deg,var(--accent),var(--ac2,#7048e8));color:#fff;border-color:transparent}
+#home .tl-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:6px}
+#home .tl-c{text-align:left;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:14px;padding:14px;cursor:pointer;display:flex;flex-direction:column;gap:6px;font:inherit;min-width:0}
+#home .tl-c:hover{border-color:var(--accent);transform:translateY(-1px)}
+#home .tl-c b{font-size:15px;line-height:1.3;overflow-wrap:anywhere}
+#home .tl-c small,#home .tl-n{color:var(--muted);font:600 12px var(--font-body,system-ui)}
+#home .tl-c.full{border-color:#2b8a3e}
+#home .tl-bar{height:5px;border-radius:9px;background:var(--line);overflow:hidden}
+#home .tl-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--ac2,#7048e8))}
+#home .tl-h{font:700 13px var(--font-body,system-ui);color:var(--muted);margin:16px 0 6px;text-transform:uppercase;letter-spacing:.05em}
+#home .tl-ts{display:flex;flex-direction:column;gap:6px}
+#home .tl-t{text-align:left;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:10px;padding:9px 12px;cursor:pointer;font:500 14px var(--font-body,system-ui);display:flex;justify-content:space-between;gap:12px}
+#home .tl-t:hover{border-color:var(--accent)}#home .tl-t span{color:var(--muted);font-size:12px;flex:0 0 auto}
+#home .tl-e{padding:22px;border:1px dashed var(--line);border-radius:14px;color:var(--muted);text-align:center;margin-top:8px}
+@media(prefers-reduced-motion:reduce){#home .tl-c{transition:none}#home .tl-c:hover{transform:none}}
+</style>
+<script id="tl-js">
+(function(){try{
+var B=document.body,H=document.getElementById('home');if(!H)return;
+function L(e,h){return B.classList.contains('hi')?h:e}
+var topics=[];document.querySelectorAll('template[id^="tpl-b"]').forEach(function(t){var n=+t.id.slice(5);t.content.querySelectorAll('h3[id]').forEach(function(h){topics.push({n:n,id:h.id,t:h.textContent.trim(),l:h.textContent.toLowerCase()})})});
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function J(k,d){try{return JSON.parse(localStorage.getItem(k)||d)}catch(e){return JSON.parse(d)}}
+var grp='all',q='',tm=0;
+function chapters(){var out=[],g='';[].slice.call(H.children).forEach(function(c){if(c.classList.contains('hm-g'))g=c.textContent.trim();else if(c.classList.contains('hm-chs'))c.querySelectorAll('button.hm-ch').forEach(function(b){var m=/(\d+)\s*\/\s*(\d+)/.exec((b.querySelector('small')||{}).textContent||'');out.push({n:+b.dataset.ch,name:b.querySelector('b').textContent,g:g,x:m?+m[1]:0,t:m?+m[2]:0})})});return out}
+function card(c){var p=c.t?Math.round(c.x/c.t*100):0;return'<button type="button" class="tl-c'+(c.t&&c.x>=c.t?' full':'')+'" data-ch="'+c.n+'"><span class="tl-n">'+(c.n<10?'0':'')+c.n+' · '+esc(c.g)+'</span><b>'+esc(c.name)+'</b><div class="tl-bar"><i style="width:'+p+'%"></i></div><small>'+c.x+' / '+c.t+' '+L('topics learned','टॉपिक सीखे')+'</small></button>'}
+function fill(){var box=H.querySelector('.tl');if(!box)return;var cs=chapters(),ql=q.toLowerCase(),map={};cs.forEach(function(c){map[c.n]=c});
+var hits={};if(ql)topics.forEach(function(t){if(t.l.indexOf(ql)>-1)hits[t.n]=(hits[t.n]||0)+1});
+var list=cs.filter(function(c){return(grp==='all'||c.g===grp)&&(!ql||c.name.toLowerCase().indexOf(ql)>-1||hits[c.n])});
+var h='';var rec=J('jrecent','[]').filter(function(n){return map[n]}).slice(0,4);
+if(!ql&&grp==='all'&&rec.length)h+='<div class="tl-h">'+L('Recently visited','हाल में देखे गए')+'</div><div class="tl-g">'+rec.map(function(n){return card(map[n])}).join('')+'</div>';
+h+='<div class="tl-h">'+(ql||grp!=='all'?list.length+' '+L('chapters','अध्याय'):L('All chapters','सभी अध्याय'))+'</div>';
+h+=list.length?'<div class="tl-g">'+list.map(card).join('')+'</div>':'<div class="tl-e">'+L('No chapter matches. Try another word or choose All.','कोई अध्याय नहीं मिला। दूसरा शब्द आज़माएँ या All चुनें।')+'</div>';
+if(ql){var th=topics.filter(function(t){return t.l.indexOf(ql)>-1&&(grp==='all'||(map[t.n]&&map[t.n].g===grp))});if(th.length){h+='<div class="tl-h">'+L('Topics','टॉपिक')+' ('+th.length+(th.length>12?', '+L('showing 12','12 दिखाए गए'):'')+')</div><div class="tl-ts">'+th.slice(0,12).map(function(t){return'<button type="button" class="tl-t" data-ch="'+t.n+'" data-id="'+esc(t.id)+'"><b style="font-weight:600">'+esc(t.t)+'</b><span>'+L('Part ','भाग ')+t.n+'</span></button>'}).join('')+'</div>'}}
+box.querySelector('.tl-body').innerHTML=h;
+var live=box.querySelector('.tl-live');live.textContent=ql?list.length+' '+L('chapters found','अध्याय मिले'):''}
+function build(){if(H.querySelector('.tl'))return;var cs=chapters();if(!cs.length)return;var gs=[];cs.forEach(function(c){if(gs.indexOf(c.g)<0)gs.push(c.g)});
+var d=document.createElement('section');d.className='tl';d.setAttribute('aria-label',L('Topic library','टॉपिक लाइब्रेरी'));
+d.innerHTML='<div class="hm-h">'+L('Topic library','टॉपिक लाइब्रेरी')+'<small>'+L('Search chapters and topics, or filter by group','अध्याय और टॉपिक खोजें, या ग्रुप से फ़िल्टर करें')+'</small></div><div class="tl-top"><input class="tl-q" type="search" placeholder="'+L('Search '+topics.length.toLocaleString()+' topics…',topics.length.toLocaleString()+' टॉपिक खोजें…')+'" aria-label="'+L('Search topics','टॉपिक खोजें')+'" value="'+esc(q)+'"></div><div class="tl-fs" role="group" aria-label="'+L('Filter by group','ग्रुप से फ़िल्टर')+'"><button type="button" class="tl-f" data-g="all" aria-pressed="'+(grp==='all')+'">'+L('All','सभी')+'</button>'+gs.map(function(g){return'<button type="button" class="tl-f" data-g="'+esc(g)+'" aria-pressed="'+(grp===g)+'">'+esc(g)+'</button>'}).join('')+'</div><div class="tl-live" aria-live="polite" style="position:absolute;left:-9999px"></div><div class="tl-body"></div>';
+var first=H.querySelector('.hm-g'),at=first&&first.previousElementSibling&&first.previousElementSibling.classList.contains('hm-h')?first.previousElementSibling:first;
+H.insertBefore(d,at||null);fill();
+d.querySelector('.tl-q').addEventListener('input',function(e){var v=e.target.value.trim();clearTimeout(tm);tm=setTimeout(function(){q=v;fill()},150)});
+d.querySelector('.tl-fs').addEventListener('click',function(e){var b=e.target.closest('.tl-f');if(!b)return;grp=b.dataset.g;d.querySelectorAll('.tl-f').forEach(function(x){x.setAttribute('aria-pressed',x===b)});fill()})}
+var pend=0;new MutationObserver(function(){if(pend)return;pend=setTimeout(function(){pend=0;build()},60)}).observe(H,{childList:true});build();
+}catch(err){console.error('tl',err)}})();
 </script>
 </body></html>
