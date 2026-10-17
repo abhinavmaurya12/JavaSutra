@@ -46938,7 +46938,7 @@ greet();
 .bbox{display:flex;flex-direction:column;align-items:flex-start;gap:1px;flex:none;min-width:0;line-height:1.15}
 .bbox .brand{line-height:1.15}
 .bver{font:600 10.5px var(--font-mono);letter-spacing:.04em;color:var(--muted);white-space:nowrap;padding-left:1px}
-@media(max-width:420px){.bver{font-size:9px}.bbox{max-width:92px}}
+@media(max-width:420px){.bver{font-size:9px}.bbox{max-width:none}}
 @media(max-width:1000px){.bbox{flex:none}}
 </style>
 <script>
@@ -47970,7 +47970,7 @@ body.rd .rdnow{outline:2px solid var(--accent);outline-offset:6px;border-radius:
 .uk-ac button{font:inherit;font-size:12px;margin-right:4px;padding:4px 9px;border-radius:99px;border:1px solid var(--line);background:var(--surface);color:var(--fg);cursor:pointer}.uk-dt td{background:var(--bg);font-size:12.5px;line-height:1.6}
 .uk-lock{display:flex;gap:16px;align-items:center;margin:26px 0;padding:20px 22px;border-radius:18px;border:1px dashed var(--accent);background:linear-gradient(135deg,var(--accent-soft),transparent)}.uk-lock p{margin:4px 0 0;color:var(--muted)}.uk-li{font-size:34px}
 a.uk-lkd{opacity:.65}@media(max-width:420px){.uk-lock{flex-direction:column;align-items:flex-start}}@media print{#ukm,.uk-lock{display:none}}
-@media(max-width:480px){.hb{gap:3px}.hb button,#mn{min-width:31px!important;width:31px!important;height:31px!important;padding:0!important;font-size:13px}#uacct.in span{width:22px;height:22px;font-size:12px}.brand{font-size:14px}.bver{display:none!important}}
+@media(max-width:480px){.hb{gap:3px}.hb button,#mn{min-width:31px!important;width:31px!important;height:31px!important;padding:0!important;font-size:13px}#uacct.in span{width:22px;height:22px;font-size:12px}.brand{font-size:14px}.bver{font-size:8.5px!important;padding:0 6px!important;letter-spacing:0!important}}
 @media(max-width:380px){.brand{font-size:12px!important;letter-spacing:-.01em}}
 </style><script id="prem-js">(function(){try{
 var B=document.body,H=document.getElementById('home');if(!H)return;var Q=22,tm,tt;
@@ -48360,6 +48360,9 @@ body.jed-drag,body.jed-drag *{cursor:row-resize!important;user-select:none!impor
 #jed .jd-col{position:absolute;opacity:0;pointer-events:none;width:0;height:0}
 @media(max-width:700px){#jed .jd-title{display:none}#jed #jd-ta,#jed .jd-g{font-size:13px}}
 @media print{body>*:not(#jed-print){display:none!important}}
+/* phone header: show the brand name once (a later rule had un-hidden the original text under the icon version) */
+@media(max-width:420px){.bar .brand{font-size:0!important;letter-spacing:0!important}.bar .brand::before{font-size:15px;letter-spacing:0}}
+@media(max-width:380px){.bar .brand::before{font-size:14px}}
 </style>
 <div id="jed" role="dialog" aria-label="Java Editor">
 <div class="jd-top">
