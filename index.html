@@ -46443,7 +46443,7 @@ ex.shutdown();</code></pre>
   </div>
   <footer class="site-foot">
     <span>Created by ABHINAV MAURYA</span>
-    <span class="ver">WebPage Vr. 2.3.3</span>
+    <span class="ver">WebPage Vr. 2.3.4</span>
   </footer>
 </div>
 
@@ -47508,7 +47508,7 @@ restore();
 <script>
 (function(){var b=document.querySelector('.bar .brand');if(!b||b.parentElement.classList.contains('bbox'))return;
 var w=document.createElement('div');w.className='bbox';b.parentNode.insertBefore(w,b);w.appendChild(b);
-var v=document.createElement('small');v.className='bver';v.textContent='WebPage Vr. 2.3.3';v.title='Version 2.3.3';w.appendChild(v)})();
+var v=document.createElement('small');v.className='bver';v.textContent='WebPage Vr. 2.3.4';v.title='Version 2.3.4';w.appendChild(v)})();
 </script><style id="nopc">#pc{display:none!important}</style><style id="volicon">#hrd svg{width:20px;height:20px;display:block}@media(max-width:380px){body:not(.home) .hb button#hrd{display:grid!important}}</style>
 <script>(function(){var b=document.getElementById('hrd');if(!b)return;b.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z" fill="currentColor"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>'})();</script><style id="jsqcss">
 #jsq{display:none;grid-column:1/-1;padding:18px 0 50px}
@@ -48175,8 +48175,10 @@ new MutationObserver(function(){partLabels();lib()}).observe(B,{attributes:true,
 partDec();feDec();
 
 /* ---------- WHAT'S NEW ---------- */
-var WN_VER='2.3.3';
+var WN_VER='2.3.4';
 var WN=[
+['🎯','Interview Questions section','इंटरव्यू प्रश्न सेक्शन','New Interview section with two phases: Phase 1 OOPs (51 questions) and Phase 2 Array (70 questions). Every answer has a code example, and you can search, filter by topic and mark questions as revised. Open it from the Interview Questions button in the home hero or in the footer.','नया इंटरव्यू सेक्शन, दो चरणों में: चरण 1 OOPs (51 प्रश्न) और चरण 2 ऐरे (70 प्रश्न)। हर उत्तर के साथ कोड उदाहरण है, और आप खोज सकते हैं, टॉपिक से फ़िल्टर कर सकते हैं और प्रश्न को दोहराया चिह्नित कर सकते हैं। इसे होम हीरो या फ़ुटर के इंटरव्यू प्रश्न बटन से खोलें।'],
+['🔢','Array interview phase','ऐरे इंटरव्यू चरण','Phase 2 covers array concepts, bubble sort, binary search, Kadane, two pointers, subarray problems and matrix programs, from 1D vs 2D arrays to spiral printing and matrix multiplication.','चरण 2 में ऐरे कॉन्सेप्ट, बबल सॉर्ट, बाइनरी सर्च, Kadane, टू-पॉइंटर, सबऐरे प्रॉब्लम और मैट्रिक्स प्रोग्राम हैं, 1D बनाम 2D ऐरे से लेकर स्पाइरल प्रिंट और मैट्रिक्स गुणा तक।'],
 ['📧','Contact that always opens','हमेशा खुलने वाला संपर्क','Email buttons now open Gmail in a new tab if your device has no mail app. Contact in the footer has email, GitHub, LinkedIn and Instagram logos, and the Contact section has a new info panel.','अगर आपके डिवाइस में मेल ऐप नहीं है तो ईमेल बटन अब नए टैब में Gmail खोलते हैं। फ़ुटर के Contact में ईमेल, GitHub, LinkedIn और Instagram लोगो हैं, और Contact सेक्शन में नया इन्फो पैनल है।'],
 ['💻','MacBook app button','मैकबुक ऐप बटन','The footer Get the app row now has a MacBook button next to Android, Apple and Windows.','फ़ुटर की Get the app पंक्ति में Android, Apple और Windows के साथ अब MacBook बटन भी है।'],
 ['🧑‍🏫','A richer About section','और बेहतर परिचय सेक्शन','About now shows live stats, six study tools, a five-step learning path and an author card.','परिचय में अब स्टैट्स, छह स्टडी टूल्स, पाँच-चरण का लर्निंग पाथ और लेखक कार्ड दिखता है।'],
@@ -48234,7 +48236,7 @@ if(cta&&!cta.querySelector('[data-wn]')){var b=document.createElement('button');
 var wnHi=B.classList.contains('hi');new MutationObserver(function(){var h=B.classList.contains('hi');if(h===wnHi)return;wnHi=h;if(H){H.querySelectorAll('[data-wnx]').forEach(function(e){e.remove()});wnInject()}}).observe(B,{attributes:true,attributeFilter:['class']});
 wnInject();
 /* keep the hero buttons in one fixed order, whichever script adds them first */
-var ctaT=0;function ctaOrder(){var c=H&&H.querySelector('.hm-cta');if(!c)return;var rank=function(e){return e.classList.contains('hm-p')?0:e.dataset.cont?0.5:e.id==='hmS'?1:e.dataset.jsq?2:e.dataset.play?3:e.dataset.wn?4:e.dataset.inst?4.5:5};
+var ctaT=0;function ctaOrder(){var c=H&&H.querySelector('.hm-cta');if(!c)return;var rank=function(e){return e.classList.contains('hm-p')?0:e.dataset.cont?0.5:e.id==='hmS'?1:e.dataset.iv?1.5:e.dataset.jsq?2:e.dataset.play?3:e.dataset.wn?4:e.dataset.inst?4.5:5};
 var k=[].slice.call(c.children),w=k.slice().sort(function(a,b){return rank(a)-rank(b)});if(w.some(function(e,i){return e!==k[i]}))w.forEach(function(e){c.appendChild(e)})}
 if(H)new MutationObserver(function(){if(ctaT)return;ctaT=setTimeout(function(){ctaT=0;ctaOrder()},30)}).observe(H,{childList:true,subtree:true});
 ctaOrder();
@@ -48408,12 +48410,12 @@ window.addEventListener('scroll',function(){if(!trT)trT=setTimeout(function(){tr
 document.addEventListener('visibilitychange',track);window.addEventListener('pagehide',track);
 /* ---------- what's new history ---------- */
 function wnItems(a){return'<ul class="wnl">'+a.map(function(x){return'<li><span class="e">'+x[0]+'</span><div><b>'+L(x[1],x[2])+'</b><p>'+L(x[3],x[4])+'</p></div></li>'}).join('')+'</ul>'}
-function wnOpen(){wnMark();openM('✨ '+L("What's new",'नया क्या है'));var rel=[['2.3.3',WN.slice(0,3)],['2.3.2',WN.slice(3,4)],['2.3.1',WN.slice(4,7)],['2.3.0',WN.slice(7,11)],['2.2.9',WN.slice(11,12)],['2.2.8',WN.slice(12,15)],['2.2.7',WN.slice(15,18)],['2.2.6',WN.slice(18,21)],['2.2.5',WN.slice(21,24)],['2.2.4',WN.slice(24,27)],['2.2.3',WN.slice(27,30)],['2.2.0',WN.slice(30,33)],['2.1.9',WN.slice(33,36)],['2.1.8',WN.slice(36,39)],['2.1.7',WN.slice(39,42)],['2.1.'+'6',WN.slice(39)]];
+function wnOpen(){wnMark();openM('✨ '+L("What's new",'नया क्या है'));var rel=[['2.3.4',WN.slice(0,2)],['2.3.3',WN.slice(2,5)],['2.3.2',WN.slice(5,6)],['2.3.1',WN.slice(6,9)],['2.3.0',WN.slice(9,13)],['2.2.9',WN.slice(13,14)],['2.2.8',WN.slice(14,17)],['2.2.7',WN.slice(17,20)],['2.2.6',WN.slice(20,23)],['2.2.5',WN.slice(23,26)],['2.2.4',WN.slice(26,29)],['2.2.3',WN.slice(29,32)],['2.2.0',WN.slice(32,35)],['2.1.9',WN.slice(35,38)],['2.1.8',WN.slice(38,41)],['2.1.7',WN.slice(41,44)],['2.1.'+'6',WN.slice(41)]];
 BD.innerHTML=rel.map(function(r,i){return i===0?'<div class="wnv">v'+r[0]+' · '+L('Latest','नया')+'</div>'+wnItems(r[1]):'<details class="wnd"><summary>v'+r[0]+'</summary>'+wnItems(r[1])+'</details>'}).join('')+'<button class="tlbtn" id="wncl">'+L('Got it','समझ गया')+'</button>';$('#wncl').onclick=closeM}
 /* ---------- install as app / offline ---------- */
 /* Put the public link of your hosted Java Sutra site here (for example your GitHub Pages link). People who open the downloaded file get a button that takes them there to install. */
 var APP_URL='';
-var SWV='jsutra-v2.3.3',OFFST='unknown',DEFP=null,ICON192='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAAPrElEQVR42u3de3BU1RkA8O/cfWR3A5tsXsS8hDwwRNSAgAYQFUSUjgqO7ahjS6ut9Q+1jo7UTutYH3V0pjpjp6PUF51qlbHVQYSCbxCNhAjEEEgghDxIyHuTbLKvu4/TP/Z1NwT2nsNuyNl8568I692bsz/unsd3vo/03DWDUgAAAAIUAEjwvygJ/CGN/AxAA39LAEDx4uD/CAA09EPgDxUvJgBAg68Mvzh02eCLieI2wi8Ovib0YqK4jXE3GXnryG2Mv8lxv9GENxn1G4Wuhv0zcf9I2Duo53z6R8LeQT38/QMgYe+gHm49AETC3kE93HooEAl7B/Vw6wEACXsH9XDrocFBNPYO6uHSA4RI2Duoh1tPZBqPvYN6OPQEp/HYO6iHTw8AkbB3UA+3HgqRMRDqQT3MeoAEx0CoB/Xw6AmMgVAP6uHUE9jKQD2oh1NPaBCNelAPl57QbjzqQT1cekILiagH9XDpoSQqnAP1oB42PaAI50A9qIdZDw2Fc6Ae1MOjJ/gEQj2oh09PJKQV9aAeDj2UEAn1oB5uPRDYykA9qIdPDwUioR7Uw60nNIhGPaiHS09oNx71oB4uPZFpPOpBPRx6AqcyUA/q4dRDo8M5UA/qYdMDinAO1IN6mPVEnUxFPaiHVQ+ET2WgHtTDoSewlYF6UA+nHgCQUA/q4dYT3o1HPaiHRw+N5EhEPaiHXU9kGo96UA+HnuATCPWgHj49QIiEelAPt57wGAj1oB4ePRAdzoF6UA+bHmU4B+pBPcx6AgmmUA/q4dQDhEioB/Vw64kKaUU9qIdVj/JkKupBPcx6aHgvDPWgHg49wfxAqAf18OlRhnOgHtTDrCeSYAr1oB4OPQBEi3qY9UjEVDon9bJLjCWFxtkFuiyLLjNdMhokvQ4k4nfJfpfb75L9btkzOCL3WeWeQXefVe6xOls6ne3d1OtPGj0UQCu0HtBorti7G9S15gc3jtYc5NdDSNrSKzNvWmG57irNzNSzvYvGZNCYDIGfjXPyx/0t9fqcbacdzZ2O5o7RQ82jP57wOlzi6gk8gQR+9hAgoL5xP3tAyrplZd6vf2a4OB/OrxGtxlRaaCothJurAID6/PZjHaOHjvdt3Tta3yKcHgpEK/43F9snyKrHMLuo+C+PplaUQQIa0UgzKmbPqJjtc7ht9S3C6QFCtEkw7kmcHsvqFcXPPCIZUmAymnh6AEA7bfQAq56sdWvmPPkQSAQmpwmoJ3IyVeQ5l/pPiEGPuerK2U8+iHrOrUdZbEXoGTvzN8W59WjM5uLnHiWSBJPdBNMTzs6BeqJm7AUPb9BlpKOemHogXC9M4NVCxm+KmHr0uVnZt92AetTooYRoRV9rZvQTe60569bVRKtVe0G/31bTMLLvsP1Ym6uz3zM44nfLftlL9HqN0aDLTNPnZBhn5xmL82bML0ktL5L0urMvUYmnJ7iQKPhORTz1AJCM1ctUXnDw0+r2l99xd/af2T/UKfudssc66jjeOfRtfeBdiFaXtrg8/ZorMlZUmkrzJ7w9sfQEp/Hi6iHMw6AYerRpM02lF6u5UPe/Pml78Z9M/UM93qHqhqHqI60vvJdyUVbWTUty77jOVJYfWaMSTQ8FohV+lzR+egDAVF4CJPZl5Z6B9r++cz794+4e7Nq8q3PzLnNl2aw7VnjHnCLqASDaJNhjZ9oLO3eERkpBrqovr8/2UZ8/LhEaI3UtI3UtguqJ1MpIfj2gKr5H5ezd3T2QrPE9THogfCpD4Pie+OkBAMlgUHMpyWRAPeGtjCSIDmPdLjhrBAv1etVcKX1ZJeoJbmVMFz0TbKlOsIvsHR5VcwXzwvKc21eiHkWxFZEjU+OlB4B4hmwqr1P6zAOzf79Bm2aeznpCIa2oJ3STzpZTaq8lkbwNP8m980brl7WDX9QOVTd4h8emmx4goWm8+FHxcdADFOzH2r1DNq3FrFZRii5r7dKstUuBUmdr9+iPJ8aOtI42nBxr6vA75KTXQwOnMsTVw74dHyt6jtKR/Ycz1yxjvzAxFucZi/Ny1q8AAOrzO1pOjx1pHas/OXKo2X6sy+/zJ58eANBOh2ePWj0AAKTnvZ08gMa9k0ZKnVuQOrdg1vprAMBndw3XNFr3Ngx8cdDdN5I0eqgyuYKo57nYBkGxo+dsBxpttUfiG6uhSTVkrlxQ9tTPq755ufLdJ3LXLSMp+iTQE5VoXNDTgMyBoyrin9pe3Ox3exIT9kPSF8+d9+J9S79+sei+NZJeJ7QeIKFE44KfJWV7CMWMYLE3trU89VpC48f0mebSx++o2vmsZek8cfUEEkyhngnW4vs/2dvxyvuJDkM05GcufOt3JY/cpqj8J5IeCN630OfYE6An8Bad//io+Ym/+5zuBMeykjkP3Dx34+0i6qHhemFCZ0Fg+riY4p/6tn1Tt+7xob11iX4UXfzLVXnrrhZOD0SKraCes6yHuTp6j97/QsOGZ4erDyfUUMXTdxnzMsTSExwDiZ2BhWkKxhs9N1xzpOHe5w+sfazz9W2uzv5EAJL02jn33yiWnuBWhrh6CGc4B2cEi7Olu+2lLa0vbTGVFVqWXZ62uNy8oEyXaY6Xofz1Vze/+qm7zyaKHgjGRIuf/YlhJToe8U+O452O411dm3cCEENRzswFZebKUnNlaWp5IdFo+B9COk3OiopTH9aIoocqkyskux5ISOwlgLOj39Ex0Pvx9xSIZExJqyxNu6o8Y/l88+VzOAxlLCnr+HC/KHpC58Kmix5IdN5Cv8tj3ddo3dd08pWPDXmZueuqCu5ZqWf5jstYVCKQHqoo+y2kHrZwDkisnnGfnLPb2vra/6pX/bHz/T3qbzIl20wDccYi6IFQ2e/k1wOTqye8rOx1yU1Pv9/1n2/Vb+PrZhhF0UMBpGTIuMs4EZv8EznNf92qfndWa0kVRY+yVgbqSWBcs2xzDB86qfYhJBFR9ITDOQTO9s28En2BznO5uodU3qXP5RVFD4XxJ1MF08O8jhhLj3amqeK1jalzC+MeFa9JNai8T3nEKYoeCCUaF1UPYR1Ex3z2AMm4fkHGtZV92787tWmb48TpuOihhMwsV5VjWh6y+1weUfRQEgiqF75OBVM8YoxvLgAAieTcujznlmWDXx3qenvncG3TeerJWl5hKspWc49jJ/sE0gNAtNNFD6gf90QidTJXLcxctdBxouv0lq/7dtTIg6McekyFWfOfu1vl/VnrTwmkJ5KhTNwaOczzsJij5jOaqTS/9E/3lPzh7uH9TQOfH7R+d9TR1qtGD2g1+bcuuWTjel2aSeUd9u87IZCe0F6Y0BWWuEJazznnOusSn6WqwlJVAQDuniHb4dbRox32Ez2ubqurd9hrd/vcHkmnk4x6wyxLanFu+qLSnFWXG2alq787edjRX3NSID2RBFOC6mGchqmfscfacMi1ZOdaslcvjG9IUPt/91OfXyA9wQRT4ld3Y5uInaeeBDWv3d3yTrVYeiC0lYF6gDPxdPxa498+c1vtYumJ1MoQVA9T9FYkq2GMteYL0Hp2N7VuqRFODyhPZYhYl1Sakar+Q/K5ZDU7FZOvx1rXceCJD/x+EE7PuETj4lW11VkYYrWC++Eq9rkm9dnz9dEfNn7gdXlF1HPmyVTBaiKnzitW/1F5rLaYerxjzsbHNvXvqvXZXYmm4xlz1T+/rebhf4urB0gw0bioFbXNiy5VPQDyyf0jsffY/dC7vaZ3+36i11qqLs26YUHmistSci1xpjPqav/oh+a39shDDhHHPdEJpoTVo5lhylq7XOVn5ursBz9Vv8dOZd/AnsMD3zRQAMNFmWkLS9MWlKQtKJlZXkA0nHXEvA554Pvm7q+Odn1+xOeUhZuxT/QWRCuoHqBQ8MBPJaPaaqZjDa3cERqu7iHnjtqeHT9QQiS9zlCYZSrKMRVmG4uyjYWZ+oyZGlOK1pSiMeo1phSikajX55e9nlGXbB1z9dvsHYNjrf3DRzpHmnoopWLtVJxbTzjJpnh6Mm9cmrfhFvX/+m11zXGJ7/HJXntLr72lT8Rz7HHXE9jKEEyPpNNd9Kvbih68E1hSJFp3102HnKmTrCc0iJ7yeoher0s3G4vz0xbPz153vT4ng2nwYW/qcLX3op6461GeTJ2KetKuvmLeG38+/1nP6Xc/Qz2J0BNK75IM+1xnj5HoG+rbVo16EqGHhk9lTNFxTzwAtb30gd8lo55E6AmeC5vqc67z2WbaXde79VvUkyA9E5xMTSY9ro7e4xs3hX8L1BN3PUCiT6ZOwfUe7ubuGqj/xfOeYTvqSZyeqJqpU1IP50PIdvB440OvyP021JNQPcFiK1NWD8cDyO+SO17d2vnmDur1o55E64HAVsYU1kOY6PR8uKfzje3u04M4ap4cPTR0sHCq6qGq3IwcODawq2ZgZ43X5sT1nsnUAyT0FTb19VCvzy97/E63PDji6R92nepznOgaa2wfrW/xy17c57ogeigAOXTVtVNYD1a1ndJ6IgmmUA/q4dATTDCFelAPnx6qqDKEelAPsx4I1spAPaiHSw8lipOpqAf1sOoBRaJx1IN6mPUEz8ajHtTDpwcAJNSDerj1RJX9Rj2oh1UPDZf9Rj2oh0NPZBqPelAPh57QIBr1oB4uPQBEQj2oh1tPKMUd6kE9XHoCYyDUg3o49UROZaAe1MOhh4bCOVAP6uHRE6gbL6SelcfehKRrmxdtEksPBSC1C9eIpef6Y29BUre3F78uih5lzVRxvrmSvwmjh5LQXhh+c02ddm/tb0TRA9HhHAKMmmF6NFH0KMM5RJlzTZMmhh4aXfZbgBn7l+W/TXo7by55WxQ9oCj7LdB6z/QYRIughwKQ/ZVrRVwtXN34Kj57LrgeIITsr1yLa8241synhyrCOVAP6mHWE0rzi3pQD5ceUJ5MRT2oh1VPpGYq6kE9HHqAEAn1oB5uPeHsHKgH9fDoCYW0oh7Uw6WHnlH2G/WgHgY9kWk86kE9HHpAUfYb9aAeZj2UBAbRqAf1cOmB6HAO1IN62PRQRTgH6kE9zHogfDIV9aAeDj3BJxDqQT18eoAQCfWgHm49ipBW1IN62PXQ0FYG6kE9PHpgorLfqAf1qNVDzyj7jXpQD4MeiC77jXpQD5seqij7jXpQD7OeqETjqAf1sOoZF86BelAPmx6qCOdAPaiHWQ8EY6JRD+rh0hNIMIV6UA+nHsXJVNSDetj1BMdAqAf18Ok5W9lv1IN6VOmBicp+ox7Uo1YPPaPsN+pBPQx6ILrsN+pBPWx6qKLsN+pBPcx6wnmiUQ/q4dFDo8M5UA/qYdOjrJWBelAPsx4g406moh7Uw6In+mQq6kE9jHoUJ1NRD+ph10OB/B8Dl4GuIaHEtAAAAABJRU5ErkJggg==',ICON512='data:image/png;base64,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';
+var SWV='jsutra-v2.3.4',OFFST='unknown',DEFP=null,ICON192='data:image/png;base64,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',ICON512='data:image/png;base64,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';
 function isSA(){try{return window.matchMedia('(display-mode: standalone)').matches||navigator.standalone===true}catch(e){return false}}
 (function(){var web=/^https?:$/.test(location.protocol);if(!web){OFFST='local';return}
 try{var base=location.origin+location.pathname,m={id:base,name:'Java Sutra',short_name:'Java Sutra',description:'Java interview prep notes, quizzes and animations',start_url:base,scope:base.replace(/[^\/]*$/,''),display:'standalone',background_color:'#fff7ed',theme_color:'#e8590c',icons:[{src:ICON192,sizes:'192x192',type:'image/png',purpose:'any'},{src:ICON512,sizes:'512x512',type:'image/png',purpose:'any'},{src:ICON512,sizes:'512x512',type:'image/png',purpose:'maskable'}]};
@@ -48771,7 +48773,7 @@ var st=[[chs,T('chapters','अध्याय')],[tops.toLocaleString(),T('topic
 return'<footer id="pmfoot" class="fx"><div class="fx-top"><div class="fx-brand"><div class="fx-logo">☕ Java Sutra</div><p><b>'+T('JavaSutra — Your Complete Java Learning Hub','जावासूत्र — आपका संपूर्ण जावा लर्निंग हब')+'</b></p><p>'+T('Explore Java tutorials, hands-on coding practice and interview questions — all in one developer-focused platform.','जावा ट्यूटोरियल, हैंड्स-ऑन कोडिंग प्रैक्टिस और इंटरव्यू प्रश्न खोजें — सब कुछ एक डेवलपर-केंद्रित प्लेटफ़ॉर्म में।')+'</p>'+(last&&n[last]?b('data-ch="'+last+'"','▶ '+T('Continue: ','जारी रखें: ')+last+' · '+esc(n[last])):'')+'</div><div class="fx-stats">'+st.map(function(s){return'<div><b>'+s[0]+'</b><span>'+s[1]+'</span></div>'}).join('')+'</div>'+'<div class="fx-app"><div class="fx-app-t"><div class="fx-app-h">📲 '+T('Get the app','ऐप पाएँ')+'</div><p class="fx-note">🔄 '+T('Not seeing the latest version of the website or app? Clear your browser/app cache and reload.','वेबसाइट या ऐप का नया वर्ज़न नहीं दिख रहा? अपने ब्राउज़र/ऐप का कैश क्लियर करें और पेज रीलोड करें।')+'</p></div><div class="fx-stores"><button type="button" class="fx-store" data-fx="store:android"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="#3ddc84" d="M17.6 9.5a1 1 0 0 0-1 1v5.6a1 1 0 0 0 2 0v-5.6a1 1 0 0 0-1-1zM6.4 9.5a1 1 0 0 0-1 1v5.6a1 1 0 0 0 2 0v-5.6a1 1 0 0 0-1-1zM8 9.3v8.1c0 .6.5 1.100 1.100 1.100h.8v2.700a1 1 0 0 0 2 0v-2.700h.2v2.700a1 1 0 0 0 2 0v-2.700h.8c.6 0 1.100-.5 1.100-1.100V9.300zM15.500 3.800l1-1.700a.2.2 0 0 0-.4-.2l-1 1.700A6.200 6.200 0 0 0 12 3a6.200 6.200 0 0 0-3.100.6l-1-1.700a.2.2 0 0 0-.4.200l1 1.700A5.400 5.400 0 0 0 5.600 8.500h12.800a5.400 5.400 0 0 0-2.900-4.700zM9.700 6.800a.6.6 0 1 1 0-1.200.6.6 0 0 1 0 1.200zm4.600 0a.6.6 0 1 1 0-1.200.6.6 0 0 1 0 1.200z"/></svg><span><small>'+T('GET IT ON','इस पर पाएँ')+'</small><b>Android</b></span></button><button type="button" class="fx-store" data-fx="store:apple"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.4 2-3.5 2.1-3.6-1.1-1.7-2.9-1.9-3.5-1.9-1.500-.1-2.900.9-3.600.9-.8 0-1.900-.9-3.200-.8-1.600 0-3.100 1-4 2.400-1.700 3-.4 7.400 1.200 9.800.8 1.200 1.800 2.500 3 2.400 1.200 0 1.700-.8 3.100-.8s1.900.8 3.100.8c1.300 0 2.100-1.200 2.900-2.300.9-1.300 1.300-2.600 1.300-2.700 0 0-2.400-.9-2.400-3.700zM14 5.400c.7-.8 1.100-1.900 1-3-1 0-2.100.7-2.800 1.500-.6.700-1.200 1.800-1 2.900 1.100.1 2.100-.6 2.800-1.400z"/></svg><span><small>'+T('GET IT ON','इस पर पाएँ')+'</small><b>Apple</b></span></button><button type="button" class="fx-store" data-fx="store:windows"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="#00a4ef" d="M2 3.600 10.300 2.500v8.300H2zM11.400 2.400 22 .9v9.900H11.400zM2 11.900h8.300v8.300L2 19.100zM11.400 11.900H22V23l-10.600-1.500z"/></svg><span><small>'+T('GET IT ON','इस पर पाएँ')+'</small><b>Windows</b></span></button><button type="button" class="fx-store" data-fx="store:mac"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.4 2-3.5 2.1-3.6-1.1-1.7-2.9-1.9-3.5-1.9-1.500-.1-2.900.9-3.600.9-.8 0-1.900-.9-3.200-.8-1.600 0-3.100 1-4 2.400-1.700 3-.4 7.400 1.200 9.800.8 1.200 1.800 2.500 3 2.400 1.200 0 1.700-.8 3.100-.8s1.900.8 3.100.8c1.300 0 2.100-1.200 2.900-2.300.9-1.300 1.300-2.600 1.300-2.700 0 0-2.400-.9-2.400-3.700zM14 5.400c.7-.8 1.100-1.900 1-3-1 0-2.100.7-2.800 1.500-.6.700-1.200 1.800-1 2.900 1.100.1 2.100-.6 2.800-1.400z"/></svg><span><small>'+T('GET IT ON','इस पर पाएँ')+'</small><b>MacBook</b></span></button></div></div>'+'</div>'
 +'<div class="fx-cols">'
 +col(T('Learn','सीखें'),lv.map(function(x){return b('data-ch="'+x[0]+'"',x[1])}))
-+col(T('Explore','एक्सप्लोर'),[b('data-fx="seg:home"',T('Home','होम')),b('data-fx="seg:oops"','OOPs'),b('data-fx="seg:collections"','Collections'),b('data-fx="seg:threads"','Threads'),b('data-fx="seg:notes"',T('Full Notes','पूरे नोट्स')),b('data-fx="seg:jsq"','☕ JavaSquadz'),b('data-fx="seg:fe"','🎨 Frontend')])
++col(T('Explore','एक्सप्लोर'),[b('data-fx="seg:home"',T('Home','होम')),b('data-fx="seg:oops"','OOPs'),b('data-fx="seg:collections"','Collections'),b('data-fx="seg:threads"','Threads'),b('data-fx="seg:notes"',T('Full Notes','पूरे नोट्स')),b('data-iv="1"','🎯 '+T('Interview Questions','इंटरव्यू प्रश्न')),b('data-fx="seg:jsq"','☕ JavaSquadz'),b('data-fx="seg:fe"','🎨 Frontend')])
 +col(T('Practice','प्रैक्टिस'),[b('data-act="quiz"',T('Mixed interview quiz','मिक्स्ड इंटरव्यू क्विज़')),b('data-q=""',T('Search topics','टॉपिक खोजें'))].concat(n[13]?[b('data-ch="13"',T('Run and predict (Collections)','Run और Predict (Collections)'))]:[],n[9]?[b('data-ch="9"',esc(n[9]))]:[],n[17]?[b('data-ch="17"',esc(n[17]))]:[]))
 +col(T('Your study data','आपका स्टडी डेटा'),[b('data-fx="click:Export backup"',T('Export backup','बैकअप एक्सपोर्ट')),b('data-fx="click:Import backup"',T('Import backup','बैकअप इम्पोर्ट')),b('data-fx="click:Print"',T('Print / PDF cheat sheet','प्रिंट / PDF चीट शीट')),b('data-fx="sel:[data-wn]"',T("What's new",'नया क्या है')),b('data-fx="sel:[data-inst]"',T('Get the app','ऐप पाएँ'))])
 +col(T('Project','प्रोजेक्ट'),[ex('https://github.com/abhinavmaurya12/JavaSquadz','JavaSquadz repo'),ex('https://github.com/abhinavmaurya12','GitHub · abhinavmaurya12'),ex('https://abhinavmaurya12.github.io/javapath-react/','JavaPath (React)')])
@@ -50512,4 +50514,1224 @@ body.home .hm-hero p.hm-note{margin:0 0 14px;max-width:620px;font-size:12.5px;li
 .fx-top .fx-stores{flex:0 1 auto}
 @media(max-width:700px){.fx-stores{width:100%}.fx-stores .fx-store{flex:1 1 140px}}
 </style>
+<style id="ivcss">
+#iv{display:none;grid-column:1/-1;padding:18px 0 50px}
+body.iv #iv{display:block}
+body.iv #home,body.iv .wrap>header.top,body.iv .wrap>.part,body.iv #side>#nav,body.iv #hrd,body.iv #rt,body.iv #fe,body.iv #jsq{display:none!important}
+body.iv #side{display:none!important}
+body.iv .wrap{grid-template-columns:minmax(0,1fr)!important}
+body.iv .seg button[aria-pressed="true"]:not(#seg-iv){background:var(--surface)!important;color:var(--fg)!important;border:1px solid var(--line)!important}
+#seg-iv.on{background:linear-gradient(90deg,var(--accent),var(--ac2))!important;color:#fff!important;border-color:transparent!important}
+#iv .iv-wrap{max-width:980px;margin-inline:auto;display:grid;gap:16px}
+.iv-hero{position:relative;overflow:hidden;border-radius:26px;padding:clamp(22px,4.5vw,44px);color:#fff;background:linear-gradient(135deg,#e8590c 0%,#c2255c 50%,#7048e8 100%);box-shadow:0 20px 50px rgba(112,72,232,.22)}
+.iv-hero::after{content:"?";position:absolute;right:18px;bottom:-46px;font:800 190px var(--font-display);opacity:.13}
+.iv-hero .k{font:600 12px var(--font-mono);letter-spacing:.14em;text-transform:uppercase;opacity:.9}
+.iv-hero h1{margin:8px 0 8px;font-size:clamp(26px,5vw,46px);line-height:1.08;font-weight:800;letter-spacing:-.02em;color:#fff!important}
+.iv-hero p{margin:0;max-width:620px;color:#fff!important;opacity:.93;line-height:1.6;font-size:clamp(14px,2vw,16.5px)}
+.iv-tools{display:grid;gap:12px}
+.iv-search{width:100%;padding:12px 14px;font:400 15px var(--font-body);background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:12px}
+.iv-search:focus{outline:2px solid var(--accent);outline-offset:1px}
+.iv-chips{display:flex;flex-wrap:wrap;gap:6px}
+.iv-chip{font:600 13px/1 var(--font-body);padding:9px 13px;border-radius:999px;cursor:pointer;background:var(--surface);color:var(--muted);border:1px solid var(--line)}
+.iv-chip:hover{color:var(--fg);border-color:var(--accent)}
+.iv-chip[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+.iv-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 14px;color:var(--muted);font-size:.9rem}
+.iv-bar button{font:600 13px var(--font-body);padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--fg);cursor:pointer}
+.iv-bar button:hover{border-color:var(--accent);color:var(--accent)}
+.iv-prog{height:6px;border-radius:99px;background:var(--line);overflow:hidden}
+.iv-prog i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--ac2));width:0;transition:width .3s}
+.iv-list{display:grid;gap:10px}
+.iv-q{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.iv-q[open]{border-color:var(--accent)}
+.iv-q summary{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;cursor:pointer;list-style:none;font:600 1rem/1.4 var(--font-body)}
+.iv-q summary::-webkit-details-marker{display:none}
+.iv-q summary::after{content:"+";margin-left:auto;padding-left:8px;font:500 20px/1 var(--font-mono);color:var(--muted)}
+.iv-q[open] summary::after{content:"–"}
+.iv-n{flex:none;min-width:34px;text-align:center;font:600 12px/1 var(--font-mono);padding:6px 8px;border-radius:8px;background:var(--accent-soft);color:var(--accent)}
+.iv-q.done .iv-n{background:var(--ok-soft);color:var(--ok)}
+.iv-a{padding:2px 16px 16px 16px;display:grid;gap:12px;min-width:0}
+.iv-a>*{min-width:0}
+.iv-a p{max-width:75ch}
+.iv-a ul{margin:0;padding-left:1.2rem;display:grid;gap:4px}
+.iv-a code{background:var(--accent-soft);color:var(--accent);padding:1px 6px;border-radius:4px;font-size:.88em}
+.iv-a pre code{background:none;color:inherit;padding:0;font-size:inherit}
+.iv-a td:first-child{white-space:normal}
+.iv-a h4{margin:4px 0 0;font:600 .8rem var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.iv-mk{justify-self:start;font:600 13px var(--font-body);padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--muted);cursor:pointer}
+.iv-mk:hover{border-color:var(--ok);color:var(--ok)}
+.iv-q.done .iv-mk{background:var(--ok-soft);color:var(--ok);border-color:transparent}
+.iv-empty{color:var(--muted);padding:26px 0;text-align:center}
+.iv-phases{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
+.iv-ph{text-align:left;cursor:pointer;display:grid;gap:10px;align-content:start;padding:22px;border-radius:20px;border:1px solid var(--line);background:var(--surface);color:var(--fg);font:inherit;transition:transform .15s,border-color .15s,box-shadow .15s}
+.iv-ph:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 12px 30px rgba(112,72,232,.14)}
+.iv-ph .e{font-size:32px;line-height:1}
+.iv-ph .t{font:600 12px var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.iv-ph h2{margin:0}
+.iv-ph p{margin:0;color:var(--muted);font-size:.95rem}
+.iv-ph .m{font:600 13px var(--font-mono);color:var(--muted)}
+.iv-ph .go{font-weight:700;color:var(--accent)}
+.iv-back{justify-self:start;font:600 14px var(--font-body);padding:8px 14px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--fg);cursor:pointer}
+.iv-back:hover{border-color:var(--accent);color:var(--accent)}
+</style>
+<script id="iv-js">
+(function(){try{
+var B=document.body,$=function(s){return document.querySelector(s)},W=$('.wrap');if(!W)return;
+var V=document.createElement('section');V.id='iv';
+W.insertBefore(V,$('#home')?$('#home').nextSibling:$('.bar').nextSibling);
+function hi(){return B.classList.contains('hi')}
+function L(e,h){return hi()&&h?h:e}
+function esc(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+var QS=[];
+function Q(n,c,q,a,code){QS.push({n:n,c:c,q:q,a:a,code:code||'',p:n<=51?1:2})}
+
+Q(1,'ctor','What are static blocks and static initializers in Java?',
+`<p>A <b>static block</b> (also called a static initializer) is a block written as <code>static { ... }</code> inside a class. The JVM runs it <b>once</b>, when the class is first loaded, before <code>main()</code> and before any object is created. It is used to initialise static variables.</p><ul><li>A class can have several static blocks; they run top to bottom.</li><li>Static blocks run before instance initializer blocks and constructors.</li></ul>`,
+`class Demo {
+    static int x;
+    static {                          // runs once, when the class is loaded
+        x = 10;
+        System.out.println("static block");
+    }
+    public static void main(String[] args) {
+        System.out.println("main: " + x);
+    }
+}
+// Output:
+// static block
+// main: 10`);
+
+Q(2,'ctor','How to call one constructor from another constructor?',
+`<p>Use <code>this(...)</code> inside a constructor to call another constructor of the <b>same class</b>. This is called <b>constructor chaining</b>. The call must be the <b>first statement</b>, and constructors cannot call each other in a loop (compile-time error). To call a parent-class constructor use <code>super(...)</code> instead.</p>`,
+`class Student {
+    String name; int age;
+    Student() { this("Unknown", 0); }            // calls the 2-argument constructor
+    Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}`);
+
+Q(3,'oop','What is method overriding in Java?',
+`<p>When a subclass provides its own implementation of a method that is already defined in its superclass, with the <b>same name and parameter list</b>, it is method overriding. Which version runs is decided at <b>runtime</b> by the actual object type (runtime polymorphism).</p><ul><li>Return type must be the same or a subtype (covariant).</li><li>The access level cannot be reduced (public cannot become protected).</li><li><code>static</code>, <code>final</code> and <code>private</code> methods cannot be overridden.</li><li>An overriding method cannot throw broader checked exceptions.</li><li>Use <code>@Override</code> so the compiler checks the rules for you.</li></ul>`,
+`class Animal { void sound() { System.out.println("Animal sound"); } }
+class Dog extends Animal {
+    @Override
+    void sound() { System.out.println("Bark"); }
+}
+Animal a = new Dog();
+a.sound();    // Bark  (decided at runtime)`);
+
+Q(4,'ctor','What is the super keyword in Java?',
+`<p><code>super</code> refers to the <b>immediate parent class</b>. It has three uses:</p><ul><li><code>super.method()</code> – call the parent's version of an overridden method.</li><li><code>super.variable</code> – access a parent field hidden by a subclass field.</li><li><code>super(...)</code> – call a parent constructor (must be the first statement). If you don't write it, the compiler inserts <code>super()</code> automatically.</li></ul>`,
+`class Parent {
+    String name = "Parent";
+    Parent() { System.out.println("Parent constructor"); }
+    void show() { System.out.println("Parent show"); }
+}
+class Child extends Parent {
+    String name = "Child";
+    Child() { super(); }                       // 1) parent constructor
+    void show() {
+        super.show();                          // 2) parent method
+        System.out.println(super.name);        // 3) parent variable
+    }
+}`);
+
+Q(5,'oop','Difference between method overloading and method overriding in Java?',
+`<div class="tablewrap"><table><thead><tr><th>Point</th><th>Overloading</th><th>Overriding</th></tr></thead><tbody>
+<tr><td>Meaning</td><td>Same method name, different parameters</td><td>Subclass redefines a parent method</td></tr>
+<tr><td>Where</td><td>Same class (or subclass)</td><td>Parent and child class (inheritance)</td></tr>
+<tr><td>Parameters</td><td>Must differ (number, type or order)</td><td>Must be the same</td></tr>
+<tr><td>Return type</td><td>Can differ (but alone it is not enough)</td><td>Same or covariant</td></tr>
+<tr><td>Binding</td><td>Compile time (static)</td><td>Runtime (dynamic)</td></tr>
+<tr><td>Polymorphism</td><td>Compile-time</td><td>Runtime</td></tr>
+<tr><td>static / final / private</td><td>Can be overloaded</td><td>Cannot be overridden</td></tr>
+</tbody></table></div>`);
+
+Q(6,'abs','Difference between abstract class and interface?',
+`<div class="tablewrap"><table><thead><tr><th>Point</th><th>Abstract class</th><th>Interface</th></tr></thead><tbody>
+<tr><td>Methods</td><td>Abstract and concrete methods</td><td>Abstract methods, plus <code>default</code>, <code>static</code> and <code>private</code> methods (Java 8/9+)</td></tr>
+<tr><td>Variables</td><td>Any kind (instance, static, final or not)</td><td>Only <code>public static final</code> constants</td></tr>
+<tr><td>Constructor</td><td>Yes</td><td>No</td></tr>
+<tr><td>Inheritance</td><td>A class can extend only one</td><td>A class can implement many; an interface can extend many</td></tr>
+<tr><td>Keyword</td><td><code>extends</code></td><td><code>implements</code></td></tr>
+<tr><td>Use when</td><td>Related classes share state and code</td><td>Unrelated classes must follow the same contract</td></tr>
+</tbody></table></div>`);
+
+Q(7,'basics','Why is Java platform independent?',
+`<p>The Java compiler (<code>javac</code>) does not produce machine code. It produces <b>bytecode</b> (a <code>.class</code> file) that is the same on every operating system. Each platform has its own <b>JVM</b> that converts that bytecode into instructions for the local machine. So the same <code>.class</code> file runs on Windows, Linux or macOS: <i>write once, run anywhere</i>.</p><p>Note: Java programs are platform independent, but the JVM itself is platform <b>dependent</b>.</p>`);
+
+Q(8,'oop','What is method overloading in Java?',
+`<p>Defining <b>more than one method with the same name but different parameter lists</b> (different number, type or order of parameters) in the same class. The compiler picks the right one at compile time, so it is also called compile-time polymorphism. Changing only the return type is <b>not</b> overloading and gives a compile error.</p>`,
+`class Calc {
+    int add(int a, int b)          { return a + b; }
+    double add(double a, double b) { return a + b; }
+    int add(int a, int b, int c)   { return a + b + c; }
+}`);
+
+Q(9,'basics','What is the difference between C++ and Java?',
+`<div class="tablewrap"><table><thead><tr><th>Point</th><th>C++</th><th>Java</th></tr></thead><tbody>
+<tr><td>Platform</td><td>Platform dependent (compiled to machine code)</td><td>Platform independent (bytecode + JVM)</td></tr>
+<tr><td>Pointers</td><td>Supported</td><td>No explicit pointers, only references</td></tr>
+<tr><td>Multiple inheritance</td><td>Supported with classes</td><td>Only through interfaces</td></tr>
+<tr><td>Memory management</td><td>Manual (<code>new</code> / <code>delete</code>)</td><td>Automatic garbage collection</td></tr>
+<tr><td>Operator overloading</td><td>Supported</td><td>Not supported</td></tr>
+<tr><td>Header files / preprocessor</td><td>Yes</td><td>No</td></tr>
+<tr><td>Destructors</td><td>Yes</td><td>No (garbage collector cleans up)</td></tr>
+<tr><td>Threads</td><td>Library based</td><td>Built-in language support</td></tr>
+</tbody></table></div>`);
+
+Q(10,'basics','What is JIT compiler?',
+`<p>The <b>Just-In-Time (JIT) compiler</b> is a part of the JVM. While a program runs, it finds the frequently executed ("hot") bytecode and compiles it into <b>native machine code</b>, then caches that code. Later calls run the native version directly instead of being interpreted again, which makes the program much faster.</p>`);
+
+Q(11,'basics','What is bytecode in Java?',
+`<p>Bytecode is the <b>platform-neutral, intermediate code</b> that <code>javac</code> generates from your <code>.java</code> source and stores in a <code>.class</code> file. It is not readable machine code; the JVM interprets it (and the JIT compiler compiles it) on the target machine. Bytecode is what makes Java portable.</p>`,
+`javac Hello.java      // produces Hello.class (bytecode)
+javap -c Hello        // shows the bytecode instructions
+java Hello            // JVM runs the bytecode`);
+
+Q(12,'ctor','Difference between this() and super() in Java?',
+`<div class="tablewrap"><table><thead><tr><th>Point</th><th><code>this()</code></th><th><code>super()</code></th></tr></thead><tbody>
+<tr><td>Calls</td><td>Another constructor of the same class</td><td>A constructor of the parent class</td></tr>
+<tr><td>Purpose</td><td>Constructor chaining within a class</td><td>Initialise the inherited part of the object</td></tr>
+<tr><td>Position</td><td colspan="2">Must be the first statement of a constructor</td></tr>
+<tr><td>Together</td><td colspan="2">Cannot both be used in the same constructor</td></tr>
+<tr><td>Default</td><td>None</td><td>Compiler inserts <code>super()</code> if you write neither</td></tr>
+</tbody></table></div>`);
+
+Q(13,'oop','What is a class?',
+`<p>A class is a <b>blueprint or template</b> that defines the data (fields) and behaviour (methods) common to a group of objects. It is a logical entity: no memory is allocated for the fields until an object is created from it.</p>`,
+`class Car {
+    String color;            // state (fields)
+    void drive() { }         // behaviour (methods)
+}`);
+
+Q(14,'oop','What is an object?',
+`<p>An object is an <b>instance of a class</b>. It has <b>state</b> (values of its fields), <b>behaviour</b> (its methods) and <b>identity</b> (it is different from every other object). Objects are created with <code>new</code> and live on the heap; a variable holds a reference to them.</p>`,
+`Car c1 = new Car();     // c1 is a reference; new Car() is the object on the heap
+c1.color = "Red";
+c1.drive();`);
+
+Q(15,'basics','What is a method in Java?',
+`<p>A method is a named block of code inside a class that performs a task and can be reused by calling it. It may take parameters and may return a value (or <code>void</code>). Methods are either <b>instance</b> methods (need an object) or <b>static</b> methods (belong to the class).</p>`,
+`public int add(int a, int b) {    // access  return-type  name(parameters)
+    return a + b;
+}`);
+
+Q(16,'oop','What is encapsulation?',
+`<p>Encapsulation means <b>wrapping data and the methods that work on it into a single unit (a class) and restricting direct access</b> to the data. In Java you make fields <code>private</code> and expose them through public getters and setters. Benefits: data hiding, validation in one place, flexibility to change the internals, and easier maintenance.</p>`,
+`class Account {
+    private double balance;                 // hidden data
+    public double getBalance() { return balance; }
+    public void deposit(double amt) {
+        if (amt > 0) balance += amt;        // validation
+    }
+}`);
+
+Q(17,'basics','Why is main() method public, static and void in Java?',
+`<p><b>public</b> – an access specifier that lets the JVM, which is outside your class, call the method. If it were private or default, the JVM could not access it.</p>
+<p><b>static</b> – normally a method needs an object to be called. The JVM starts the program before any object exists, so <code>main()</code> is static and can be called directly on the class without creating an object.</p>
+<p><b>void</b> – the return type used when a method returns no value. <code>main()</code> returns nothing to the JVM (use <code>System.exit(code)</code> to give an exit status).</p>`);
+
+Q(18,'basics','Explain about main() method in Java?',
+`<p><code>main()</code> is the <b>entry point</b> of a Java application. The JVM looks for this exact signature and starts execution from it. <code>String[] args</code> holds the command-line arguments (it can also be written <code>String... args</code>).</p><ul><li>The class name must match the one passed to <code>java</code>.</li><li>You may overload <code>main()</code>, but the JVM calls only this signature.</li><li>If it is missing or the signature is wrong, you get an error like "Main method not found".</li><li>Newer Java versions also allow a simpler form of main, but the classic signature is what interviews expect.</li></ul>`,
+`public class Demo {
+    public static void main(String[] args) {
+        System.out.println(args.length);
+    }
+}
+// java Demo a b c   ->  3`);
+
+Q(19,'ctor','What is a constructor in Java?',
+`<p>A constructor is a special method that <b>initialises a new object</b>. It has the <b>same name as the class</b>, <b>no return type</b>, and runs automatically when you use <code>new</code>.</p><ul><li>If you write none, the compiler adds a <b>default (no-argument) constructor</b>.</li><li>Types: default, no-argument and parameterised.</li><li>Constructors cannot be <code>static</code>, <code>final</code> or <code>abstract</code>, and they are not inherited.</li></ul>`,
+`class Employee {
+    int id; String name;
+    Employee(int id, String name) { this.id = id; this.name = name; }
+}
+Employee e = new Employee(1, "Ravi");`);
+
+Q(20,'basics','What is the difference between length and length() in Java?',
+`<p><code>length</code> is a <b>final field</b> of an <b>array</b> (no parentheses). <code>length()</code> is a <b>method</b> of <code>String</code> (and <code>StringBuilder</code>/<code>StringBuffer</code>).</p>`,
+`int[] arr = {1, 2, 3};
+String s = "Java";
+System.out.println(arr.length);    // 3 - field
+System.out.println(s.length());    // 4 - method`);
+
+Q(21,'basics','What is ASCII Code?',
+`<p>ASCII stands for <b>American Standard Code for Information Interchange</b>. It assigns a number to each character: standard ASCII uses 7 bits (0 to 127), and extended ASCII uses 8 bits (0 to 255). It covers only English letters, digits and symbols, and its set cannot be extended to other languages. That is why languages like C, which use ASCII, are limited to English text.</p>`);
+
+Q(22,'basics','What is Unicode?',
+`<p>Unicode is a character set developed by the <b>Unicode Consortium</b> to represent <b>every language in the world</b>. Java uses Unicode so a program can handle text in any language. A Java <code>char</code> is 16 bits (range 0 to 65,535). Characters beyond that range are stored as a pair of <code>char</code> values (surrogate pairs). ASCII is a small subset of Unicode (the first 128 characters).</p>`);
+
+Q(23,'basics','Difference between Character Constant and String Constant in Java?',
+`<p>A <b>character constant</b> is a single character in <b>single quotes</b> (type <code>char</code>). A <b>string constant</b> is a sequence of characters in <b>double quotes</b> (type <code>String</code>, an object).</p>`,
+`char c = 'A';          // character constant
+char d = '2';
+String s = "Hello World";   // string constant`);
+
+Q(24,'basics','What are constants and how to create constants in Java?',
+`<p>Constants are fixed values that cannot change while the program runs. In Java you create them with the <code>final</code> keyword. For a constant shared by the whole class, use <code>static final</code> and an UPPER_CASE name.</p>`,
+`final int number = 10;
+final String str = "java-interview-questions";
+public static final double PI = 3.14159;   // class-level constant`);
+
+Q(25,'basics',"Difference between '>>' and '>>>' operators in Java?",
+`<p><code>&gt;&gt;</code> is the <b>signed right shift</b>: it shifts bits to the right and fills the left with the <b>sign bit</b>, so negative numbers stay negative. <code>&gt;&gt;&gt;</code> is the <b>unsigned right shift</b>: it fills the left with <b>zeroes</b>. For positive numbers both give the same result.</p>`,
+`int a = -16;
+System.out.println(a >> 2);    // -4          (sign bit preserved)
+System.out.println(a >>> 2);   // 1073741820  (zeroes shifted in)
+System.out.println(16 >> 2);   // 4           (same as >>> for positive)`);
+
+Q(26,'naming','Explain Java Coding Standards for classes (Java coding conventions for classes)?',
+`<p>Sun (now Oracle) defined Java coding conventions, and following them is strongly recommended.</p><ul><li>Class names start with an <b>uppercase</b> letter.</li><li>Class names should be <b>nouns</b>.</li><li>For multiple words, capitalise the first letter of each inner word (CamelCase).</li></ul><p>Examples: <code>Employee</code>, <code>EmployeeDetails</code>, <code>ArrayList</code>, <code>TreeSet</code>, <code>HashSet</code>.</p>`);
+
+Q(27,'naming','Explain Java Coding standards for interfaces?',
+`<ul><li>Interface names start with an <b>uppercase</b> letter.</li><li>Interface names are usually <b>adjectives</b> (describing a capability), though nouns are also common.</li><li>Use CamelCase for multiple words.</li></ul><p>Examples: <code>Runnable</code>, <code>Serializable</code>, <code>Cloneable</code>, <code>Comparable</code>.</p>`);
+
+Q(28,'naming','Explain Java Coding standards for Methods?',
+`<ul><li>Method names start with a <b>lowercase</b> letter.</li><li>Method names are usually <b>verbs</b>.</li><li>For multiple words, every inner word starts with an uppercase letter (camelCase).</li></ul>`,
+`toString()
+getDetails()
+public abstract void getDetails();`);
+
+Q(29,'naming','Explain Java Coding Standards for variables?',
+`<ul><li>Variable names start with a <b>lowercase</b> letter.</li><li>Variable names should be <b>nouns</b>.</li><li>Short, meaningful names are recommended.</li><li>For multiple words, every inner word starts with an uppercase character.</li></ul><p>Examples: <code>value</code>, <code>empName</code>, <code>employeeId</code>.</p>`);
+
+Q(30,'naming','Explain Java Coding Standards for Constants?',
+`<ul><li>Constants are created using <code>static</code> and <code>final</code>.</li><li>Constant names use only <b>UPPERCASE</b> letters; separate words with an underscore.</li></ul><p>Examples: <code>MAX_VALUE</code>, <code>MIN_VALUE</code>, <code>MAX_PRIORITY</code>, <code>MIN_PRIORITY</code>.</p>`,
+`public static final int MAX_VALUE = 100;
+public static final int MIN_VALUE = 0;`);
+
+Q(31,'oop','Difference between overriding and overloading in Java?',
+`<p><b>Overloading</b>: same method name with different parameters in the same class; resolved at compile time. <b>Overriding</b>: a subclass redefines an inherited method with the same signature; resolved at runtime. See question 5 for the full comparison table.</p>`,
+`class A {
+    void show(int x)    { }          // overloading: same name, different parameters
+    void show(String s) { }
+}
+class B extends A {
+    @Override
+    void show(int x)    { }          // overriding: same signature as the parent
+}`);
+
+Q(32,'oop',"What is 'IS-A' relationship in Java?",
+`<p>The IS-A relationship represents <b>inheritance</b>. It is implemented with <code>extends</code> (class to class) or <code>implements</code> (class to interface). If class B extends class A, then "B IS-A A": B gets all the non-private members of A and can be used wherever an A is expected.</p>`,
+`class Animal { void eat() { } }
+class Dog extends Animal { }              // Dog IS-A Animal
+Dog d = new Dog();
+d.eat();                                  // inherited
+System.out.println(d instanceof Animal);  // true`);
+
+Q(33,'oop',"What is 'HAS-A' relationship in Java?",
+`<p>The HAS-A relationship represents <b>composition or aggregation</b>: a class contains a reference to another class as a field. It is used to reuse code without inheritance.</p>`,
+`class Engine { void start() { } }
+class Car {
+    private Engine engine = new Engine();   // Car HAS-A Engine
+    void drive() { engine.start(); }
+}`);
+
+Q(34,'oop',"Difference between 'IS-A' and 'HAS-A' relationship in Java?",
+`<div class="tablewrap"><table><thead><tr><th>Point</th><th>IS-A</th><th>HAS-A</th></tr></thead><tbody>
+<tr><td>Based on</td><td>Inheritance</td><td>Composition / aggregation</td></tr>
+<tr><td>Keyword</td><td><code>extends</code> / <code>implements</code></td><td>A field of another class type</td></tr>
+<tr><td>Example</td><td>Dog IS-A Animal</td><td>Car HAS-A Engine</td></tr>
+<tr><td>Coupling</td><td>Tight (child depends on parent)</td><td>Loose, easier to change</td></tr>
+<tr><td>Use when</td><td>The child truly is a kind of the parent</td><td>One object uses or contains another</td></tr>
+</tbody></table></div>`);
+
+Q(35,'oop','Explain about instanceof operator in Java?',
+`<p><code>instanceof</code> checks at <b>runtime</b> whether an object is an instance of a given class, subclass or interface, and returns <code>true</code> or <code>false</code>. It returns <code>false</code> for <code>null</code>. It is commonly used before casting to avoid a <code>ClassCastException</code>.</p>`,
+`Object o = "Hello";
+System.out.println(o instanceof String);    // true
+System.out.println(o instanceof Integer);   // false
+String n = null;
+System.out.println(n instanceof String);    // false - null is never an instance
+
+// Pattern matching (Java 16+)
+if (o instanceof String s) { System.out.println(s.length()); }`);
+
+Q(36,'basics','What does null mean in Java?',
+`<p><code>null</code> is a special literal meaning "no object". When a reference variable doesn't point to any object, it holds <code>null</code> (it is also the default value of reference fields). Using a null reference to call a method or access a field throws a <code>NullPointerException</code>.</p>`,
+`String s = null;
+s.length();      // NullPointerException`);
+
+Q(37,'naming','Can we have multiple classes in a single file?',
+`<p>Yes. A single <code>.java</code> file can contain many classes, but <b>at most one of them can be <code>public</code></b>, and the file name must match that public class. Each class is compiled into its own <code>.class</code> file.</p>`,
+`// File: Test.java
+public class Test {
+    public static void main(String[] args) { new Helper().hi(); }
+}
+class Helper { void hi() { System.out.println("Hi"); } }`);
+
+Q(38,'access','What all access modifiers are allowed for a top-level class?',
+`<p>Only <b><code>public</code></b> and <b>default</b> (no modifier, package-private). <code>private</code> and <code>protected</code> are not allowed for a top-level class (they are allowed for nested classes). Non-access modifiers such as <code>final</code>, <code>abstract</code> and <code>strictfp</code> can also be used.</p>`);
+
+Q(39,'naming','What are packages in Java?',
+`<p>A package is a <b>namespace that groups related classes and interfaces</b>. Packages avoid name conflicts, organise code, and help control access. Java has built-in packages (<code>java.lang</code>, <code>java.util</code>, <code>java.io</code>) and you can create your own. A package maps to a folder structure.</p>`,
+`package com.javasutra.demo;       // must be the first statement
+
+import java.util.List;
+
+public class Demo { }`);
+
+Q(40,'naming','Can we have more than one package statement in a source file in Java?',
+`<p>No. A source file can have <b>at most one</b> <code>package</code> statement. Writing two causes a compile-time error.</p>`);
+
+Q(41,'naming','Can we define a package statement after an import statement in Java?',
+`<p>No. The <code>package</code> statement must be the <b>first statement</b> in the file (comments are allowed before it). The required order is: <b>package, then imports, then class declarations</b>.</p>`,
+`import java.util.List;
+package com.demo;      // compile-time error: package must come first`);
+
+Q(42,'naming','What are identifiers in a Java program?',
+`<p>Identifiers are the names you give to classes, methods, variables, packages and so on.</p><p><b>Rules:</b></p><ul><li>Cannot start with a digit.</li><li>The first character must be a letter, an underscore (<code>_</code>) or a dollar sign (<code>$</code>); from the second character onward digits are also allowed.</li><li>Identifiers are <b>case sensitive</b>.</li><li>There is no length limit, but short meaningful names are recommended.</li><li>Reserved words (like <code>class</code> or <code>int</code>) cannot be used as identifiers.</li></ul>`,
+`int empId;  String _name;  double $price;   // valid
+// int 1stRank;    // invalid - starts with a digit
+// int my-var;     // invalid - '-' not allowed
+// int class;      // invalid - reserved word`);
+
+Q(43,'access','What are access modifiers in Java?',
+`<p>Access modifiers control <b>where a class, method, variable or constructor can be accessed from</b>. Access control is an important part of encapsulation: it prevents misuse of a class and its members.</p><div class="tablewrap"><table><thead><tr><th>Modifier</th><th>Same class</th><th>Same package</th><th>Subclass (other package)</th><th>Other package</th></tr></thead><tbody>
+<tr><td><code>public</code></td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><td><code>protected</code></td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td></tr>
+<tr><td>default</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td></tr>
+<tr><td><code>private</code></td><td>Yes</td><td>No</td><td>No</td><td>No</td></tr>
+</tbody></table></div>`);
+
+Q(44,'access','What is the difference between access specifiers and access modifiers in Java?',
+`<p>In C++ there are <b>access specifiers</b> (<code>public</code>, <code>private</code>, <code>protected</code>) that are separate from other modifiers. In Java there is no such split: everything is called a <b>modifier</b>, divided into two groups.</p><ul><li><b>Access modifiers:</b> <code>public</code>, <code>private</code>, <code>protected</code>, default.</li><li><b>Non-access modifiers:</b> <code>abstract</code>, <code>static</code>, <code>final</code>, and others such as <code>synchronized</code>, <code>volatile</code>, <code>transient</code>.</li></ul>`);
+
+Q(45,'access','What access modifiers can be used for a class?',
+`<p>For a top-level class only two: <b><code>public</code></b> and <b>default</b>.</p><ul><li>A <code>public</code> class can be accessed from anywhere.</li><li>A default class can be accessed only within the same package.</li></ul>`);
+
+Q(46,'access','Explain what access modifiers can be used for methods?',
+`<p>All four can be used for methods: <code>public</code>, <code>protected</code>, default and <code>private</code>.</p><div class="tablewrap"><table><thead><tr><th>Modifier</th><th>Accessible from</th></tr></thead><tbody>
+<tr><td><code>public</code></td><td>Same class; same package (subclass and non-subclass); different package (subclass and non-subclass)</td></tr>
+<tr><td><code>protected</code></td><td>Same class; same package (subclass and non-subclass); different package <b>subclass only</b></td></tr>
+<tr><td>default</td><td>Same class; same package (subclass and non-subclass). Not from a different package</td></tr>
+<tr><td><code>private</code></td><td>Only within the same class</td></tr>
+</tbody></table></div>`);
+
+Q(47,'access','Explain what access modifiers can be used for variables?',
+`<p>All four can be used for variables too: <code>public</code>, <code>protected</code>, default and <code>private</code>, with the same access rules as for methods.</p><div class="tablewrap"><table><thead><tr><th>Modifier</th><th>Accessible from</th></tr></thead><tbody>
+<tr><td><code>public</code></td><td>Everywhere: same class, same package, subclasses and non-subclasses in other packages</td></tr>
+<tr><td><code>protected</code></td><td>Same class, same package, and subclasses in a different package (not non-subclasses there)</td></tr>
+<tr><td>default</td><td>Same class and same package only; not from a different package</td></tr>
+<tr><td><code>private</code></td><td>Only within that class</td></tr>
+</tbody></table></div><p>Good practice: keep fields <code>private</code> and expose them with getters and setters.</p>`);
+
+Q(48,'access','What is the final access modifier in Java?',
+`<p><code>final</code> is a non-access modifier that <b>prevents change</b>.</p><ul><li><b>final variable</b> – value cannot be reassigned (a constant). For an object, the reference can't change, but the object's contents can.</li><li><b>final method</b> – cannot be overridden.</li><li><b>final class</b> – cannot be extended (e.g. <code>String</code>).</li><li><b>final parameter</b> – cannot be modified inside the method.</li></ul>`,
+`final int MAX = 10;
+// MAX = 20;                      // compile-time error
+
+class A { final void show() { } }
+class B extends A {
+    // void show() { }            // error: cannot override final method
+}
+final class Util { }
+// class X extends Util { }       // error: cannot extend final class`);
+
+Q(49,'abs','Explain about abstract classes in Java?',
+`<p>Take a <code>Vehicle</code> class: we cannot give a complete implementation because there may be two-wheelers, four-wheelers and so on. In such a case we make <code>Vehicle</code> <b>abstract</b>. Any class that extends it must provide the implementation of its abstract methods; the abstract class itself may also contain concrete methods.</p><ul><li>An abstract class <b>cannot be instantiated</b>, but you can create reference variables of its type.</li><li>It can contain <b>zero or more</b> abstract methods.</li><li>It can have constructors, fields and concrete methods.</li><li>A class that has an abstract method must itself be declared abstract.</li></ul>`,
+`abstract class Vehicle {
+    abstract void start();                 // no body
+    void stop() { System.out.println("Stopped"); }   // concrete method
+}
+class Bike extends Vehicle {
+    void start() { System.out.println("Bike started"); }
+}
+Vehicle v = new Bike();     // reference of abstract type, object of subclass
+// Vehicle x = new Vehicle();   // error: cannot instantiate`);
+
+Q(50,'abs','Can we create a constructor in an abstract class?',
+`<p>Yes. It doesn't give a compilation error. Since an abstract class cannot be instantiated directly, the constructor is never called with <code>new</code> on that class, but it <b>runs when a subclass constructor calls <code>super()</code></b>, so it is used to initialise the common state.</p>`,
+`abstract class Shape {
+    Shape() { System.out.println("Shape constructor"); }
+}
+class Circle extends Shape {
+    Circle() { super(); }      // runs the abstract class constructor
+}
+new Circle();                  // prints: Shape constructor`);
+
+Q(51,'abs','What are abstract methods in Java?',
+`<p>An abstract method is a method <b>without a body</b>. It is declared with the keyword <code>abstract</code> and ends with a semicolon instead of braces. The <b>subclass must implement</b> it (unless the subclass is also abstract). Abstract methods cannot be <code>private</code>, <code>static</code> or <code>final</code>.</p>`,
+`public abstract void getDetails();      // signature only
+
+abstract class Employee {
+    abstract void getDetails();
+}
+class Manager extends Employee {
+    void getDetails() { System.out.println("Manager details"); }
+}`);
+
+/* ===== Phase 2: Array questions (52-121) ===== */
+Q(52,'concept','Array Programs',
+`<p>An array stores a <b>fixed number of elements of the same type</b> in contiguous memory, accessed by an index that starts at 0. Almost every array program uses these basics: declare, initialise, traverse and update.</p>`,
+`int[] a = new int[5];                 // default values (0)
+int[] b = {10, 20, 30, 40, 50};
+for (int i = 0; i < b.length; i++) System.out.print(b[i] + " ");
+for (int x : b) System.out.print(x + " ");        // for-each
+System.out.println(java.util.Arrays.toString(b)); // [10, 20, 30, 40, 50]`);
+
+Q(53,'concept','1D vs 2D Array',
+`<div class="tablewrap"><table><thead><tr><th>Point</th><th>1D array</th><th>2D array</th></tr></thead><tbody>
+<tr><td>Structure</td><td>A single row of elements</td><td>An array of arrays (rows and columns)</td></tr>
+<tr><td>Declaration</td><td><code>int[] a = new int[5];</code></td><td><code>int[][] m = new int[3][4];</code></td></tr>
+<tr><td>Access</td><td><code>a[i]</code></td><td><code>m[i][j]</code></td></tr>
+<tr><td>Length</td><td><code>a.length</code></td><td><code>m.length</code> (rows), <code>m[0].length</code> (columns)</td></tr>
+<tr><td>Traversal</td><td>One loop</td><td>Nested loops</td></tr>
+<tr><td>Use</td><td>Lists of values</td><td>Tables, matrices, grids</td></tr>
+</tbody></table></div>`);
+
+Q(54,'concept','Jagged Array',
+`<p>A jagged array is a 2D array whose <b>rows have different lengths</b>. In Java a 2D array is an array of arrays, so you only give the number of rows first and create each row separately.</p>`,
+`int[][] j = new int[3][];       // only rows fixed
+j[0] = new int[2];
+j[1] = new int[4];
+j[2] = new int[1];
+System.out.println(j[1].length);   // 4`);
+
+Q(55,'concept','Array Memory',
+`<ul><li>An array is an <b>object</b>, created on the <b>heap</b>. The variable holds a reference (stored on the stack if it is a local variable).</li><li>Elements sit in <b>contiguous</b> memory, so access by index is O(1): address = base + index × element size.</li><li>The size is <b>fixed</b> once created.</li><li>Default values: <code>0</code> for numbers, <code>false</code> for boolean, <code>'\\u0000'</code> for char, <code>null</code> for objects.</li><li>A 2D array is an array of references, each pointing to a row array.</li><li>Out-of-range index throws <code>ArrayIndexOutOfBoundsException</code>.</li></ul>`);
+
+Q(56,'concept','Array vs ArrayList',
+`<div class="tablewrap"><table><thead><tr><th>Point</th><th>Array</th><th>ArrayList</th></tr></thead><tbody>
+<tr><td>Size</td><td>Fixed</td><td>Grows and shrinks dynamically</td></tr>
+<tr><td>Element types</td><td>Primitives and objects</td><td>Objects only (autoboxing for primitives)</td></tr>
+<tr><td>Length</td><td><code>arr.length</code></td><td><code>list.size()</code></td></tr>
+<tr><td>Add / remove</td><td>Not supported directly</td><td><code>add()</code>, <code>remove()</code></td></tr>
+<tr><td>Generics</td><td>No</td><td>Yes (<code>ArrayList&lt;String&gt;</code>)</td></tr>
+<tr><td>Speed</td><td>Slightly faster, less memory</td><td>Slight overhead from resizing and boxing</td></tr>
+</tbody></table></div>`);
+
+Q(57,'search','Bubble Sort',
+`<p>Repeatedly compare adjacent elements and swap them if they are in the wrong order. After each pass the largest remaining element "bubbles" to the end. Time: O(n²), best case O(n) with the <code>swapped</code> flag; space O(1); stable.</p>`,
+`static void bubbleSort(int[] a) {
+    for (int i = 0; i < a.length - 1; i++) {
+        boolean swapped = false;
+        for (int j = 0; j < a.length - 1 - i; j++) {
+            if (a[j] > a[j + 1]) {
+                int t = a[j]; a[j] = a[j + 1]; a[j + 1] = t;
+                swapped = true;
+            }
+        }
+        if (!swapped) break;       // already sorted
+    }
+}`);
+
+Q(58,'sub','Kadane Algorithm',
+`<p>Finds the <b>maximum sum of a contiguous subarray</b> in one pass. At each element, either extend the current subarray or start a new one: <code>cur = max(a[i], cur + a[i])</code>, and keep the best seen. Time O(n), space O(1).</p>`,
+`static int kadane(int[] a) {
+    int cur = a[0], best = a[0];
+    for (int i = 1; i < a.length; i++) {
+        cur = Math.max(a[i], cur + a[i]);
+        best = Math.max(best, cur);
+    }
+    return best;
+}   // {-2,1,-3,4,-1,2,1,-5,4} -> 6`);
+
+Q(59,'sub','Two Pointers',
+`<p>A technique that uses <b>two indexes</b> moving through the array (from both ends or one behind the other) to avoid a nested loop. It turns many O(n²) problems into O(n): pair sum in a sorted array, removing duplicates, reversing, merging sorted arrays.</p>`,
+`// Pair with given sum in a SORTED array
+static boolean hasPair(int[] a, int target) {
+    int l = 0, r = a.length - 1;
+    while (l < r) {
+        int s = a[l] + a[r];
+        if (s == target) return true;
+        if (s < target) l++; else r--;
+    }
+    return false;
+}`);
+
+Q(60,'search','Binary Search',
+`<p>Searches a <b>sorted</b> array by repeatedly halving the search range: compare with the middle element and discard one half. Time O(log n), space O(1). Use <code>mid = low + (high - low) / 2</code> to avoid overflow.</p>`,
+`static int binarySearch(int[] a, int key) {
+    int low = 0, high = a.length - 1;
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+        if (a[mid] == key) return mid;
+        if (a[mid] < key) low = mid + 1; else high = mid - 1;
+    }
+    return -1;      // not found
+}`);
+
+Q(61,'search','WAP to find Kth smallest element in an unsorted array',
+`<p>Simple way: sort and return <code>a[k-1]</code> (O(n log n)). Better: keep a <b>max-heap of size k</b>; the top is the kth smallest. Time O(n log k).</p>`,
+`static int kthSmallest(int[] a, int k) {
+    PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
+    for (int x : a) {
+        pq.add(x);
+        if (pq.size() > k) pq.poll();      // drop the largest
+    }
+    return pq.peek();
+}   // {7,10,4,3,20,15}, k=3 -> 7`);
+
+Q(62,'search','Sort the array and calculate cumulative frequency of each element',
+`<p>Sort the array so equal values are together, count each group, and keep a running total.</p>`,
+`Arrays.sort(a);
+int cum = 0;
+for (int i = 0; i < a.length; ) {
+    int j = i;
+    while (j < a.length && a[j] == a[i]) j++;
+    cum += j - i;
+    System.out.println(a[i] + "  freq=" + (j - i) + "  cumulative=" + cum);
+    i = j;
+}   // {3,1,2,3,1} -> 1:2:2, 2:1:3, 3:2:5`);
+
+Q(63,'prog','Find the majority element (appears more than n/2 times)',
+`<p><b>Boyer-Moore voting</b>: keep a candidate and a count; matching elements add 1, others subtract 1, and the candidate resets at 0. A majority element, if it exists, survives. Verify at the end. O(n) time, O(1) space.</p>`,
+`static int majority(int[] a) {
+    int cand = 0, count = 0;
+    for (int x : a) {
+        if (count == 0) cand = x;
+        count += (x == cand) ? 1 : -1;
+    }
+    count = 0;
+    for (int x : a) if (x == cand) count++;
+    return count > a.length / 2 ? cand : -1;     // -1 = none
+}`);
+
+Q(64,'prog','Length of the longest consecutive elements sequence (unsorted)',
+`<p>Put all numbers in a <b>HashSet</b>. Start counting only from numbers whose predecessor (<code>x-1</code>) is absent, then walk upwards. O(n) time.</p>`,
+`static int longestConsecutive(int[] a) {
+    Set<Integer> set = new HashSet<>();
+    for (int x : a) set.add(x);
+    int best = 0;
+    for (int x : set) {
+        if (!set.contains(x - 1)) {            // start of a sequence
+            int len = 1;
+            while (set.contains(x + len)) len++;
+            best = Math.max(best, len);
+        }
+    }
+    return best;
+}   // {100,4,200,1,3,2} -> 4  (1,2,3,4)`);
+
+Q(65,'prog','Max product formed by multiplying three numbers (unsorted, negatives allowed)',
+`<p>Two negatives make a positive, so the answer is the larger of: (three largest) or (two smallest × largest). After sorting: <code>max(a[n-1]*a[n-2]*a[n-3], a[0]*a[1]*a[n-1])</code>.</p>`,
+`static int maxProduct3(int[] a) {
+    Arrays.sort(a);
+    int n = a.length;
+    return Math.max(a[n-1] * a[n-2] * a[n-3], a[0] * a[1] * a[n-1]);
+}   // {-10,-10,5,2} -> 500`);
+
+Q(66,'prog','Find numbers that are NOT repeated; all others appear twice',
+`<p>Add each number to a set; if it is already there, remove it. Numbers that appear twice cancel out and only the non-repeated ones remain. (If exactly one number is unique, XOR of all elements gives it directly.)</p>`,
+`static Set<Integer> nonRepeated(int[] a) {
+    Set<Integer> set = new LinkedHashSet<>();
+    for (int x : a)
+        if (!set.add(x)) set.remove(x);
+    return set;
+}   // {1,2,3,2,1,4} -> [3, 4]`);
+
+Q(67,'search','Sort array1 using array2 as the sorting key',
+`<p>Sort the <b>indexes</b> by the values in array2, then rebuild array1 in that index order.</p>`,
+`static int[] sortByKey(int[] arr1, int[] arr2) {
+    int n = arr1.length;
+    Integer[] idx = new Integer[n];
+    for (int i = 0; i < n; i++) idx[i] = i;
+    Arrays.sort(idx, (x, y) -> Integer.compare(arr2[x], arr2[y]));
+    int[] res = new int[n];
+    for (int i = 0; i < n; i++) res[i] = arr1[idx[i]];
+    return res;
+}   // arr1={10,20,30}, arr2={3,1,2} -> {20,30,10}`);
+
+Q(68,'prog','Find the missing number in an array containing 1..100 with one missing',
+`<p>The sum of 1..n is <code>n(n+1)/2</code>. Subtract the array sum to get the missing number. O(n) time, O(1) space. (XOR of all numbers and 1..n also works and cannot overflow.)</p>`,
+`static int missing(int[] a, int n) {          // n = 100
+    int expected = n * (n + 1) / 2;
+    int sum = 0;
+    for (int x : a) sum += x;
+    return expected - sum;
+}`);
+
+Q(69,'concept','Demonstrate jagged arrays (arrays of arrays with different lengths)',
+`<p>Create the rows with different sizes, fill them, and print using each row's own length.</p>`,
+`int[][] jag = new int[3][];
+jag[0] = new int[]{1};
+jag[1] = new int[]{2, 3};
+jag[2] = new int[]{4, 5, 6};
+for (int i = 0; i < jag.length; i++) {
+    for (int j = 0; j < jag[i].length; j++)
+        System.out.print(jag[i][j] + " ");
+    System.out.println();
+}
+// 1
+// 2 3
+// 4 5 6`);
+
+Q(70,'sub','Find all pairs in an integer array whose sum equals a given number',
+`<p>For each element, check whether <code>target - x</code> was already seen (HashSet). O(n) time.</p>`,
+`static void pairs(int[] a, int target) {
+    Set<Integer> seen = new HashSet<>();
+    for (int x : a) {
+        if (seen.contains(target - x))
+            System.out.println("(" + (target - x) + ", " + x + ")");
+        seen.add(x);
+    }
+}   // {1,5,7,-1,5}, 6 -> (1,5) (7,-1) (1,5)`);
+
+Q(71,'prog','Remove duplicates from an array in place and return new length',
+`<p>For an <b>unsorted</b> array: copy an element forward only if it has not appeared in the already-kept part (O(n²) without extra space). For a sorted array use the faster two-pointer method in Q78.</p>`,
+`static int removeDuplicates(int[] a) {
+    int len = 0;
+    for (int i = 0; i < a.length; i++) {
+        boolean dup = false;
+        for (int j = 0; j < len; j++)
+            if (a[j] == a[i]) { dup = true; break; }
+        if (!dup) a[len++] = a[i];
+    }
+    return len;           // first len elements are unique
+}`);
+
+Q(72,'prog','Every element repeats twice except one — find that element',
+`<p><b>XOR</b> of all elements: <code>x ^ x = 0</code> and <code>x ^ 0 = x</code>, so pairs cancel and the single element remains. O(n) time, O(1) space.</p>`,
+`static int single(int[] a) {
+    int res = 0;
+    for (int x : a) res ^= x;
+    return res;
+}   // {4,1,2,1,2} -> 4`);
+
+Q(73,'prog','Print all common elements in three sorted arrays',
+`<p>Use three pointers. If all three values are equal, print it; otherwise advance the pointer with the smallest value. O(n1 + n2 + n3).</p>`,
+`int i = 0, j = 0, k = 0;
+while (i < a.length && j < b.length && k < c.length) {
+    if (a[i] == b[j] && b[j] == c[k]) {
+        System.out.print(a[i] + " ");
+        i++; j++; k++;
+    } else if (a[i] < b[j]) i++;
+    else if (b[j] < c[k]) j++;
+    else k++;
+}`);
+
+Q(74,'prog','First repeating element — the element that occurs more than once and whose index of first occurrence is smallest',
+`<p>Traverse from the <b>right</b> keeping a set of seen values. If an element is already in the set, remember its index (it keeps moving left). The last remembered index is the answer.</p>`,
+`static int firstRepeating(int[] a) {
+    Set<Integer> seen = new HashSet<>();
+    int min = -1;
+    for (int i = a.length - 1; i >= 0; i--) {
+        if (seen.contains(a[i])) min = i;
+        else seen.add(a[i]);
+    }
+    return min == -1 ? -1 : a[min];
+}   // {10,5,3,4,3,5,6} -> 5`);
+
+Q(75,'prog','Smallest positive integer NOT representable as a subset sum',
+`<p>For a <b>sorted</b> array, keep <code>res = 1</code>, the smallest value not yet representable. If <code>a[i] &gt; res</code>, stop; otherwise every value up to <code>res + a[i] - 1</code> is representable, so <code>res += a[i]</code>.</p>`,
+`static int smallestNotSum(int[] a) {     // a is sorted
+    int res = 1;
+    for (int x : a) {
+        if (x > res) break;
+        res += x;
+    }
+    return res;
+}   // {1,2,3,8} -> 7`);
+
+Q(76,'prog','Rearrange array alternating positive/negative, preserving order',
+`<p>Collect positives and negatives in separate lists (keeping their order), then place them alternately; leftover elements go at the end.</p>`,
+`static int[] rearrange(int[] a) {
+    List<Integer> pos = new ArrayList<>(), neg = new ArrayList<>();
+    for (int x : a) { if (x >= 0) pos.add(x); else neg.add(x); }
+    int[] res = new int[a.length];
+    int p = 0, n = 0, i = 0;
+    while (p < pos.size() && n < neg.size()) {
+        res[i++] = pos.get(p++);
+        res[i++] = neg.get(n++);
+    }
+    while (p < pos.size()) res[i++] = pos.get(p++);
+    while (n < neg.size()) res[i++] = neg.get(n++);
+    return res;
+}   // {1,2,3,-4,-1,4} -> {1,-4,2,-1,3,4}`);
+
+Q(77,'sub','Check if any subarray has sum equal to zero',
+`<p>Keep a running prefix sum. If the prefix sum becomes 0, or the same prefix sum appears twice, the elements between have sum zero. O(n) with a HashSet.</p>`,
+`static boolean zeroSumSubarray(int[] a) {
+    Set<Integer> seen = new HashSet<>();
+    int sum = 0;
+    for (int x : a) {
+        sum += x;
+        if (sum == 0 || !seen.add(sum)) return true;
+    }
+    return false;
+}   // {4,2,-3,1,6} -> true  (2,-3,1)`);
+
+Q(78,'prog','Remove duplicates IN PLACE from a sorted array; return new length',
+`<p>Two pointers: <code>k</code> marks the end of the unique part; copy <code>a[i]</code> forward whenever it differs from <code>a[k-1]</code>. O(n) time, O(1) space.</p>`,
+`static int removeDup(int[] a) {
+    if (a.length == 0) return 0;
+    int k = 1;
+    for (int i = 1; i < a.length; i++)
+        if (a[i] != a[k - 1]) a[k++] = a[i];
+    return k;
+}   // {1,1,2,2,3} -> 3, array starts {1,2,3,...}`);
+
+Q(79,'prog','Remove all instances of a value IN PLACE; return new length',
+`<p>Copy every element that is <b>not</b> equal to the value to the front using a write pointer. O(n) time, O(1) space.</p>`,
+`static int removeElement(int[] a, int val) {
+    int k = 0;
+    for (int x : a)
+        if (x != val) a[k++] = x;
+    return k;
+}   // {3,2,2,3}, val=3 -> 2`);
+
+Q(80,'sub',"Maximum sum of a contiguous subarray (Kadane's algorithm)",
+`<p>Same as Q58, but this version also reports where the best subarray starts and ends.</p>`,
+`int cur = a[0], best = a[0], s = 0, start = 0, end = 0;
+for (int i = 1; i < a.length; i++) {
+    if (a[i] > cur + a[i]) { cur = a[i]; s = i; }
+    else cur += a[i];
+    if (cur > best) { best = cur; start = s; end = i; }
+}
+System.out.println(best + " from index " + start + " to " + end);`);
+
+Q(81,'sub','Maximum product of a contiguous subarray',
+`<p>A negative number can turn the smallest product into the largest, so track both the <b>max</b> and <b>min</b> product ending at each index and swap them when the element is negative. O(n).</p>`,
+`static int maxProductSubarray(int[] a) {
+    int max = a[0], min = a[0], best = a[0];
+    for (int i = 1; i < a.length; i++) {
+        if (a[i] < 0) { int t = max; max = min; min = t; }
+        max = Math.max(a[i], max * a[i]);
+        min = Math.min(a[i], min * a[i]);
+        best = Math.max(best, max);
+    }
+    return best;
+}   // {2,3,-2,4} -> 6`);
+
+Q(82,'prog','Length of longest consecutive sequence in an unsorted array',
+`<p>See Q64 for the O(n) HashSet solution. Alternative: sort, then count runs where each element is exactly 1 more than the previous (skip duplicates). O(n log n).</p>`,
+`Arrays.sort(a);
+int best = 1, run = 1;
+for (int i = 1; i < a.length; i++) {
+    if (a[i] == a[i - 1]) continue;              // skip duplicates
+    if (a[i] == a[i - 1] + 1) run++;
+    else run = 1;
+    best = Math.max(best, run);
+}`);
+
+Q(83,'prog','Find all elements that appear more than n/k times',
+`<p>Count frequencies with a HashMap and print every element whose count is greater than <code>n/k</code>. O(n) time, O(n) space (Moore's voting extension can reduce space to O(k)).</p>`,
+`static void moreThanNByK(int[] a, int k) {
+    Map<Integer, Integer> freq = new HashMap<>();
+    for (int x : a) freq.merge(x, 1, Integer::sum);
+    for (Map.Entry<Integer, Integer> e : freq.entrySet())
+        if (e.getValue() > a.length / k)
+            System.out.println(e.getKey());
+}`);
+
+Q(84,'prog','Reverse an array IN PLACE',
+`<p>Swap the first and last elements, then move both ends toward the middle. O(n) time, O(1) space.</p>`,
+`static void reverse(int[] a) {
+    for (int i = 0, j = a.length - 1; i < j; i++, j--) {
+        int t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+}`);
+
+Q(85,'prog','Minimum steps from (1,1) to (N,M) moving (x, x+y) or (x+y, y)',
+`<p>Work <b>backwards</b> from (N,M): the previous point is unique, because the larger coordinate must have been produced by adding the smaller one. So subtract the smaller from the larger until you reach (1,1). If N equals M and is not 1 (or a coordinate hits 0), it is impossible. (Use division instead of repeated subtraction for large values, as in the Euclidean algorithm.)</p>`,
+`static int minSteps(int n, int m) {
+    int steps = 0;
+    while (!(n == 1 && m == 1)) {
+        if (n == m) return -1;          // cannot reach
+        if (n > m) n -= m; else m -= n;
+        steps++;
+    }
+    return steps;
+}   // (3,1) -> 2   (1,1)->(2,1)->(3,1)`);
+
+Q(86,'mat','Print a 2D matrix in spiral (clockwise) order',
+`<p>Keep four boundaries (top, bottom, left, right). Print the top row, right column, bottom row and left column, then shrink the boundaries.</p>`,
+`int top = 0, bot = r - 1, left = 0, right = c - 1;
+while (top <= bot && left <= right) {
+    for (int j = left; j <= right; j++) System.out.print(m[top][j] + " ");
+    top++;
+    for (int i = top; i <= bot; i++) System.out.print(m[i][right] + " ");
+    right--;
+    if (top <= bot) {
+        for (int j = right; j >= left; j--) System.out.print(m[bot][j] + " ");
+        bot--;
+    }
+    if (left <= right) {
+        for (int i = bot; i >= top; i--) System.out.print(m[i][left] + " ");
+        left++;
+    }
+}`);
+
+Q(87,'prog','Find the single repeated element in an array of 101 numbers containing 1..100 with one value repeated',
+`<p>The sum of 1..100 is 5050. The array sum minus 5050 equals the repeated number. O(n) time, O(1) space.</p>`,
+`int sum = 0;
+for (int x : a) sum += x;          // a has 101 elements
+int repeated = sum - 100 * 101 / 2;`);
+
+Q(88,'prog','Find maximum element in an array',
+`<p>Assume the first element is the maximum and update it whenever a larger value appears. O(n).</p>`,
+`int max = a[0];
+for (int i = 1; i < a.length; i++)
+    if (a[i] > max) max = a[i];`);
+
+Q(89,'prog','Find minimum element in an array',
+`<p>Same idea as Q88 with the comparison reversed.</p>`,
+`int min = a[0];
+for (int i = 1; i < a.length; i++)
+    if (a[i] < min) min = a[i];`);
+
+Q(90,'mat','Find maximum element in a 2D matrix',
+`<p>Compare every element using nested loops.</p>`,
+`int max = m[0][0];
+for (int i = 0; i < m.length; i++)
+    for (int j = 0; j < m[i].length; j++)
+        if (m[i][j] > max) max = m[i][j];`);
+
+Q(91,'mat','Find minimum element in a 2D matrix',
+`<p>Same as Q90 with the comparison reversed.</p>`,
+`int min = m[0][0];
+for (int i = 0; i < m.length; i++)
+    for (int j = 0; j < m[i].length; j++)
+        if (m[i][j] < min) min = m[i][j];`);
+
+Q(92,'search','Sort an array in ascending order (selection sort)',
+`<p>Find the smallest element in the unsorted part and swap it to the front. O(n²), at most n-1 swaps.</p>`,
+`for (int i = 0; i < a.length - 1; i++) {
+    int minIdx = i;
+    for (int j = i + 1; j < a.length; j++)
+        if (a[j] < a[minIdx]) minIdx = j;
+    int t = a[i]; a[i] = a[minIdx]; a[minIdx] = t;
+}`);
+
+Q(93,'search','Sort an array in descending order (selection sort)',
+`<p>Same as Q92, but select the <b>largest</b> element each time.</p>`,
+`for (int i = 0; i < a.length - 1; i++) {
+    int maxIdx = i;
+    for (int j = i + 1; j < a.length; j++)
+        if (a[j] > a[maxIdx]) maxIdx = j;
+    int t = a[i]; a[i] = a[maxIdx]; a[maxIdx] = t;
+}`);
+
+Q(94,'search','Merge two sorted arrays into one sorted array',
+`<p>Use two pointers; always copy the smaller current element, then copy whatever remains. O(n + m).</p>`,
+`static int[] merge(int[] a, int[] b) {
+    int[] r = new int[a.length + b.length];
+    int i = 0, j = 0, k = 0;
+    while (i < a.length && j < b.length)
+        r[k++] = (a[i] <= b[j]) ? a[i++] : b[j++];
+    while (i < a.length) r[k++] = a[i++];
+    while (j < b.length) r[k++] = b[j++];
+    return r;
+}`);
+
+Q(95,'prog','Print union of two arrays (distinct values)',
+`<p>Add all elements of both arrays to a <code>LinkedHashSet</code>; it removes duplicates and keeps insertion order.</p>`,
+`Set<Integer> union = new LinkedHashSet<>();
+for (int x : a) union.add(x);
+for (int x : b) union.add(x);
+System.out.println(union);   // {1,2,3} and {3,4} -> [1, 2, 3, 4]`);
+
+Q(96,'mat','Add two matrices element-wise',
+`<p>Both matrices must have the same size. Add the elements at the same position.</p>`,
+`int[][] sum = new int[r][c];
+for (int i = 0; i < r; i++)
+    for (int j = 0; j < c; j++)
+        sum[i][j] = a[i][j] + b[i][j];`);
+
+Q(97,'mat','Transpose of a matrix',
+`<p>Rows become columns: <code>t[j][i] = m[i][j]</code>. An r × c matrix becomes c × r.</p>`,
+`int[][] t = new int[c][r];
+for (int i = 0; i < r; i++)
+    for (int j = 0; j < c; j++)
+        t[j][i] = m[i][j];`);
+
+Q(98,'mat','Multiply two matrices',
+`<p>For A (r × n) and B (n × c), the result is r × c. Each cell is the dot product of a row of A and a column of B. The number of columns of A must equal the number of rows of B. O(r·n·c).</p>`,
+`int[][] res = new int[r][c];
+for (int i = 0; i < r; i++)
+    for (int j = 0; j < c; j++)
+        for (int k = 0; k < n; k++)
+            res[i][j] += A[i][k] * B[k][j];`);
+
+Q(99,'mat','Sum of all elements in a matrix',
+`<p>Add every element using nested loops.</p>`,
+`int sum = 0;
+for (int[] row : m)
+    for (int x : row) sum += x;`);
+
+Q(100,'mat','Sum of the upper triangular part of a matrix',
+`<p>For a square matrix, the upper triangle (including the main diagonal) is the cells where <code>j &gt;= i</code>.</p>`,
+`int sum = 0;
+for (int i = 0; i < n; i++)
+    for (int j = i; j < n; j++)
+        sum += m[i][j];`);
+
+Q(101,'mat','Maximum element in the upper triangular part of a matrix',
+`<p>Loop over the cells with <code>j &gt;= i</code> and keep the largest.</p>`,
+`int max = Integer.MIN_VALUE;
+for (int i = 0; i < n; i++)
+    for (int j = i; j < n; j++)
+        max = Math.max(max, m[i][j]);`);
+
+Q(102,'mat','Minimum element in the upper triangular part of a matrix',
+`<p>Loop over the cells with <code>j &gt;= i</code> and keep the smallest.</p>`,
+`int min = Integer.MAX_VALUE;
+for (int i = 0; i < n; i++)
+    for (int j = i; j < n; j++)
+        min = Math.min(min, m[i][j]);`);
+
+Q(103,'mat','Sum of the lower triangular part of a matrix',
+`<p>The lower triangle (including the main diagonal) is the cells where <code>j &lt;= i</code>.</p>`,
+`int sum = 0;
+for (int i = 0; i < n; i++)
+    for (int j = 0; j <= i; j++)
+        sum += m[i][j];`);
+
+Q(104,'mat','Maximum element in the lower triangular part of a matrix',
+`<p>Loop over the cells with <code>j &lt;= i</code> and keep the largest.</p>`,
+`int max = Integer.MIN_VALUE;
+for (int i = 0; i < n; i++)
+    for (int j = 0; j <= i; j++)
+        max = Math.max(max, m[i][j]);`);
+
+Q(105,'mat','Minimum element in the lower triangular part of a matrix',
+`<p>Loop over the cells with <code>j &lt;= i</code> and keep the smallest.</p>`,
+`int min = Integer.MAX_VALUE;
+for (int i = 0; i < n; i++)
+    for (int j = 0; j <= i; j++)
+        min = Math.min(min, m[i][j]);`);
+
+Q(106,'prog','Right shift array elements by one position',
+`<p>Save the last element, move every element one place to the right (from the end), then put the saved element at index 0 (a circular right shift).</p>`,
+`int last = a[a.length - 1];
+for (int i = a.length - 1; i > 0; i--)
+    a[i] = a[i - 1];
+a[0] = last;       // {1,2,3,4} -> {4,1,2,3}`);
+
+Q(107,'prog','Frequency count of each element in an array',
+`<p>Use a map from element to count; <code>LinkedHashMap</code> keeps the order of first appearance.</p>`,
+`Map<Integer, Integer> freq = new LinkedHashMap<>();
+for (int x : a) freq.put(x, freq.getOrDefault(x, 0) + 1);
+for (Map.Entry<Integer, Integer> e : freq.entrySet())
+    System.out.println(e.getKey() + " -> " + e.getValue());`);
+
+Q(108,'prog','First non-repeating element in an array',
+`<p>Count frequencies first, then scan the array again and return the first element whose count is 1. O(n).</p>`,
+`static int firstNonRepeating(int[] a) {
+    Map<Integer, Integer> freq = new LinkedHashMap<>();
+    for (int x : a) freq.merge(x, 1, Integer::sum);
+    for (int x : a)
+        if (freq.get(x) == 1) return x;
+    return -1;                     // none
+}   // {4,5,1,2,0,4} -> 5`);
+
+Q(109,'prog','Convert binary array to decimal number',
+`<p>Treat the array as binary digits (most significant bit first). For each bit: <code>dec = dec * 2 + bit</code>.</p>`,
+`int dec = 0;
+for (int bit : bits)
+    dec = dec * 2 + bit;
+// {1,0,1,1} -> 11`);
+
+Q(110,'mat','Find the maximum element in any single row of a matrix',
+`<p>Scan one row (given by its index) for the largest value; repeat for every row to get the row-wise maximums.</p>`,
+`for (int i = 0; i < m.length; i++) {
+    int max = m[i][0];
+    for (int j = 1; j < m[i].length; j++)
+        if (m[i][j] > max) max = m[i][j];
+    System.out.println("Row " + i + " max = " + max);
+}`);
+
+Q(111,'prog','Print each word stored in an array of strings',
+`<p>Loop over the <code>String</code> array and print each element.</p>`,
+`String[] words = {"Java", "is", "fun"};
+for (String w : words)
+    System.out.println(w);`);
+
+Q(112,'mat','Print matrix elements diagonal-wise (main and anti)',
+`<p>For a square n × n matrix, the <b>main diagonal</b> has <code>i == j</code> and the <b>anti-diagonal</b> has <code>i + j == n - 1</code>.</p>`,
+`for (int i = 0; i < n; i++)
+    System.out.print(m[i][i] + " ");            // main diagonal
+System.out.println();
+for (int i = 0; i < n; i++)
+    System.out.print(m[i][n - 1 - i] + " ");    // anti-diagonal`);
+
+Q(113,'mat','Print matrix elements in diagonal sequence form',
+`<p>All cells on one diagonal share the same <code>i + j</code>. Loop over every sum from 0 to <code>r + c - 2</code> and print the cells for that sum on one line.</p>`,
+`for (int s = 0; s <= r + c - 2; s++) {
+    for (int i = 0; i < r; i++) {
+        int j = s - i;
+        if (j >= 0 && j < c) System.out.print(m[i][j] + " ");
+    }
+    System.out.println();
+}
+// {{1,2,3},{4,5,6},{7,8,9}} ->
+// 1
+// 2 4
+// 3 5 7
+// 6 8
+// 9`);
+
+Q(114,'prog','Apply an if/else criteria element-wise over an array',
+`<p>Loop through the array and decide what to do with each element using if / else-if / else.</p>`,
+`for (int x : a) {
+    if (x < 0)          System.out.println(x + " is negative");
+    else if (x == 0)    System.out.println(x + " is zero");
+    else if (x % 2 == 0) System.out.println(x + " is positive and even");
+    else                System.out.println(x + " is positive and odd");
+}`);
+
+Q(115,'prog','Find HCF (GCD) of all array elements using if/else',
+`<p>HCF of the whole array = HCF applied repeatedly: <code>hcf = gcd(hcf, a[i])</code>. It can stop early once it reaches 1.</p>`,
+`static int gcd(int a, int b) {
+    while (b != 0) { int t = a % b; a = b; b = t; }
+    return a;
+}
+int hcf = a[0];
+for (int i = 1; i < a.length; i++) {
+    hcf = gcd(hcf, a[i]);
+    if (hcf == 1) break;            // cannot get smaller
+}   // {12,18,24} -> 6`);
+
+Q(116,'prog','Find the first 3-digit number in an array',
+`<p>Scan from the left and return the first element whose absolute value is between 100 and 999.</p>`,
+`int found = -1;
+for (int x : a) {
+    int v = Math.abs(x);
+    if (v >= 100 && v <= 999) { found = x; break; }
+}
+System.out.println(found);     // -1 if none`);
+
+Q(117,'prog','Find the median of an array',
+`<p>Sort a copy. If the length is odd, the median is the middle element; if even, it is the average of the two middle elements.</p>`,
+`static double median(int[] a) {
+    int[] s = a.clone();
+    Arrays.sort(s);
+    int n = s.length;
+    if (n % 2 == 1) return s[n / 2];
+    return (s[n / 2 - 1] + s[n / 2]) / 2.0;
+}   // {5,1,3} -> 3.0   {1,2,3,4} -> 2.5`);
+
+Q(118,'prog','Find the largest value in an array without sorting',
+`<p>One pass with a "largest so far" variable: O(n), better than sorting (O(n log n)) when you need only the maximum.</p>`,
+`int largest = Integer.MIN_VALUE;
+for (int x : a)
+    if (x > largest) largest = x;`);
+
+Q(119,'prog','Find the mode (most frequent value) of an array',
+`<p>Count frequencies in a HashMap and return the value with the highest count.</p>`,
+`static int mode(int[] a) {
+    Map<Integer, Integer> freq = new HashMap<>();
+    int mode = a[0], best = 0;
+    for (int x : a) {
+        int c = freq.merge(x, 1, Integer::sum);
+        if (c > best) { best = c; mode = x; }
+    }
+    return mode;
+}   // {1,2,2,3,3,3} -> 3`);
+
+Q(120,'prog','Find the mean (average) of array elements',
+`<p>Add all elements and divide by the count. Use <code>double</code> (or cast) to avoid integer division, and <code>long</code> for the sum if values are large.</p>`,
+`long sum = 0;
+for (int x : a) sum += x;
+double mean = (double) sum / a.length;`);
+
+Q(121,'mat','Make every element of a 5x5 matrix zero',
+`<p>Assign 0 to each cell with nested loops, or use <code>Arrays.fill</code> on each row. (A new <code>int[5][5]</code> is already all zeros.)</p>`,
+`int[][] m = new int[5][5];
+for (int i = 0; i < 5; i++)
+    for (int j = 0; j < 5; j++)
+        m[i][j] = 0;
+// or: for (int[] row : m) Arrays.fill(row, 0);`);
+
+var KEY='ivdone',cat='all',qy='',ph=0;
+var PH=[null,
+ {e:'🧩',t:'Phase 1',th:'चरण 1',n:'OOPs',nh:'OOPs',d:'Core Java and object-oriented concepts: classes, constructors, inheritance, access modifiers and abstraction.',dh:'कोर जावा और ऑब्जेक्ट-ओरिएंटेड कॉन्सेप्ट: क्लास, कंस्ट्रक्टर, इनहेरिटेंस, एक्सेस मॉडिफायर और एब्स्ट्रैक्शन।',
+  cats:[['all','All','सभी'],['basics','Java basics','जावा बेसिक्स'],['oop','OOP','OOP'],['ctor','Constructors & keywords','कंस्ट्रक्टर और कीवर्ड'],['naming','Naming & packages','नेमिंग और पैकेज'],['access','Access & modifiers','एक्सेस और मॉडिफायर'],['abs','Abstraction','एब्स्ट्रैक्शन']]},
+ {e:'🔢',t:'Phase 2',th:'चरण 2',n:'Array',nh:'ऐरे',d:'Array concepts, sorting and searching, subarray problems, matrix programs and classic array questions with code.',dh:'ऐरे कॉन्सेप्ट, सॉर्टिंग-सर्चिंग, सबऐरे, मैट्रिक्स प्रोग्राम और कोड के साथ क्लासिक ऐरे प्रश्न।',
+  cats:[['all','All','सभी'],['concept','Concepts','कॉन्सेप्ट'],['search','Sorting & searching','सॉर्टिंग और सर्चिंग'],['sub','Subarrays & two pointers','सबऐरे और टू-पॉइंटर'],['prog','Array programs','ऐरे प्रोग्राम'],['mat','Matrix','मैट्रिक्स']]}];
+function done(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return[]}}
+function save(a){try{localStorage.setItem(KEY,JSON.stringify(a))}catch(e){}}
+function cnt(p){return QS.filter(function(x){return x.p===p}).length}
+function dcnt(p,d){return d.filter(function(n){return QS[n-1]&&QS[n-1].p===p}).length}
+function build(){
+  var d=done(),lang=hi(),h;
+  QS.forEach(function(x){x.t=(x.q+' '+x.a.replace(/<[^>]+>/g,' ')+' '+x.code).toLowerCase()});
+  if(!ph){
+    h='<div class="iv-wrap"><div class="iv-hero"><div class="k">Java Sutra · '+L('Interview prep','इंटरव्यू तैयारी')+'</div><h1>'+L('Java Interview Questions','जावा इंटरव्यू प्रश्न')+'</h1><p>'+QS.length+' '+L('questions in two phases, with clear answers and code examples. Choose a phase to start.','प्रश्न दो चरणों में, स्पष्ट उत्तर और कोड उदाहरणों के साथ। शुरू करने के लिए एक चरण चुनें।')+'</p></div>'
+    +'<div class="iv-phases">'+[1,2].map(function(p){var P=PH[p],n=cnt(p),dn=dcnt(p,d);
+      return'<button type="button" class="iv-ph" data-ph="'+p+'"><span class="e">'+P.e+'</span><span class="t">'+L(P.t,P.th)+'</span><h2>'+esc(L(P.n,P.nh))+'</h2><p>'+esc(L(P.d,P.dh))+'</p><div class="iv-prog" aria-hidden="true"><i style="width:'+Math.round(dn/n*100)+'%"></i></div><span class="m">'+n+' '+L('questions','प्रश्न')+' · '+dn+' '+L('revised','दोहराए')+'</span><span class="go">'+L('Open','खोलें')+' →</span></button>'}).join('')+'</div></div>';
+    V.innerHTML=h;return;
+  }
+  var P=PH[ph],list=QS.filter(function(x){return x.p===ph});
+  h='<div class="iv-wrap"><button type="button" class="iv-back" data-back="1">← '+L('All phases','सभी चरण')+'</button>'
+  +'<div class="iv-hero"><div class="k">Java Sutra · '+L(P.t,P.th)+'</div><h1>'+esc(L(P.n,P.nh))+' '+L('Interview Questions','इंटरव्यू प्रश्न')+'</h1><p>'+list.length+' '+L('questions. Tap a question to open its answer.','प्रश्न। उत्तर देखने के लिए प्रश्न पर टैप करें।')+'</p></div>'
+  +'<div class="iv-tools"><input id="ivq" class="iv-search" type="search" autocomplete="off" aria-label="'+L('Search interview questions','इंटरव्यू प्रश्न खोजें')+'" placeholder="'+L('Search questions and answers…','प्रश्न और उत्तर खोजें…')+'">'
+  +'<div class="iv-chips" role="group" aria-label="'+L('Filter by topic','टॉपिक से फ़िल्टर')+'">'+P.cats.map(function(c){return'<button type="button" class="iv-chip" data-c="'+c[0]+'" aria-pressed="'+(c[0]===cat)+'">'+esc(lang?c[2]:c[1])+'</button>'}).join('')+'</div></div>'
+  +'<div class="iv-bar"><span id="ivcnt"></span><span><button type="button" id="ivx" data-open="1">'+L('Expand all','सभी खोलें')+'</button></span></div>'
+  +'<div class="iv-prog" aria-hidden="true"><i id="ivpg"></i></div>'
+  +'<div class="iv-list" id="ivl">'+list.map(function(x){
+    var dn=d.indexOf(x.n)>=0;
+    return'<details class="iv-q'+(dn?' done':'')+'" data-n="'+x.n+'" data-c="'+x.c+'"><summary><span class="iv-n">'+x.n+'</span><span>'+esc(x.q)+'</span></summary><div class="iv-a">'+x.a+(x.code?'<h4>'+L('Example','उदाहरण')+'</h4><pre><code>'+esc(x.code)+'</code></pre>':'')+'<button type="button" class="iv-mk" data-mk="'+x.n+'">'+(dn?'✓ '+L('Revised','दोहराया'):L('Mark as revised','दोहराया चिह्नित करें'))+'</button></div></details>'}).join('')
+  +'</div><p class="iv-empty" id="ive" hidden>'+L('No questions match your search.','कोई प्रश्न नहीं मिला।')+'</p></div>';
+  V.innerHTML=h;
+  var i=document.getElementById('ivq');if(i)i.value=qy;
+  apply();
+}
+function apply(){
+  var q=qy.toLowerCase().trim(),shown=0,d=done();
+  V.querySelectorAll('.iv-q').forEach(function(el){
+    var x=QS[+el.dataset.n-1];
+    var ok=(cat==='all'||x.c===cat)&&(!q||x.t.indexOf(q)>=0);
+    el.style.display=ok?'':'none';if(ok)shown++;
+  });
+  var tot=cnt(ph),dn=dcnt(ph,d);
+  var c=document.getElementById('ivcnt');
+  if(c)c.textContent=shown+' / '+tot+' '+L('questions','प्रश्न')+' · '+dn+' '+L('revised','दोहराए');
+  var p=document.getElementById('ivpg');if(p)p.style.width=Math.round(dn/tot*100)+'%';
+  var e=document.getElementById('ive');if(e)e.hidden=shown>0;
+}
+V.addEventListener('click',function(e){
+  var pc=e.target.closest('.iv-ph');
+  if(pc){ph=+pc.dataset.ph;cat='all';qy='';build();scrollTo(0,0);return}
+  if(e.target.closest('[data-back]')){ph=0;cat='all';qy='';build();scrollTo(0,0);return}
+  var ch=e.target.closest('.iv-chip');
+  if(ch){cat=ch.dataset.c;V.querySelectorAll('.iv-chip').forEach(function(b){b.setAttribute('aria-pressed',b===ch)});apply();return}
+  var ex=e.target.closest('#ivx');
+  if(ex){var open=ex.dataset.open==='1';V.querySelectorAll('.iv-q').forEach(function(el){if(el.style.display!=='none')el.open=open});ex.dataset.open=open?'0':'1';ex.textContent=open?L('Collapse all','सभी बंद करें'):L('Expand all','सभी खोलें');return}
+  var mk=e.target.closest('.iv-mk');
+  if(mk){var n=+mk.dataset.mk,a=done(),k=a.indexOf(n);if(k>=0)a.splice(k,1);else a.push(n);save(a);var el=mk.closest('.iv-q'),on=a.indexOf(n)>=0;el.classList.toggle('done',on);mk.textContent=on?'✓ '+L('Revised','दोहराया'):L('Mark as revised','दोहराया चिह्नित करें');apply()}
+});
+V.addEventListener('input',function(e){if(e.target.id==='ivq'){qy=e.target.value;apply()}});
+
+var TOPCLS=['home','dr','jsq','fe','fe-doc'];
+function openIV(){
+  TOPCLS.forEach(function(c){B.classList.remove(c)});
+  B.classList.add('iv');
+  ph=0;cat='all';qy='';build();
+  scrollTo(0,0);
+}
+function leaveIV(){B.classList.remove('iv')}
+
+var pill=document.createElement('button');pill.id='seg-iv';pill.type='button';pill.setAttribute('aria-pressed','false');pill.textContent='🎯 '+L('Interview','इंटरव्यू');pill.onclick=openIV;
+/* no header tab: Interview opens only from the home hero button */
+['oops','collections','threads','notes','jsq','fe'].forEach(function(k){var b=$('#seg-'+k);b&&b.addEventListener('click',leaveIV,true)});
+document.querySelectorAll('#bt button').forEach(function(b){b.addEventListener('click',leaveIV,true)});
+[$('.brand'),$('#hhome')].forEach(function(b){b&&b.addEventListener('click',leaveIV,true)});
+
+/* hero button on the home page */
+var H=$('#home');
+function addBtn(){
+  if(!H)return;var c=H.querySelector('.hm-cta');
+  if(!c||c.querySelector('[data-iv]'))return;
+  var b=document.createElement('button');b.type='button';b.className='hm-s';b.dataset.iv='1';
+  b.textContent='🎯 '+L('Interview Questions','इंटरव्यू प्रश्न');
+  var s=c.querySelector('#hmS');
+  if(s&&s.nextSibling)c.insertBefore(b,s.nextSibling);else c.appendChild(b);
+}
+if(H){
+  H.addEventListener('click',function(e){if(e.target.closest('[data-iv]')){e.preventDefault();openIV()}});
+  new MutationObserver(addBtn).observe(H,{childList:true,subtree:true});
+  addBtn();
+}
+/* keep tab highlight in sync; another section opening closes this one */
+new MutationObserver(function(){
+  var on=B.classList.contains('iv');
+  if(on&&(B.classList.contains('home')||B.classList.contains('jsq')||B.classList.contains('fe'))){B.classList.remove('iv');on=false}
+  pill.classList.toggle('on',on);pill.setAttribute('aria-pressed',on?'true':'false');
+}).observe(B,{attributes:true,attributeFilter:['class']});
+}catch(err){console.error('interview section',err)}})();
+</script>
 </body></html>
